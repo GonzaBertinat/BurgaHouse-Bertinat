@@ -1,0 +1,58 @@
+/* Colores, fuentes y otros */
+@import "utils";
+
+/* Selectores comunes a todos los documentos */
+@import "common";
+
+/* Selectores utilizados en sección 'Inicio' */
+@import "inicio";
+
+/* Selectores utilizados en sección 'Nosotros' */
+@import "nosotros";
+
+/* Selectores utilizados en sección 'Menú Completo' */
+@import "menu";
+
+/* Selectores utilizados en sección 'Sucursales' */
+@import "sucursales";
+
+/* Selectores utilizados en sección 'Contacto' */
+@import "contacto";
+
+/* Selectores utilizados en el Mapa del Sitio */
+@import "mapaSitio";
+
+/* Fuentes
+ h1: Staatliches
+ slogan: Staatliches
+ Titulos de secciones: Raleway
+ Textos: Defecto de Bootstrap (por ahora)
+ Subtitulos: Work Sans
+*/
+
+/* Selectores para responsividad de elementos sin Bootstrap */
+@media only screen and (max-width: 575px){
+    .encabezado__menuLateral {
+        background-color: $negro;
+        width: 260px;
+    }
+
+    .mapaGoogle {
+        width: 100%;
+        height: 300px;
+    }
+
+    .tituloPrincipal {
+        font-size: 5rem;
+    }
+
+    .fondoIndex__slogan {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .primerElemento {
+        order: -1;
+    }
+}

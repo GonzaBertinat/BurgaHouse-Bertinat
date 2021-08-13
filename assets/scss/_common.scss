@@ -1,0 +1,271 @@
+/****** Selectores comunes a todos los documentos ******/
+
+/**************************** HEADER ******************************/
+
+/* Selectores para estructura del contenido */
+.encabezado {
+    font-size: 1rem;
+}
+
+.encabezado__navegacion {
+    background-color: $negro;
+}
+
+.encabezado__contenido {
+    width: 100%;
+    align-items: center;
+}
+
+.encabezado__seccion {
+    @include relleno(1,-1,1,-1);
+}
+
+.encabezado__seccion--end {
+    @include flex(row);
+    justify-content: flex-end;
+}
+
+/* Selector para logo del sitio */
+.encabezado__logo {
+    width: 130px;
+}
+
+/* Selectores para agrupaciones de enlaces (lista y submenú) */
+.encabezado__listaEnlaces {
+    @include relleno(-1,0,-1,-1);
+    list-style: none;
+}
+
+.encabezado__itemLista:hover {
+    background-color: $negro;
+    @include estiloTexto(negrita)
+}
+
+.encabezado__submenu {
+    background-color: $negro;
+    width: 250px;
+}
+
+/* Selectores para enlaces a diferentes secciones */
+.encabezado__enlace {
+    color: $blanco !important;
+}
+
+.encabezado__enlace--centrado {
+    text-align: center;
+}
+
+.encabezado__enlace:hover {
+    background-color: $negro;
+    color: $dorado !important;
+    @include estiloTexto(negrita)
+}
+
+/* Selector de clase para marcar en el menú qué sección es la actual */
+.encabezado__enlace--activo {
+    color: $dorado !important; /* Sobreescribe bootstrap */
+    @include estiloTexto(negrita);
+    @include estiloTexto(subrayado);
+    text-underline-offset: 40%;
+}
+
+/** Selectores para menú lateral responsive */
+.encabezado__menuLateral {
+    background-color: $negro;
+    width: 300px;
+}
+
+.encabezado__listaEnlaces--margen .show {
+    @include margenes(-1,-1,18,-1);
+}
+
+/*********************************************************************/
+
+/**************************** CONTENIDO (MAIN) ******************************/
+
+/* Selector para breadcrumb */
+.listaRutas {
+    background-color: $blanco;  
+    border-top: $border-size $dorado solid; 
+    border-bottom: $border-size*1.5 $dorado solid;  
+}
+
+.listaRutas__contenido {
+    background-color: $negro;
+    
+    ol {
+        @include margenes(-1,-1,0,-1);
+        @include relleno(1,-1,1,2);
+        li {
+            font-family: $raleway;
+            @include estiloTexto(negrita);
+            color: $dorado;
+            a {
+                color: $blanco;
+                text-underline-offset: 20%;
+                transition: all 0.5s;
+            }
+            a:hover {
+                color: $dorado;
+            }
+        }
+    }
+}
+
+
+/* Selector para fondos de seccion */
+.fondoSeccion__contenido {
+    @include flex(column);
+}
+
+/* Selector para titulos h1 de las secciones */
+.tituloPrincipal {
+    font-family: $staatliches;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 300;
+}
+/****************************/
+
+/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
+.fondoSeccion {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Asigno estilos a imágenes de fondo de cada sección */
+@each $seccion in Index, Nosotros, Menu, Sucursales, Contacto {
+    .fondo#{$seccion} {
+        background-image: url("../images/fondos/fondo#{$seccion}.webp");
+        @extend .fondoSeccion; 
+    }
+}
+
+/* Selector de clase para contenido dentro del fondo de cada sección */
+.fondoSeccion .container {
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+/* Selector de clase para los titulos de las secciones de todas las páginas */
+.tituloSeccion {
+    font-size: 2.5rem;
+    font-family: $raleway;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Selector para darle relleno superior e inferior a las secciones del sitio */
+.seccion {
+    @include relleno(4,-1,4,-1);
+}
+
+/* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
+.iconoSubir__contenedor {
+    @include flex(row);
+    justify-content: flex-end;
+}
+
+.iconoSubir__enlace {
+    @include margenes(-1,-1,2,-1);
+    display: block;
+    transition: all 1s;
+    width: 50px;
+}
+
+.iconoSubir__enlace:hover {
+    @include rotar(360deg);
+}
+/*********************************************************************/
+
+/**************************** FOOTER ******************************/
+
+/* Selectores para estructura del contenido */
+.footer {
+    @include relleno(1,-1,1,-1);
+    background-color: $negro;
+    color: $blanco;
+}
+
+.footer__contenido {
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__seccion {
+    @include relleno(2,-1,2,-1);
+    @include flex(column);
+}
+
+.footer__seccion-centrado {
+    text-align: center;
+}
+
+/* Selector para textos */
+.footer__texto {
+    @include margenes(1,-1,1,-1);
+    @include estiloTexto(negrita);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Selectores para iconos de redes sociales */
+.footer__redes, .footer__autor {
+    justify-content: center;
+}
+
+.footer__contenedorRedSocial {
+    justify-content: center;
+    width: 80px;
+}
+
+.footer__redSocial {
+    transition: all 0.5s;
+}
+
+.footer__redSocial:hover {
+    @include zoom(20%,20%);
+}
+
+/* Mapa para cargar logos de redes sociales */
+$redesSociales: (
+    facebook: "../images/redes_sociales/facebook.png",
+    twitter: "../images/redes_sociales/twitter.png",
+    instagram: "../images/redes_sociales/instagram.png",
+    linkedIn: "../images/redes_sociales/linkedin.png",
+    whatsApp: "../images/redes_sociales/whatsApp.png"
+);
+
+/* Bucle que crea una clase para cada red social */
+@each $red, $ruta in $redesSociales {
+    .#{$red}Logo {
+        @extend .footer__redSocial;
+        content:url($ruta);
+    }
+} 
+
+/* Selectores para logo en footer */
+.footer__contenedorLogo {
+    @include flex(row);
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.footer__logo {
+    @include relleno(2,-1,2,-1);
+}
+
+.footer__mapaSitio {
+    @include margenes(1,1,1,1);
+    align-self: center;
+    a {
+        color: $blanco;
+        @include estiloTexto(negrita);
+    }
+}
+
+/*********************************************************************/

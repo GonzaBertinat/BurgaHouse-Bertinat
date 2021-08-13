@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mapa del sitio. Accedé a lo que buscás de forma más rápida.">
+    <meta name="keywords" content="hamburguesas, hamburgueseria, burga, takeaway, delivery, cervecería, comida, cena, sabor, buenos aires">
+    <title>Burga House | Mapa del sitio</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <!-- Menú de navegación superior -->
+        <nav class="encabezado__navegacion navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <div class="encabezado__contenido row">
+                    <div class="encabezado__seccion col-6 col-md-1">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="encabezado__seccion col-2 col-md-6">
+                        <div class="collapse navbar-collapse" id="barraNavegacionLateral">
+                            <ul class="encabezado__listaEnlaces navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
+                                <li class="nav-item dropdown">
+                                    <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Inicio
+                                    </a>
+                                    <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html">Burga House</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionVisitarnos">¿Por qué visitarnos?</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDestacadas">Destacadas del mes</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDondeEncontrarnos">¿Dónde encontrarnos?</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="encabezado__enlace nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Menú Completo
+                                    </a>
+                                    <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html">Todo el menú</a></li> 
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaClasica">Burgas Línea Clásica</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaPremium">Burgas Línea Premium</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaHambrienta">Burgas Línea Hambrienta</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="encabezado__enlace nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="encabezado__enlace nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="encabezado__seccion encabezado__seccion--end col-4">
+                        <!-- Logo de la marca -->
+                        <a class="encabezado__logo" href="../index.html">
+                            <img class="img-fluid" src="../assets/images/logo-header.png" alt="Logo Burga House">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Menú de navegación lateral -->
+        <div class="encabezado__menuLateral offcanvas offcanvas-start" id="menuLateral" tabindex="-1"  aria-labelledby="menuLateralLabel">
+            <div class="offcanvas-body">
+                <ul class="encabezado__listaEnlaces encabezado__listaEnlaces--margen">
+                    <li class="nav-item dropdown">
+                        <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html">Burga House</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionVisitarnos">¿Por qué visitarnos?</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDestacadas">Destacadas del mes</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDondeEncontrarnos">¿Dónde encontrarnos?</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="encabezado__enlace nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menú Completo
+                        </a>
+                        <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html">Todo el menú</a></li> 
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaClasica">Burgas Línea Clásica</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaPremium">Burgas Línea Premium</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaHambrienta">Burgas Línea Hambrienta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="encabezado__enlace nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="encabezado__enlace nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Contenido principal del documento -->
+    <main>
+        <!-- Mapa del sitio-->
+        <section class="mapaSitio">
+            <div class="container">
+                <h1 class="mapaSitio__titulo">Mapa del sitio</h1>
+                <p class="mapaSitio__descripcion">
+                    ¿No encontrás lo que estás buscando?
+                    <br>
+                    Te acercamos todos los contenidos del sitio para que puedas acceder más rápidamente a lo que necesitás.
+                </p>
+                <div class="mapaSitio__contenido row">
+                    <div class="enlaces col-12 col-md-4">
+                        <h2 class="enlaces__titulo"><a href="../index.html">Inicio</a></h2>
+                        <ul class="enlaces__lista">
+                            <li><a href="../index.html#seccionVisitarnos">¿Por qué visitarnos?</a></li>
+                            <li><a href="../index.html#seccionDestacadas">Destacadas del mes</a></li>
+                            <li><a href="../index.html#seccionDondeEncontrarnos">¿Dónde encontrarnos?</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces col-12 col-md-4">
+                        <h2 class="enlaces__titulo"><a href="nosotros.html">Nosotros</a></h2>
+                        <ul class="enlaces__lista">
+                            <li><a href="nosotros.html#seccionNuestraHistoria">Nuestra historia</a></li>
+                            <li><a href="nosotros.html#seccionDiferentes">¿Qué nos hace diferentes?</a></li>
+                            <li><a href="nosotros.html#seccionRecomendaciones">Opiniones de nuestros clientes</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces col-12 col-md-4">
+                        <h2 class="enlaces__titulo"><a href="menu.html">Menú Completo</a></h2>
+                        <ul class="enlaces__lista">
+                            <li>
+                                <a href="menu.html#seccionHamburguesas">Tentate con las delicias de la casa</a>
+                                <ul class="enlaces__lista">
+                                    <li><a href="menu.html#lineaClasica">Línea Clásica</a></li>
+                                    <li><a href="menu.html#lineaPremium">Línea Premium</a></li>
+                                    <li><a href="menu.html#lineaHambrienta">Línea Hambrienta</a></li>
+                                </ul>                                
+                            </li>
+                            <li><a href="menu.html#seccionBebidas">Acompañalas con algo refrescante</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces col-12 col-md-4">
+                        <h2 class="enlaces__titulo"><a href="sucursales.html">Sucursales</a></h2>
+                        <ul class="enlaces__lista">
+                            <li><a href="sucursales.html#seccionSucursales">Buscá tu BurgaHouse más cercana</a></li>
+                            <li><a href="sucursales.html#seccionMetodosPago">Métodos de pago</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces col-12 col-md-4">
+                        <h2 class="enlaces__titulo"><a href="contacto.html">Contacto</a></h2>
+                        <ul class="enlaces__lista">
+                            <li><a href="contacto.html#seccionFormulario">Dejanos tu mensaje</a></li>
+                            <li><a href="contacto.html#seccionWhatsApp">O... Escribinos por WhatsApp!</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contenido row">
+                <!-- Links a redes sociales -->
+                <div class="footer__seccion col-10 col-md-4">
+                    <div class="row">
+                        <span class="footer__texto">Seguinos en nuestras redes sociales</span>
+                    </div>
+                    <div class="footer__redes row">
+                        <div class="footer__contenedorRedSocial col-4">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebookLogo img-fluid" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="footer__contenedorRedSocial col-4">
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img class="instagramLogo img-fluid" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="footer__contenedorRedSocial col-4">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitterLogo img-fluid" alt="Twitter">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__mapaSitio row">
+                        <a href="mapa-sitio.html">Mapa del sitio</a>
+                    </div>
+                    
+                </div>
+                <!-- Logo de la marca -->
+                <div class="footer__seccion col-10 col-md-4 primerElemento">
+                    <div class="footer__contenedorLogo">
+                        <a href="../index.html">
+                            <img class="footer__logo img-fluid" src="../assets/images/logo-footer.png" alt="Logo Burga House"> 
+                        </a>
+                    </div>
+                </div>
+                <!-- Información del autor del sitio -->
+                <div class="footer__seccion footer__seccion-centrado col-10 col-md-4">
+                    <div class="row footer__autor">
+                        <span class="footer__texto">Developed by Gonzalo Bertinat</span>
+                        <div class="footer__contenedorRedSocial">
+                            <a href="https://www.linkedin.com/in/gonzabertinat/" target="_blank">
+                                <img class="linkedInLogo img-fluid" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="footer__texto">© 2021 Burga House - Derechos reservados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts para WOW y Bootstrap-->
+    <script src="../assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="../assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

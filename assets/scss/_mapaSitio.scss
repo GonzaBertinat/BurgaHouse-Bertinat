@@ -1,0 +1,43 @@
+/** Selectores para mapa del sitio **/
+
+/* Selectores para estructurar contenido */
+.mapaSitio {
+    @include relleno(12,-1,-1,-1);
+}
+
+.mapaSitio__titulo {
+    @extend .tituloSeccion;
+    @include margenes(2,-1,2,-1);
+    @include estiloTexto(negrita);
+    @include estiloTexto(italica);
+}
+
+.mapaSitio__descripcion {
+    text-align: center;
+}
+
+.mapaSitio__contenido {
+    justify-content: center;
+    @include margenes(2,-1,2,-1);
+}
+
+/* Selectores para enlaces */
+.enlaces {
+    @include relleno(-1,3,-1,3);
+}
+
+.enlaces__titulo {
+    font-size: 2rem;
+    a {
+        color: $negro;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $dorado;
+    }
+}
+
+/* Selector para lista de enlaces */
+.enlaces__lista {
+    list-style: disc;
+}

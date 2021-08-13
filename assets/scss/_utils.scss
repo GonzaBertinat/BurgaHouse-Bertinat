@@ -1,0 +1,85 @@
+/* Archivo con colores y fuentes */
+
+/** Colores **/
+$negro: #000000;
+$blanco: #ffffff;
+$dorado: #ffa500;
+$rojoOscuro: #551313;
+$rojoIntenso: rgb(255, 9, 9);
+$verdeWhatsApp: #25d366;
+$marronClaro: #b87c0c;
+
+/** Fuentes **/
+$staatliches: 'Staatliches', cursive;
+$raleway: 'Raleway', sans-serif;
+$workSans: 'Work Sans', sans-serif;
+
+/** Medidas estándar para márgenes, rellenos y bordes **/
+$margin-size: 0.5rem;
+$padding-size: 0.5rem;
+$border-size: 2px;
+
+/* Mixin que aplica un estilo determinado a un texto según el parámetro recibido */
+@mixin estiloTexto($tipo){
+    @if $tipo == negrita {
+        font-weight: bold;
+    }
+    @else if $tipo == italica {
+        font-style: italic;
+    }
+    @else if $tipo == subrayado {
+        text-decoration: underline;
+    }
+    @else {
+        font-style: normal;
+    }
+}
+
+/* Aplica padding SÓLO en la dirección que se necesite usando múltiplos de la medida base. 
+Si el valor es negativo, no se aplica - No contempla valor AUTO */
+@mixin relleno($arriba, $derecha, $abajo, $izquierda){
+    @if $arriba >= 0 {
+        padding-top: $padding-size * $arriba;
+    }
+    @if $derecha >= 0 {
+        padding-right: $padding-size * $derecha;
+    }
+    @if $abajo >= 0 {
+        padding-bottom: $padding-size * $abajo;
+    }
+    @if $izquierda >= 0 {
+        padding-left: $padding-size * $izquierda;
+    }
+}
+
+/* Aplica margenes SÓLO en la dirección que se necesite usando múltiplos de la medida base. 
+Si el valor es negativo, no se aplica - No contempla valor AUTO */
+@mixin margenes($arriba, $derecha, $abajo, $izquierda){
+    @if $arriba >= 0 {
+        margin-top: $margin-size * $arriba;
+    }
+    @if $derecha >= 0 {
+        margin-right: $margin-size * $derecha;
+    }
+    @if $abajo >= 0 {
+        margin-bottom: $margin-size * $abajo;
+    }
+    @if $izquierda >= 0 {
+        margin-left: $margin-size * $izquierda;
+    }
+}
+
+/* Aplica flexbox en la dirección que sea especificada */
+@mixin flex($direccion){
+    display: flex;
+    flex-direction: $direccion;
+}
+
+/* Transformaciones */
+@mixin rotar($grados){
+    transform: rotate($grados);
+}
+
+@mixin zoom($x, $y){
+    transform: scale(100 + $x, 100 + $y);
+}

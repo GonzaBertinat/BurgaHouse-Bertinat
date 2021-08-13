@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visitanos en la BurgaHouse más cercana a tu casa. Pedí por delivery o retirá por Take Away.">
+    <meta name="keywords" content="hamburguesas, hamburgueseria, burga, takeaway, delivery, cervecería, comida, cena, sabor, buenos aires">
+    <title>Burga House | Sucursales</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <!-- Menú de navegación superior -->
+        <nav class="encabezado__navegacion navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <div class="encabezado__contenido row">
+                    <div class="encabezado__seccion col-6 col-md-1">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="encabezado__seccion col-2 col-md-6">
+                        <div class="collapse navbar-collapse" id="barraNavegacionLateral">
+                            <ul class="encabezado__listaEnlaces navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
+                                <li class="nav-item dropdown">
+                                    <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Inicio
+                                    </a>
+                                    <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html">Burga House</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionVisitarnos">¿Por qué visitarnos?</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDestacadas">Destacadas del mes</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDondeEncontrarnos">¿Dónde encontrarnos?</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="encabezado__enlace nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Menú Completo
+                                    </a>
+                                    <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html">Todo el menú</a></li> 
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaClasica">Burgas Línea Clásica</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaPremium">Burgas Línea Premium</a></li>
+                                        <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaHambrienta">Burgas Línea Hambrienta</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="encabezado__enlace encabezado__enlace--activo nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="encabezado__enlace nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="encabezado__seccion encabezado__seccion--end col-4">
+                        <!-- Logo de la marca -->
+                        <a class="encabezado__logo" href="../index.html">
+                            <img class="img-fluid" src="../assets/images/logo-header.png" alt="Logo Burga House">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Menú de navegación lateral -->
+        <div class="encabezado__menuLateral offcanvas offcanvas-start" id="menuLateral" tabindex="-1"  aria-labelledby="menuLateralLabel">
+            <div class="offcanvas-body">
+                <ul class="encabezado__listaEnlaces encabezado__listaEnlaces--margen">
+                    <li class="nav-item dropdown">
+                        <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html">Burga House</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionVisitarnos">¿Por qué visitarnos?</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDestacadas">Destacadas del mes</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="../index.html#seccionDondeEncontrarnos">¿Dónde encontrarnos?</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="encabezado__enlace nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="encabezado__enlace nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menú Completo
+                        </a>
+                        <ul class="encabezado__submenu dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html">Todo el menú</a></li> 
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaClasica">Burgas Línea Clásica</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaPremium">Burgas Línea Premium</a></li>
+                            <li><a class="encabezado__enlace encabezado__enlace--centrado dropdown-item" href="menu.html#lineaHambrienta">Burgas Línea Hambrienta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="encabezado__enlace encabezado__enlace--activo nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="encabezado__enlace nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Contenido principal del documento -->
+    <main>
+        <!-- Imagen ilustrativa de fondo del documento -->
+        <section class="fondoSucursales">
+            <div class="fondoSeccion__contenido container">
+                <h1 class="fondoSucursales__titulo">SUCURSALES</h1>
+            </div>
+        </section>
+        <!-- BreadCrumb -->
+        <section class="listaRutas">
+            <nav class="listaRutas__contenido">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="../index.html">Burga House</a>
+                    </li>
+                    <li class="breadcrumb-item">Sucursales</li>
+                </ol>
+            </nav>
+        </section>
+        <!-- Sección con todas las sucursales -->
+        <section id="seccionSucursales" class="sucursales seccion">
+            <div class="container">
+                <h2 class="sucursales__titulo tituloSeccion">Buscá tu BurgaHouse más cercana</h2>    
+                <div class="accordion" id="acordeonSucursales">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button accordion-button__titulo collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sucursalCentro" aria-expanded="true" aria-controls="sucursalCentro">
+                                Centro
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="sucursalCentro" data-bs-parent="#acordeonSucursales" >
+                            <div class="sucursal row">
+                                <div class="sucursal__contenido col-12 col-md-4">
+                                    <div class="sucursal__categoria sucursal__categoria--centrada">
+                                        <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-casa.png" alt="Ícono de casa">
+                                        <h4 class="sucursal__nombre">Centro</h4>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-ubicacion.png" alt="Ícono de ubicación">
+                                            <h5 class="sucursal__info">Dirección</h5>
+                                        </div>
+                                        <p class="sucursal__dato">Av de Mayo 1250, CABA</p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-telefono.png" alt="Ícono de teléfono">
+                                            <h5 class="sucursal__info">Teléfono</h5>
+                                        </div>
+                                        <p class="sucursal__dato">+54 0800-111-2233</p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-reloj.png" alt="Ícono de reloj">
+                                            <h5 class="sucursal__info">Horario de atención</h5>
+                                        </div>
+                                        <p class="sucursal__dato">
+                                            Lun a Sáb - 19:00 a 00:00hs
+                                            <br>
+                                            Dom - 16:00 a 23:00hs
+                                        </p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-bolsa.png" alt="Ícono de bolsa">
+                                            <h5 class="sucursal__info">Formas de Entrega</h5>
+                                        </div>
+                                        <ul class="formasEntrega">
+                                            <li class="formasEntrega__forma">Salón</li>
+                                            <li class="formasEntrega__forma">Delivery</li>
+                                            <li class="formasEntrega__forma">Take Away</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sucursal__contenido col-12 col-md-8">
+                                    <iframe class="sucursal__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.7906497617123!2d-58.38636038539716!3d-34.60945496530739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccadabc292025%3A0xb4fa6dd31aa26346!2sAv.%20de%20Mayo%201250%2C%20C1085ABP%20CABA!5e0!3m2!1ses!2sar!4v1626241393775!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button accordion-button__titulo collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sucursalLomas" aria-expanded="true" aria-controls="sucursalLomas">
+                                Lomas de Zamora
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="sucursalLomas" data-bs-parent="#acordeonSucursales" >
+                            <div class="sucursal row">
+                                <div class="sucursal__contenido col-12 col-md-4">
+                                    <div class="sucursal__categoria sucursal__categoria--centrada">
+                                        <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-casa.png" alt="Ícono de casa">
+                                        <h4 class="sucursal__nombre">Lomas</h4>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-ubicacion.png" alt="Ícono de ubicación">
+                                            <h5 class="sucursal__info">Dirección</h5>
+                                        </div>
+                                        <p class="sucursal__dato">Laprida 235, Lomas de Zamora</p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-telefono.png" alt="Ícono de teléfono">
+                                            <h5 class="sucursal__info">Teléfono</h5>
+                                        </div>
+                                        <p class="sucursal__dato">+54 4242-4242</p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-reloj.png" alt="Ícono de reloj">
+                                            <h5 class="sucursal__info">Horario de atención</h5>
+                                        </div>
+                                        <p class="sucursal__dato">
+                                            Lun a Sáb - 20:00 a 00:00hs
+                                            <br>
+                                            Dom - 12:00 a 16:00 hs
+                                        </p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-bolsa.png" alt="Ícono de bolsa">
+                                            <h5 class="sucursal__info">Formas de Entrega</h5>
+                                        </div>
+                                        <ul class="formasEntrega">
+                                            <li class="formasEntrega__forma">Salón</li>
+                                            <li class="formasEntrega__forma">Take Away</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sucursal__contenido col-12 col-md-8">
+                                    <iframe class="sucursal__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.804085929893!2d-58.402338185880296!3d-34.76052768041913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd29361be6eab%3A0x5b7b264ba651aba2!2sLaprida%20235%2C%20B1832HOE%20Lomas%20de%20Zamora%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1626241278441!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button accordion-button__titulo collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sucursalLanus" aria-expanded="true" aria-controls="sucursalLanus">
+                                Lanús
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="sucursalLanus" data-bs-parent="#acordeonSucursales" >
+                            <div class="sucursal row">
+                                <div class="sucursal__contenido col-12 col-md-4">
+                                    <div class="sucursal__categoria sucursal__categoria--centrada">
+                                        <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-casa.png" alt="Ícono de casa">
+                                        <h4 class="sucursal__nombre">Lanús</h4>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-ubicacion.png" alt="Ícono de ubicación">
+                                            <h5 class="sucursal__info">Dirección</h5>
+                                        </div>
+                                        <p class="sucursal__dato">9 de Julio 100, Lanús</p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-telefono.png" alt="Ícono de teléfono">
+                                            <h5 class="sucursal__info">Teléfono</h5>
+                                        </div>
+                                        <p class="sucursal__dato">+54 4245-5000</p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-reloj.png" alt="Ícono de reloj">
+                                            <h5 class="sucursal__info">Horario de atención</h5>
+                                        </div>
+                                        <p class="sucursal__dato">
+                                            Lun a Sáb - 19:00 a 00:00hs
+                                            <br>
+                                            Dom - Cerrado
+                                        </p>
+                                    </div>
+                                    <div class="sucursal__categoria">
+                                        <div class="sucursal__tipoCategoria">
+                                            <img class="sucursal__icono img-fluid" src="../assets/images/iconos_sucursales/icono-bolsa.png" alt="Ícono de bolsa">
+                                            <h5 class="sucursal__info">Formas de Entrega</h5>
+                                        </div>
+                                        <ul class="formasEntrega">
+                                            <li class="formasEntrega__forma">Salón</li>
+                                            <li class="formasEntrega__forma">Delivery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sucursal__contenido col-12 col-md-8">
+                                    <iframe class="sucursal__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1639.9437769269969!2d-58.390926278790175!3d-34.70801600697942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd236c85f711%3A0xd0cd3aeab03e5311!2sAv.%209%20de%20Julio%201132%2C%20B1824%20Lan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1626241643554!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!-- Sección con 'Métodos de pago' -->
+        <section id="seccionMetodosPago" class="metodosPago seccion">
+            <div class="container">
+                <div class="metodosPago__fila row">
+                    <div class="metodosPago__contenido col-10">
+                        <h2 class="metodosPago__titulo tituloSeccion">Métodos de pago</h2>
+                        <p class="metodosPago__descripcion">En BurgaHouse contamos con los siguientes medios de pago en todas nuestras sucursales</p>        
+                    </div>
+                </div>
+                <div class="metodosPago__fila row listadoMetodos">
+                    <div class="col-12 col-md-4">
+                        <article class="metodoPago">
+                            <h3 class="metodoPago__tipo">Efectivo</h3>
+                            <img class="metodoPago__logo img-fluid" src="../assets/images/metodos_pago/efectivo.png" alt="Dinero en efectivo">
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="metodoPago">
+                            <h3 class="metodoPago__tipo">Tarjetas de crédito/débito</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img class="metodoPago__logo img-fluid" src="../assets/images/metodos_pago/visa.png" alt="Tarjeta Visa">
+                                    <img class="metodoPago__logo img-fluid" src="../assets/images/metodos_pago/mastercard.png" alt="Tarjeta MasterCard">
+                                </div>
+                                <div class="col-12">
+                                    <img class="metodoPago__logo img-fluid" src="../assets/images/metodos_pago/amex.png" alt="Tarjeta American Express">
+                                    <img class="metodoPago__logo img-fluid" src="../assets/images/metodos_pago/naranja.svg" alt="Tarjeta Naranja">
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="metodoPago">
+                            <h3 class="metodoPago__tipo">Criptomonedas</h3>
+                            <img class="metodoPago__logo img-fluid" src="../assets/images/metodos_pago/bitcoin.png" alt="Bitcoin">
+                        </article>
+                    </div>
+                </div>
+                <span class="metodosPago__titulo tituloSeccion">Te esperamos!</span>
+                <div class="row">
+                    <div class="iconoSubir__contenedor col-12 animate__animated animate__fadeInDownBig wow fadeInDownBig animate__delay-1s">
+                        <a href="#" class="iconoSubir__enlace">
+                            <img class="img-fluid" src="../assets/images/icono-subir.png" alt="Ir al principio de la página">
+                        </a>
+                    </div>
+                </div>
+            </div>        
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contenido row">
+                <!-- Links a redes sociales -->
+                <div class="footer__seccion col-10 col-md-4">
+                    <div class="row">
+                        <span class="footer__texto">Seguinos en nuestras redes sociales</span>
+                    </div>
+                    <div class="footer__redes row">
+                        <div class="footer__contenedorRedSocial col-4">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebookLogo img-fluid" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="footer__contenedorRedSocial col-4">
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img class="instagramLogo img-fluid" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="footer__contenedorRedSocial col-4">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitterLogo img-fluid" alt="Twitter">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__mapaSitio row">
+                        <a href="mapa-sitio.html">Mapa del sitio</a>
+                    </div>
+                    
+                </div>
+                <!-- Logo de la marca -->
+                <div class="footer__seccion col-10 col-md-4 primerElemento">
+                    <div class="footer__contenedorLogo">
+                        <a href="../index.html">
+                            <img class="footer__logo img-fluid" src="../assets/images/logo-footer.png" alt="Logo Burga House"> 
+                        </a>
+                    </div>
+                </div>
+                <!-- Información del autor del sitio -->
+                <div class="footer__seccion footer__seccion-centrado col-10 col-md-4">
+                    <div class="row footer__autor">
+                        <span class="footer__texto">Developed by Gonzalo Bertinat</span>
+                        <div class="footer__contenedorRedSocial">
+                            <a href="https://www.linkedin.com/in/gonzabertinat/" target="_blank">
+                                <img class="linkedInLogo img-fluid" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="footer__texto">© 2021 Burga House - Derechos reservados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts para WOW y Bootstrap-->
+    <script src="../assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="../assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

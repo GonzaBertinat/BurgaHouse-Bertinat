@@ -1,0 +1,135 @@
+/****** Selectores para sección Nosotros ******/
+
+/*** Selectores para imagen de fondo con título de la sección ***/
+.fondoNosotros__titulo {
+    @extend .tituloPrincipal;
+    color: $negro;
+    -webkit-text-stroke: 3px $blanco;
+}
+
+/*** Selectores para sección 'Nuestra historia', y algunos para '¿Qué nos hace diferentes?' ***/
+.historia {
+    background-color: $blanco;
+}
+
+.historia__contenido, .diferentes__contenido {
+    justify-content: center;
+    align-items: center;
+}
+
+.historia__columna, .diferentes__columna {
+    @include relleno(-1,3,-1,3);
+}
+
+.historia__titulo {
+    @include estiloTexto(italica);
+}
+
+.historia__texto {
+    text-align: start;
+}
+
+/* Selector para controlar las imagenes de la sección */
+.historia__imagen, .diferentes_imagen {
+    width: 100%;
+    border: solid $border-size $negro;
+}
+
+/*** Selectores para sección '¿Qué nos hace diferentes?' ***/ 
+.diferentes {
+    background-color: $negro;
+    color: $dorado;
+}
+
+.diferentes__texto {
+    text-align: end;
+    color: $blanco;
+}
+
+.diferentes__titulo {
+    @include estiloTexto(negrita)
+}
+
+/*** Selectores para sección 'Opiniones de nuestros clientes' ***/
+
+/* Selector para section */ 
+.recomendaciones {
+    background-color: $dorado;
+}
+
+/** Selectores para darle estilo a las opiniones de los clientes **/
+.recomendaciones__fila {
+    justify-content: center;
+    align-items: center;
+}
+
+.recomendaciones__titulo {
+    @include margenes(-1,-1,2,-1);
+    @include estiloTexto(negrita);
+    font-style: oblique;
+}
+
+.opinion {
+    @include relleno(1,2,1,2);
+    border: solid $border-size $marronClaro;
+    background-color: $negro;
+    display: grid;
+    grid-template-areas: 
+        "foto nombre"
+        "foto valoracion"
+        "texto texto";
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+    align-content: end;
+    text-align: center;
+}
+
+.opinion__imagen {
+    height: 125px;
+    width: 125px;
+    grid-area: foto;
+    img {
+        border: solid $border-size $dorado;
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.opinion__nombre {
+    @include margenes(3,-1,-1,-1);
+    @include estiloTexto(italica);
+    grid-area: nombre;
+    h3{
+        color: $dorado;
+        font-family: $workSans;
+        font-size: 1.5rem;
+    }
+}
+
+.opinion__valoracion {
+    grid-area: valoracion;
+    span {
+        color: $dorado;
+        font-family: $workSans;
+    }
+    img {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 15%;
+    }
+}
+
+.opinion__texto {
+    @include margenes(1,-1,-1,-1);
+    grid-area: texto;
+    padding-left: 5%;
+    padding-right: 5%;
+    p {
+        color: $blanco;
+        @include estiloTexto(italica);
+    }
+}
+/************************************************/

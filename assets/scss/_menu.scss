@@ -1,0 +1,138 @@
+/****** Selectores para sección Menú Completo ******/
+
+.fondoMenu__titulo {
+    @extend .tituloPrincipal;
+    color: $dorado;
+    -webkit-text-stroke: 4px $negro;
+}
+
+/* Selector de clase para las imágenes de hamburguesas en el menú */
+.hamburguesa {
+    border: solid $border-size $negro;
+    border-radius: 5%;
+    transition: all 0.2s;
+}
+
+.hamburguesa:hover {
+    @include margenes(2,-1,3,-1);
+    @include zoom(20%,20%);
+}
+
+/* Selector de clase para los distintos productos*/
+.nombreProducto {
+    font-family: $workSans;
+    font-weight: 700;
+}
+
+/* Selector de clase para las categorias de hamburguesas en 'Menu' */
+.categoriaProducto {
+    @include relleno(1,-1,1,-1);
+    font-size: 2rem;
+    font-family: $workSans;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Selectores para Líneas de Hamburguesas */
+.lineaClasica, .lineaHambrienta {
+    @include relleno(-1,-1,2,-1);
+    background-color: $negro;
+    color: $dorado;
+    h4, p {
+        color:$negro;
+    }
+}
+
+/* Selector para controlar hamburguesas Línea Premium */
+.lineaPremium {
+    @include relleno(-1,-1,2,-1);
+    background-color: $blanco;
+    color: $negro;
+}
+
+/* Selector de clase con estilos comunes a los article de cada hamburguesa */
+.articuloMenu {
+    @include relleno(-1,2,-1,2);
+    @include flex(column);
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+    div {
+        @include margenes(1,-1,1,-1);
+    }
+}
+
+/** Selectores de clase para cada 'Línea' de hamburguesas con estilos particulares a cada una **/
+/* Se complementan con .articuloMenu */
+.articuloLineaClasica {
+    @extend .articuloMenu;
+    border: solid $border-size $negro;
+    background-color: $dorado;
+}
+
+.articuloLineaPremium {
+    @extend .articuloMenu;
+    border: solid $border-size $dorado;
+    background-color: $negro;
+    color: $dorado;
+}
+
+.articuloLineaHambrienta {
+    @extend .articuloMenu;
+    border: solid $border-size $negro;
+    background-color: $dorado;
+}
+
+/* Selector de clase para los precios de las hamburguesas en los article */
+.precioHamburguesa {
+    @include relleno(0.5,1,0.5,1);
+    @include estiloTexto(negrita);
+    font-family: $raleway;
+    font-size: 1.5rem;
+    color: $negro;
+    border: solid $border-size $negro;
+    background-color: $rojoIntenso;
+    border-radius: 10%;
+    justify-content: center;
+    align-content: center;
+}
+
+/** Selectores para sections del documento **/
+.hamburguesas {
+    @include relleno(-1,-1,2,-1);
+    text-align: center;
+}
+
+.bebidas {
+    @include relleno(-1,-1,4,-1);
+    border-top: solid $border-size*2 $negro;
+    background-color: $dorado;
+}
+
+/* Selector de clase para contenedor de listado de bebidas */
+.listadoBebidas {
+    @include margenes(3,3,3,3);
+    border: solid $border-size*2 $negro;
+}
+
+.listadoBebidas__contenedor {
+    @include flex(row);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Selector de clase para la lista de bebidas sin alcohol y para cervezas*/
+.bebidasSinAlcohol, .cervezas {
+    @include relleno(-1,-1,-1,1);
+    list-style-type: square;
+    list-style-position: inside;
+    font-size: 1.3rem;
+}
+
+/* Selector de clase para los precios de las bebidas */
+.precioBebida {
+    @include estiloTexto(negrita);
+    @include estiloTexto(italica);
+}
+
+/************************************************/

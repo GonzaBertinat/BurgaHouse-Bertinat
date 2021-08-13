@@ -1,0 +1,957 @@
+@charset "UTF-8";
+/* Colores, fuentes y otros */
+/* Archivo con colores y fuentes */
+/** Colores **/
+/** Fuentes **/
+/** Medidas estándar para márgenes, rellenos y bordes **/
+/* Mixin que aplica un estilo determinado a un texto según el parámetro recibido */
+/* Aplica padding SÓLO en la dirección que se necesite usando múltiplos de la medida base. 
+Si el valor es negativo, no se aplica - No contempla valor AUTO */
+/* Aplica margenes SÓLO en la dirección que se necesite usando múltiplos de la medida base. 
+Si el valor es negativo, no se aplica - No contempla valor AUTO */
+/* Aplica flexbox en la dirección que sea especificada */
+/* Transformaciones */
+/* Selectores comunes a todos los documentos */
+/****** Selectores comunes a todos los documentos ******/
+/**************************** HEADER ******************************/
+/* Selectores para estructura del contenido */
+.encabezado {
+  font-size: 1rem; }
+
+.encabezado__navegacion {
+  background-color: #000000; }
+
+.encabezado__contenido {
+  width: 100%;
+  align-items: center; }
+
+.encabezado__seccion {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.encabezado__seccion--end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+/* Selector para logo del sitio */
+.encabezado__logo {
+  width: 130px; }
+
+/* Selectores para agrupaciones de enlaces (lista y submenú) */
+.encabezado__listaEnlaces {
+  padding-right: 0rem;
+  list-style: none; }
+
+.encabezado__itemLista:hover {
+  background-color: #000000;
+  font-weight: bold; }
+
+.encabezado__submenu {
+  background-color: #000000;
+  width: 250px; }
+
+/* Selectores para enlaces a diferentes secciones */
+.encabezado__enlace {
+  color: #ffffff !important; }
+
+.encabezado__enlace--centrado {
+  text-align: center; }
+
+.encabezado__enlace:hover {
+  background-color: #000000;
+  color: #ffa500 !important;
+  font-weight: bold; }
+
+/* Selector de clase para marcar en el menú qué sección es la actual */
+.encabezado__enlace--activo {
+  color: #ffa500 !important;
+  /* Sobreescribe bootstrap */
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 40%; }
+
+/** Selectores para menú lateral responsive */
+.encabezado__menuLateral {
+  background-color: #000000;
+  width: 300px; }
+
+.encabezado__listaEnlaces--margen .show {
+  margin-bottom: 9rem; }
+
+/*********************************************************************/
+/**************************** CONTENIDO (MAIN) ******************************/
+/* Selector para breadcrumb */
+.listaRutas {
+  background-color: #ffffff;
+  border-top: 2px #ffa500 solid;
+  border-bottom: 3px #ffa500 solid; }
+
+.listaRutas__contenido {
+  background-color: #000000; }
+  .listaRutas__contenido ol {
+    margin-bottom: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem; }
+    .listaRutas__contenido ol li {
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      color: #ffa500; }
+      .listaRutas__contenido ol li a {
+        color: #ffffff;
+        text-underline-offset: 20%;
+        transition: all 0.5s; }
+      .listaRutas__contenido ol li a:hover {
+        color: #ffa500; }
+
+/* Selector para fondos de seccion */
+.fondoSeccion__contenido {
+  display: flex;
+  flex-direction: column; }
+
+/* Selector para titulos h1 de las secciones */
+.tituloPrincipal, .fondoIndex__titulo, .fondoIndex__slogan, .fondoNosotros__titulo, .fondoMenu__titulo, .fondoSucursales__titulo, .fondoContacto__titulo {
+  font-family: "Staatliches", cursive;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 300; }
+
+/****************************/
+/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
+.fondoSeccion, .fondoIndex, .fondoNosotros, .fondoMenu, .fondoSucursales, .fondoContacto {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; }
+
+/* Asigno estilos a imágenes de fondo de cada sección */
+.fondoIndex {
+  background-image: url("../images/fondos/fondoIndex.webp"); }
+
+.fondoNosotros {
+  background-image: url("../images/fondos/fondoNosotros.webp"); }
+
+.fondoMenu {
+  background-image: url("../images/fondos/fondoMenu.webp"); }
+
+.fondoSucursales {
+  background-image: url("../images/fondos/fondoSucursales.webp"); }
+
+.fondoContacto {
+  background-image: url("../images/fondos/fondoContacto.webp"); }
+
+/* Selector de clase para contenido dentro del fondo de cada sección */
+.fondoSeccion .container, .fondoIndex .container, .fondoNosotros .container, .fondoMenu .container, .fondoSucursales .container, .fondoContacto .container {
+  height: 100%;
+  overflow: hidden;
+  justify-content: center; }
+
+/* Selector de clase para los titulos de las secciones de todas las páginas */
+.tituloSeccion, .mapaSitio__titulo {
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: 500; }
+
+/* Selector para darle relleno superior e inferior a las secciones del sitio */
+.seccion {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+/* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
+.iconoSubir__contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.iconoSubir__enlace {
+  margin-bottom: 1rem;
+  display: block;
+  transition: all 1s;
+  width: 50px; }
+
+.iconoSubir__enlace:hover {
+  transform: rotate(360deg); }
+
+/*********************************************************************/
+/**************************** FOOTER ******************************/
+/* Selectores para estructura del contenido */
+.footer {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #000000;
+  color: #ffffff; }
+
+.footer__contenido {
+  justify-content: center;
+  align-items: center; }
+
+.footer__seccion {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column; }
+
+.footer__seccion-centrado {
+  text-align: center; }
+
+/* Selector para textos */
+.footer__texto {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center; }
+
+/* Selectores para iconos de redes sociales */
+.footer__redes, .footer__autor {
+  justify-content: center; }
+
+.footer__contenedorRedSocial {
+  justify-content: center;
+  width: 80px; }
+
+.footer__redSocial, .facebookLogo, .twitterLogo, .instagramLogo, .linkedInLogo, .whatsAppLogo {
+  transition: all 0.5s; }
+
+.footer__redSocial:hover, .facebookLogo:hover, .twitterLogo:hover, .instagramLogo:hover, .linkedInLogo:hover, .whatsAppLogo:hover {
+  transform: scale(120%, 120%); }
+
+/* Mapa para cargar logos de redes sociales */
+/* Bucle que crea una clase para cada red social */
+.facebookLogo {
+  content: url("../images/redes_sociales/facebook.png"); }
+
+.twitterLogo {
+  content: url("../images/redes_sociales/twitter.png"); }
+
+.instagramLogo {
+  content: url("../images/redes_sociales/instagram.png"); }
+
+.linkedInLogo {
+  content: url("../images/redes_sociales/linkedin.png"); }
+
+.whatsAppLogo {
+  content: url("../images/redes_sociales/whatsApp.png"); }
+
+/* Selectores para logo en footer */
+.footer__contenedorLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto; }
+
+.footer__logo {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.footer__mapaSitio {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  align-self: center; }
+  .footer__mapaSitio a {
+    color: #ffffff;
+    font-weight: bold; }
+
+/*********************************************************************/
+/* Selectores utilizados en sección 'Inicio' */
+/****** Selectores para sección Inicio ******/
+/** Selectores para los botones que navegan a otros documentos del sitio **/
+.botonNavegacion, .visitarnos__boton, .destacadas__boton, .dondeEncontrarnos__boton {
+  padding-top: 0.25rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  border-style: solid;
+  transition: all 0.5s; }
+
+.botonNavegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .dondeEncontrarnos__boton:hover {
+  transform: scale(120%, 120%); }
+
+/*** Selectores para imagen de fondo, título y slogan del documento ***/
+.fondoIndex__titulo {
+  color: #000000;
+  -webkit-text-stroke: 3px #ffa500; }
+
+.fondoIndex__slogan {
+  -webkit-text-stroke: 1px #ffa500;
+  color: #000000;
+  font-size: 3.5rem;
+  letter-spacing: 2px; }
+
+/*** Selectores para seccion 'Por qué visitarnos?' ***/
+.visitarnos {
+  background-color: #ffffff; }
+
+.visitarnos__fila {
+  justify-content: center; }
+
+.visitarnos__titulo {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.visitarnos__imagen {
+  border: solid 2px #000000; }
+
+.visitarnos__texto {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+  text-align: center; }
+
+.visitarnos__boton {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border-color: #000000;
+  background-color: #000000; }
+
+.visitarnos__boton:hover {
+  color: #ffffff; }
+
+/*** Selectores para seccion 'Nuestras destacadas del mes' ***/
+.destacadas {
+  color: #ffa500;
+  background: #000000;
+  background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
+
+.destacadas__fila {
+  justify-content: center; }
+
+.destacadas__titulo {
+  font-style: italic; }
+
+/** Selectores para cada producto destacado **/
+.destacada__contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.destacada__article {
+  width: 80%;
+  text-align: center; }
+
+.destacada__imagen {
+  border: solid 2px #ffa500;
+  border-radius: 5%;
+  transition: all 0.2s; }
+
+.destacada__imagen:hover {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  transform: scale(120%, 120%); }
+
+.destacada__nombre {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700; }
+
+.destacadas__boton {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  border-color: #ffa500;
+  background-color: #ffa500; }
+
+.destacadas__boton:hover {
+  color: #000000; }
+
+/*** Selectores para sección '¿Dónde encontrarnos?' ***/
+.dondeEncontrarnos {
+  background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
+
+.dondeEncontrarnos__fila {
+  align-items: center;
+  justify-content: center; }
+
+.dondeEncontrarnos__titulo {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.dondeEncontrarnos__seccion {
+  padding-right: 2rem;
+  padding-left: 2rem; }
+
+.dondeEncontrarnos__subtitulo {
+  font-style: italic;
+  text-align: center; }
+
+.dondeEncontrarnos__texto {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center; }
+
+.dondeEncontrarnos__contenedorImagen {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: solid 2px #000000; }
+
+.dondeEncontrarnos__imagen {
+  height: 100%; }
+
+.dondeEncontrarnos__boton {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #ffa500;
+  border-color: #000000;
+  background-color: #000000; }
+
+.dondeEncontrarnos__boton:hover {
+  color: #ffa500; }
+
+/* Selectores utilizados en sección 'Nosotros' */
+/****** Selectores para sección Nosotros ******/
+/*** Selectores para imagen de fondo con título de la sección ***/
+.fondoNosotros__titulo {
+  color: #000000;
+  -webkit-text-stroke: 3px #ffffff; }
+
+/*** Selectores para sección 'Nuestra historia', y algunos para '¿Qué nos hace diferentes?' ***/
+.historia {
+  background-color: #ffffff; }
+
+.historia__contenido, .diferentes__contenido {
+  justify-content: center;
+  align-items: center; }
+
+.historia__columna, .diferentes__columna {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+
+.historia__titulo {
+  font-style: italic; }
+
+.historia__texto {
+  text-align: start; }
+
+/* Selector para controlar las imagenes de la sección */
+.historia__imagen, .diferentes_imagen {
+  width: 100%;
+  border: solid 2px #000000; }
+
+/*** Selectores para sección '¿Qué nos hace diferentes?' ***/
+.diferentes {
+  background-color: #000000;
+  color: #ffa500; }
+
+.diferentes__texto {
+  text-align: end;
+  color: #ffffff; }
+
+.diferentes__titulo {
+  font-weight: bold; }
+
+/*** Selectores para sección 'Opiniones de nuestros clientes' ***/
+/* Selector para section */
+.recomendaciones {
+  background-color: #ffa500; }
+
+/** Selectores para darle estilo a las opiniones de los clientes **/
+.recomendaciones__fila {
+  justify-content: center;
+  align-items: center; }
+
+.recomendaciones__titulo {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-style: oblique; }
+
+.opinion {
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  border: solid 2px #b87c0c;
+  background-color: #000000;
+  display: grid;
+  grid-template-areas: "foto nombre" "foto valoracion" "texto texto";
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  align-content: end;
+  text-align: center; }
+
+.opinion__imagen {
+  height: 125px;
+  width: 125px;
+  grid-area: foto; }
+  .opinion__imagen img {
+    border: solid 2px #ffa500;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%; }
+
+.opinion__nombre {
+  margin-top: 1.5rem;
+  font-style: italic;
+  grid-area: nombre; }
+  .opinion__nombre h3 {
+    color: #ffa500;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem; }
+
+.opinion__valoracion {
+  grid-area: valoracion; }
+  .opinion__valoracion span {
+    color: #ffa500;
+    font-family: "Work Sans", sans-serif; }
+  .opinion__valoracion img {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 15%; }
+
+.opinion__texto {
+  margin-top: 0.5rem;
+  grid-area: texto;
+  padding-left: 5%;
+  padding-right: 5%; }
+  .opinion__texto p {
+    color: #ffffff;
+    font-style: italic; }
+
+/************************************************/
+/* Selectores utilizados en sección 'Menú Completo' */
+/****** Selectores para sección Menú Completo ******/
+.fondoMenu__titulo {
+  color: #ffa500;
+  -webkit-text-stroke: 4px #000000; }
+
+/* Selector de clase para las imágenes de hamburguesas en el menú */
+.hamburguesa {
+  border: solid 2px #000000;
+  border-radius: 5%;
+  transition: all 0.2s; }
+
+.hamburguesa:hover {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  transform: scale(120%, 120%); }
+
+/* Selector de clase para los distintos productos*/
+.nombreProducto {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700; }
+
+/* Selector de clase para las categorias de hamburguesas en 'Menu' */
+.categoriaProducto {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  text-align: center; }
+
+/* Selectores para Líneas de Hamburguesas */
+.lineaClasica, .lineaHambrienta {
+  padding-bottom: 1rem;
+  background-color: #000000;
+  color: #ffa500; }
+  .lineaClasica h4, .lineaClasica p, .lineaHambrienta h4, .lineaHambrienta p {
+    color: #000000; }
+
+/* Selector para controlar hamburguesas Línea Premium */
+.lineaPremium {
+  padding-bottom: 1rem;
+  background-color: #ffffff;
+  color: #000000; }
+
+/* Selector de clase con estilos comunes a los article de cada hamburguesa */
+.articuloMenu, .articuloLineaClasica, .articuloLineaPremium, .articuloLineaHambrienta {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center; }
+  .articuloMenu div, .articuloLineaClasica div, .articuloLineaPremium div, .articuloLineaHambrienta div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; }
+
+/** Selectores de clase para cada 'Línea' de hamburguesas con estilos particulares a cada una **/
+/* Se complementan con .articuloMenu */
+.articuloLineaClasica {
+  border: solid 2px #000000;
+  background-color: #ffa500; }
+
+.articuloLineaPremium {
+  border: solid 2px #ffa500;
+  background-color: #000000;
+  color: #ffa500; }
+
+.articuloLineaHambrienta {
+  border: solid 2px #000000;
+  background-color: #ffa500; }
+
+/* Selector de clase para los precios de las hamburguesas en los article */
+.precioHamburguesa {
+  padding-top: 0.25rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  border: solid 2px #000000;
+  background-color: #ff0909;
+  border-radius: 10%;
+  justify-content: center;
+  align-content: center; }
+
+/** Selectores para sections del documento **/
+.hamburguesas {
+  padding-bottom: 1rem;
+  text-align: center; }
+
+.bebidas {
+  padding-bottom: 2rem;
+  border-top: solid 4px #000000;
+  background-color: #ffa500; }
+
+/* Selector de clase para contenedor de listado de bebidas */
+.listadoBebidas {
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  border: solid 4px #000000; }
+
+.listadoBebidas__contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+/* Selector de clase para la lista de bebidas sin alcohol y para cervezas*/
+.bebidasSinAlcohol, .cervezas {
+  padding-left: 0.5rem;
+  list-style-type: square;
+  list-style-position: inside;
+  font-size: 1.3rem; }
+
+/* Selector de clase para los precios de las bebidas */
+.precioBebida {
+  font-weight: bold;
+  font-style: italic; }
+
+/************************************************/
+/* Selectores utilizados en sección 'Sucursales' */
+/****** Selectores para sección Sucursales ******/
+/*** Selectores para imagen de fondo con título de la sección ***/
+.fondoSucursales__titulo {
+  color: #000000;
+  -webkit-text-stroke: 3px #ffffff; }
+
+/*** Selectores para sección con las sucursales en acordeón ***/
+/** Selectores para estructurar contenido del section **/
+.sucursales {
+  background-color: #ffffff; }
+
+.sucursales__titulo {
+  font-style: italic;
+  font-weight: 600; }
+
+/** Selectores para el acordeón con las sucursales **/
+/* Sobreescribe estilos de bootstrap */
+.accordion {
+  margin-top: 2rem; }
+  .accordion h4, .accordion h5 {
+    margin-bottom: 0rem; }
+
+.accordion-button:focus {
+  border-color: #000000;
+  border-width: 4px;
+  box-shadow: 0 0 0 0 #000000; }
+
+.accordion-collapse {
+  border: solid 2px #000000; }
+
+/** Selector para los nombres de las sucursales cuando están colapsadas en el acordeón **/
+.accordion-button__titulo {
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff !important;
+  border: #000000 solid 2px;
+  background-color: #000000 !important; }
+
+.accordion-button__titulo:hover {
+  color: #ffa500 !important; }
+
+/** Selectores para estructurar contenido dentro de cada item del acordeon **/
+.sucursal {
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem; }
+
+.sucursal__contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.sucursal__categoria {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.sucursal__categoria--centrada {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.sucursal__tipoCategoria {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+/** Selectores para datos de la sucursal **/
+.sucursal__nombre {
+  margin-left: 0.5rem;
+  font-weight: bold; }
+
+.sucursal__info {
+  color: #551313;
+  font-size: 1.5rem;
+  font-style: italic; }
+
+.sucursal__dato {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+/* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
+.sucursal__icono {
+  margin-right: 1rem;
+  width: 25px; }
+
+/* Selector para los iframe de Google Maps */
+.sucursal__mapa {
+  width: 100%; }
+
+/** Selectores para listas con las formas de entrega **/
+.formasEntrega {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style-type: circle;
+  color: #000000; }
+
+.formasEntrega__forma {
+  text-decoration: underline; }
+
+/*** Selectores para sección 'Métodos de Pago' ***/
+/** Selectores para estructurar contenido dentro del section **/
+.metodosPago {
+  background-color: #ffa500;
+  border-top: solid 2px #000000;
+  text-align: center; }
+
+.metodosPago__fila {
+  justify-content: center; }
+
+.metodosPago__contenido {
+  padding-right: 2rem;
+  padding-left: 2rem; }
+
+.metodosPago__titulo {
+  font-style: italic;
+  font-weight: 600; }
+
+.metodosPago__descripcion {
+  text-align: center;
+  font-size: 1.5rem; }
+
+/* Selector para caja contenedora de métodos de pago */
+.listadoMetodos {
+  border: solid 4px #000000;
+  width: 90%;
+  margin: 1rem auto; }
+
+/** Selectores para estructurar contenido de cada article **/
+.metodoPago {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center; }
+
+.metodoPago__tipo {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-style: italic;
+  color: #551313;
+  font-size: 1.5rem;
+  font-family: "Work Sans", sans-serif; }
+
+/* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
+.metodoPago__logo {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  width: 60px; }
+
+/************************************************/
+/* Selectores utilizados en sección 'Contacto' */
+/****** Selectores para sección Contacto ******/
+/** Selectores para imagen de fondo con título de la sección **/
+.fondoContacto__titulo {
+  color: #ffffff;
+  -webkit-text-stroke: 4px #000000; }
+
+/*** Selectores para section con formulario ***/
+/** Selectores para estructura contenido del formulario **/
+.formulario form {
+  padding-left: 1rem;
+  margin-top: 1rem;
+  border: 4px solid #ffa500;
+  width: 85%;
+  color: #ffa500;
+  background-color: #000000;
+  text-align: start; }
+  .formulario form span {
+    text-align: center;
+    margin-bottom: 0.5rem; }
+
+.formulario__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.formulario__titulo {
+  font-weight: bold; }
+
+.formulario__parrafo {
+  text-align: center;
+  font-size: 1rem; }
+  .formulario__parrafo em {
+    text-decoration: underline; }
+
+/** Selectores para los campos dentro del formulario **/
+.campo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .campo .form-check-input {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem; }
+
+.campo__label {
+  margin-left: 1rem; }
+
+.campo__input {
+  width: 90%;
+  margin: 0 auto; }
+
+/** Selectores botones de Enviar y Limpiar Campos **/
+.botones {
+  justify-content: center;
+  align-items: center; }
+
+.botones__contenedor {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.botones__boton {
+  padding-top: 0.25rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #ffa500;
+  border: solid 2px #000000;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  width: 100%; }
+
+.botones__boton:hover {
+  transform: scale(110%, 110%); }
+
+/*** Selectores para la sección de contacto por WhatsApp ***/
+.whatsApp__link {
+  width: 50px; }
+
+.whatsApp__titulo {
+  font-weight: bold; }
+
+.whatsApp__contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.whatsApp__texto {
+  color: #25d366; }
+
+/************************************************/
+/* Selectores utilizados en el Mapa del Sitio */
+/** Selectores para mapa del sitio **/
+/* Selectores para estructurar contenido */
+.mapaSitio {
+  padding-top: 6rem; }
+
+.mapaSitio__titulo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-style: italic; }
+
+.mapaSitio__descripcion {
+  text-align: center; }
+
+.mapaSitio__contenido {
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+/* Selectores para enlaces */
+.enlaces {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+
+.enlaces__titulo {
+  font-size: 2rem; }
+  .enlaces__titulo a {
+    color: #000000;
+    text-decoration: none; }
+  .enlaces__titulo a:hover {
+    color: #ffa500; }
+
+/* Selector para lista de enlaces */
+.enlaces__lista {
+  list-style: disc; }
+
+/* Fuentes
+ h1: Staatliches
+ slogan: Staatliches
+ Titulos de secciones: Raleway
+ Textos: Defecto de Bootstrap (por ahora)
+ Subtitulos: Work Sans
+*/
+/* Selectores para responsividad de elementos sin Bootstrap */
+@media only screen and (max-width: 575px) {
+  .encabezado__menuLateral {
+    background-color: #000000;
+    width: 260px; }
+  .mapaGoogle {
+    width: 100%;
+    height: 300px; }
+  .tituloPrincipal, .fondoIndex__titulo, .fondoIndex__slogan, .fondoNosotros__titulo, .fondoMenu__titulo, .fondoSucursales__titulo, .fondoContacto__titulo {
+    font-size: 5rem; }
+  .fondoIndex__slogan {
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 767px) {
+  .primerElemento {
+    order: -1; } }

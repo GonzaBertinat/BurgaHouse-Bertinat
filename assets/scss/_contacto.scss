@@ -1,0 +1,108 @@
+/****** Selectores para sección Contacto ******/
+
+/** Selectores para imagen de fondo con título de la sección **/
+.fondoContacto__titulo {
+    @extend .tituloPrincipal;
+    color: $blanco;
+    -webkit-text-stroke: 4px $negro;
+}
+
+/*** Selectores para section con formulario ***/
+
+/** Selectores para estructura contenido del formulario **/
+.formulario {
+    form {
+        @include relleno(-1,-1,-1,2);
+        @include margenes(2,-1,-1,-1);
+        border: $border-size*2 solid $dorado;
+        width: 85%;
+        color: $dorado;
+        background-color: $negro;
+        text-align: start;
+        span {
+            text-align: center;
+            @include margenes(-1,-1,1,-1);
+        }
+    }
+}
+
+.formulario__contenido {
+    @include flex(column);
+    align-items: center;
+}
+
+.formulario__titulo {
+    @include estiloTexto(negrita);
+}
+
+.formulario__parrafo {
+    text-align: center;
+    font-size: 1rem;
+    em {
+        @include estiloTexto(subrayado);
+    }
+}
+
+/** Selectores para los campos dentro del formulario **/
+.campo {
+    @include margenes(1,-1,1,-1);
+    .form-check-input {
+        @include margenes(1.5,-1,1,1);
+    }
+}
+
+.campo__label {
+    @include margenes(-1,-1,-1,2);
+}
+
+.campo__input {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/** Selectores botones de Enviar y Limpiar Campos **/
+.botones {
+    justify-content: center;
+    align-items: center;
+}
+
+.botones__contenedor {
+    @include margenes(1,-1,1,-1);
+    @include flex(row);
+    justify-content: center;
+}
+
+.botones__boton {
+    @include relleno(0.5,1,0.5,1);
+    @include estiloTexto(negrita);
+    font-size: 1rem;
+    background-color: $dorado;
+    border: solid $border-size $negro;
+    color: $negro;
+    font-family: $raleway;
+    width: 100%;
+}
+
+.botones__boton:hover {
+    @include zoom(10%,10%)
+}
+
+/*** Selectores para la sección de contacto por WhatsApp ***/
+.whatsApp__link {
+    width: 50px;
+}
+
+.whatsApp__titulo {
+    @include estiloTexto(negrita)
+}
+
+.whatsApp__contenedor {
+    @include flex(row);
+    justify-content: center;
+}
+
+.whatsApp__texto {
+    color: $verdeWhatsApp;
+}
+
+/************************************************/
