@@ -1,31 +1,23 @@
 /****** Selectores para sección Menú Completo ******/
 
+/** Selector para imagen de fondo con título de la sección **/
 .fondoMenu__titulo {
     @extend .tituloPrincipal;
     color: $dorado;
     -webkit-text-stroke: 4px $negro;
 }
 
-/* Selector de clase para las imágenes de hamburguesas en el menú */
-.hamburguesa {
-    border: solid $border-size $negro;
-    border-radius: 5%;
-    transition: all 0.2s;
+/** Selectores para sección de Hamburguesas **/
+.hamburguesas {
+    @include relleno(-1,-1,2,-1);
+    text-align: center;
 }
 
-.hamburguesa:hover {
-    @include margenes(2,-1,3,-1);
-    @include zoom(20%,20%);
+.hamburguesas__titulo {
+    @extend .tituloSeccion;
 }
 
-/* Selector de clase para los distintos productos*/
-.nombreProducto {
-    font-family: $workSans;
-    font-weight: 700;
-}
-
-/* Selector de clase para las categorias de hamburguesas en 'Menu' */
-.categoriaProducto {
+.hamburguesas__categoria {
     @include relleno(1,-1,1,-1);
     font-size: 2rem;
     font-family: $workSans;
@@ -33,21 +25,37 @@
     text-align: center;
 }
 
-/* Selectores para Líneas de Hamburguesas */
-.lineaClasica, .lineaHambrienta {
-    @include relleno(-1,-1,2,-1);
-    background-color: $negro;
-    color: $dorado;
-    h4, p {
-        color:$negro;
-    }
+.hamburguesas__listado {
+    justify-content: center;
 }
 
-/* Selector para controlar hamburguesas Línea Premium */
-.lineaPremium {
+.hamburguesas__nota {
+    display: block;
+    @include margenes(1,-1,-1,-1);
+    @include estiloTexto(negrita);
+}
+
+/* Selectores para Líneas de Hamburguesas */
+.lineaHamburguesas {
     @include relleno(-1,-1,2,-1);
+}
+
+.hamburguesas__clasicas {    
+    @extend .lineaHamburguesas;
+    background-color: $negro;
+    color: $dorado;
+}
+
+.hamburguesas__premium {
+    @extend .lineaHamburguesas;
     background-color: $blanco;
     color: $negro;
+}
+
+.hamburguesas__hambrientas {
+    @extend .lineaHamburguesas;
+    background-color: $negro;
+    color: $dorado;
 }
 
 /* Selector de clase con estilos comunes a los article de cada hamburguesa */
@@ -57,36 +65,36 @@
     align-items: center;
     font-size: 1rem;
     text-align: center;
-    div {
-        @include margenes(1,-1,1,-1);
-    }
+    overflow: hidden;
 }
 
-/** Selectores de clase para cada 'Línea' de hamburguesas con estilos particulares a cada una **/
-/* Se complementan con .articuloMenu */
-.articuloLineaClasica {
-    @extend .articuloMenu;
+/** Selectores comunes para cada producto **/
+.hamburguesa__nombre {
+    @include margenes(2,-1,2,-1);
+    font-family: $workSans;
+    font-weight: 700;
+}
+
+.hamburguesa__descripcion {
+    @include margenes(1,-1,1,-1);
+    @include estiloTexto(italica);
+}
+
+.hamburguesa__imagen {
     border: solid $border-size $negro;
-    background-color: $dorado;
+    border-radius: 5%;
+    transition: all 0.2s;
 }
 
-.articuloLineaPremium {
-    @extend .articuloMenu;
-    border: solid $border-size $dorado;
-    background-color: $negro;
-    color: $dorado;
+.hamburguesa__imagen:hover {
+    @include margenes(2,-1,3,-1);
+    @include zoom(20%,20%);
 }
 
-.articuloLineaHambrienta {
-    @extend .articuloMenu;
-    border: solid $border-size $negro;
-    background-color: $dorado;
-}
-
-/* Selector de clase para los precios de las hamburguesas en los article */
-.precioHamburguesa {
+.hamburguesa__precio {
     @include relleno(0.5,1,0.5,1);
     @include estiloTexto(negrita);
+    @include margenes(1,-1,1,-1);
     font-family: $raleway;
     font-size: 1.5rem;
     color: $negro;
@@ -97,40 +105,117 @@
     align-content: center;
 }
 
-/** Selectores para sections del documento **/
-.hamburguesas {
-    @include relleno(-1,-1,2,-1);
-    text-align: center;
+/** Selectores para cada producto de Línea Clásica **/
+.clasica {
+    @extend .articuloMenu;
+    border: solid $border-size $negro;
+    background-color: $dorado;
 }
 
+.clasica__nombre {
+    @extend .hamburguesa__nombre;
+    color: $negro;
+}
+
+.clasica__imagen {
+    @extend .hamburguesa__imagen;
+}
+
+.clasica__descripcion {
+    @extend .hamburguesa__descripcion;
+    color: $negro;
+}
+
+.clasica__precio {
+    @extend .hamburguesa__precio;
+}
+
+/** Selectores para cada producto de Línea Premium **/
+.premium {
+    @extend .articuloMenu;
+    border: solid $border-size $dorado;
+    background-color: $negro;
+    color: $dorado;
+}
+
+.premium__nombre {
+    @extend .hamburguesa__nombre;
+}
+
+.premium__imagen {
+    @extend .hamburguesa__imagen;
+}
+
+.premium__descripcion {
+    @extend .hamburguesa__descripcion;
+}
+
+.premium__precio {
+    @extend .hamburguesa__precio;
+}
+
+/** Selectores para cada producto de Línea Hambrienta **/
+.hambrienta {
+    @extend .articuloMenu;
+    border: solid $border-size $negro;
+    background-color: $dorado;
+}
+
+.hambrienta__nombre {
+    @extend .hamburguesa__nombre;
+    color: $negro;
+}
+
+.hambrienta__imagen {
+    @extend .hamburguesa__imagen;
+}
+
+.hambrienta__descripcion {
+    @extend .hamburguesa__descripcion;
+    color: $negro;
+}
+
+.hambrienta__precio {
+    @extend .hamburguesa__precio;
+}
+
+/** Selectores para la sección de Bebidas **/
 .bebidas {
     @include relleno(-1,-1,4,-1);
     border-top: solid $border-size*2 $negro;
     background-color: $dorado;
 }
 
-/* Selector de clase para contenedor de listado de bebidas */
-.listadoBebidas {
+.bebidas__titulo {
+    @extend .tituloSeccion;
+    @include margenes(1,-1,-1,-1);
+}
+
+.bebidas__listado {
     @include margenes(3,3,3,3);
     border: solid $border-size*2 $negro;
 }
 
-.listadoBebidas__contenedor {
-    @include flex(row);
-    justify-content: center;
-    align-items: center;
+.bebidas__categoria {
+    @include relleno(1,-1,1,-1);
+    text-align: center;
 }
 
-/* Selector de clase para la lista de bebidas sin alcohol y para cervezas*/
-.bebidasSinAlcohol, .cervezas {
-    @include relleno(-1,-1,-1,1);
-    list-style-type: square;
-    list-style-position: inside;
+.bebidas__items {
+    @include relleno(0,0,0,0);
     font-size: 1.3rem;
 }
 
-/* Selector de clase para los precios de las bebidas */
-.precioBebida {
+/** Selectores para los items de las listas de bebidas **/
+.bebida {
+    @include flex(row);
+    justify-content: space-between;
+    span {
+        @include margenes(-1,3,-1,3);
+    }
+}
+
+.bebida__precio {
     @include estiloTexto(negrita);
     @include estiloTexto(italica);
 }

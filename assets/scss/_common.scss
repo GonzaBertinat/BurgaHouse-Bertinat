@@ -112,7 +112,6 @@
     }
 }
 
-
 /* Selector para fondos de seccion */
 .fondoSeccion__contenido {
     @include flex(column);
@@ -179,6 +178,7 @@
 .iconoSubir__enlace:hover {
     @include rotar(360deg);
 }
+
 /*********************************************************************/
 
 /**************************** FOOTER ******************************/

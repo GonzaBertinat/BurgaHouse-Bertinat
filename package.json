@@ -1,7 +1,7 @@
 {
-  "name": "desafio16_sass",
+  "name": "burgahouse",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto Final - Curso Desarrollo Web Camada 19295 - CoderHouse - 2021",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

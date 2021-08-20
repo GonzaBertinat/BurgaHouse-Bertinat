@@ -148,7 +148,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.tituloSeccion, .mapaSitio__titulo {
+.tituloSeccion, .hamburguesas__titulo, .bebidas__titulo, .mapaSitio__titulo {
   font-size: 2.5rem;
   font-family: "Raleway", sans-serif;
   text-align: center;
@@ -521,28 +521,17 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /************************************************/
 /* Selectores utilizados en sección 'Menú Completo' */
 /****** Selectores para sección Menú Completo ******/
+/** Selector para imagen de fondo con título de la sección **/
 .fondoMenu__titulo {
   color: #ffa500;
   -webkit-text-stroke: 4px #000000; }
 
-/* Selector de clase para las imágenes de hamburguesas en el menú */
-.hamburguesa {
-  border: solid 2px #000000;
-  border-radius: 5%;
-  transition: all 0.2s; }
+/** Selectores para sección de Hamburguesas **/
+.hamburguesas {
+  padding-bottom: 1rem;
+  text-align: center; }
 
-.hamburguesa:hover {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  transform: scale(120%, 120%); }
-
-/* Selector de clase para los distintos productos*/
-.nombreProducto {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 700; }
-
-/* Selector de clase para las categorias de hamburguesas en 'Menu' */
-.categoriaProducto {
+.hamburguesas__categoria {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 2rem;
@@ -550,55 +539,71 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   font-weight: 500;
   text-align: center; }
 
+.hamburguesas__listado {
+  justify-content: center; }
+
+.hamburguesas__nota {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold; }
+
 /* Selectores para Líneas de Hamburguesas */
-.lineaClasica, .lineaHambrienta {
-  padding-bottom: 1rem;
+.lineaHamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas {
+  padding-bottom: 1rem; }
+
+.hamburguesas__clasicas {
   background-color: #000000;
   color: #ffa500; }
-  .lineaClasica h4, .lineaClasica p, .lineaHambrienta h4, .lineaHambrienta p {
-    color: #000000; }
 
-/* Selector para controlar hamburguesas Línea Premium */
-.lineaPremium {
-  padding-bottom: 1rem;
+.hamburguesas__premium {
   background-color: #ffffff;
   color: #000000; }
 
+.hamburguesas__hambrientas {
+  background-color: #000000;
+  color: #ffa500; }
+
 /* Selector de clase con estilos comunes a los article de cada hamburguesa */
-.articuloMenu, .articuloLineaClasica, .articuloLineaPremium, .articuloLineaHambrienta {
+.articuloMenu, .clasica, .premium, .hambrienta {
   padding-right: 1rem;
   padding-left: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1rem;
-  text-align: center; }
-  .articuloMenu div, .articuloLineaClasica div, .articuloLineaPremium div, .articuloLineaHambrienta div {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem; }
+  text-align: center;
+  overflow: hidden; }
 
-/** Selectores de clase para cada 'Línea' de hamburguesas con estilos particulares a cada una **/
-/* Se complementan con .articuloMenu */
-.articuloLineaClasica {
+/** Selectores comunes para cada producto **/
+.hamburguesa__nombre, .clasica__nombre, .premium__nombre, .hambrienta__nombre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700; }
+
+.hamburguesa__descripcion, .clasica__descripcion, .premium__descripcion, .hambrienta__descripcion {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-style: italic; }
+
+.hamburguesa__imagen, .clasica__imagen, .premium__imagen, .hambrienta__imagen {
   border: solid 2px #000000;
-  background-color: #ffa500; }
+  border-radius: 5%;
+  transition: all 0.2s; }
 
-.articuloLineaPremium {
-  border: solid 2px #ffa500;
-  background-color: #000000;
-  color: #ffa500; }
+.hamburguesa__imagen:hover, .clasica__imagen:hover, .premium__imagen:hover, .hambrienta__imagen:hover {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  transform: scale(120%, 120%); }
 
-.articuloLineaHambrienta {
-  border: solid 2px #000000;
-  background-color: #ffa500; }
-
-/* Selector de clase para los precios de las hamburguesas en los article */
-.precioHamburguesa {
+.hamburguesa__precio, .clasica__precio, .premium__precio, .hambrienta__precio {
   padding-top: 0.25rem;
   padding-right: 0.5rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   color: #000000;
@@ -608,39 +613,72 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center;
   align-content: center; }
 
-/** Selectores para sections del documento **/
-.hamburguesas {
-  padding-bottom: 1rem;
-  text-align: center; }
+/** Selectores para cada producto de Línea Clásica **/
+.clasica {
+  border: solid 2px #000000;
+  background-color: #ffa500; }
 
+.clasica__nombre {
+  color: #000000; }
+
+.clasica__descripcion {
+  color: #000000; }
+
+/** Selectores para cada producto de Línea Premium **/
+.premium {
+  border: solid 2px #ffa500;
+  background-color: #000000;
+  color: #ffa500; }
+
+/** Selectores para cada producto de Línea Hambrienta **/
+.hambrienta {
+  border: solid 2px #000000;
+  background-color: #ffa500; }
+
+.hambrienta__nombre {
+  color: #000000; }
+
+.hambrienta__descripcion {
+  color: #000000; }
+
+/** Selectores para la sección de Bebidas **/
 .bebidas {
   padding-bottom: 2rem;
   border-top: solid 4px #000000;
   background-color: #ffa500; }
 
-/* Selector de clase para contenedor de listado de bebidas */
-.listadoBebidas {
+.bebidas__titulo {
+  margin-top: 0.5rem; }
+
+.bebidas__listado {
   margin-top: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
   margin-left: 1.5rem;
   border: solid 4px #000000; }
 
-.listadoBebidas__contenedor {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
+.bebidas__categoria {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center; }
 
-/* Selector de clase para la lista de bebidas sin alcohol y para cervezas*/
-.bebidasSinAlcohol, .cervezas {
-  padding-left: 0.5rem;
-  list-style-type: square;
-  list-style-position: inside;
+.bebidas__items {
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0rem;
   font-size: 1.3rem; }
 
-/* Selector de clase para los precios de las bebidas */
-.precioBebida {
+/** Selectores para los items de las listas de bebidas **/
+.bebida {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .bebida span {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem; }
+
+.bebida__precio {
   font-weight: bold;
   font-style: italic; }
 
