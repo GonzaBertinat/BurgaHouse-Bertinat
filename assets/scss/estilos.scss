@@ -20,7 +20,7 @@
 @import "contacto";
 
 /* Selectores utilizados en el Mapa del Sitio */
-@import "mapaSitio";
+@import "mapa-sitio";
 
 /* Fuentes
  h1: Staatliches
@@ -32,27 +32,27 @@
 
 /* Selectores para responsividad de elementos sin Bootstrap */
 @media only screen and (max-width: 575px){
-    .encabezado__menuLateral {
+    .encabezado__menu-lateral {
         background-color: $negro;
         width: 260px;
     }
 
-    .mapaGoogle {
+    .sucursal__mapa {
         width: 100%;
         height: 300px;
     }
 
-    .tituloPrincipal {
+    .titulo-principal {
         font-size: 5rem;
     }
 
-    .fondoIndex__slogan {
+    .fondo-index__slogan {
         font-size: 3rem;
     }
 }
 
 @media only screen and (max-width: 767px){
-    .primerElemento {
+    .primer-elemento {
         order: -1;
     }
 }

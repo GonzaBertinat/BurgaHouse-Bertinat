@@ -31,14 +31,14 @@
 }
 
 /* Selectores para agrupaciones de enlaces (lista y submenú) */
-.encabezado__listaEnlaces {
+.encabezado__lista-enlaces {
     @include relleno(-1,0,-1,-1);
     list-style: none;
 }
 
-.encabezado__itemLista:hover {
+.encabezado__item-lista:hover {
     background-color: $negro;
-    @include estiloTexto(negrita)
+    @include estilo-texto(negrita)
 }
 
 .encabezado__submenu {
@@ -58,24 +58,24 @@
 .encabezado__enlace:hover {
     background-color: $negro;
     color: $dorado !important;
-    @include estiloTexto(negrita)
+    @include estilo-texto(negrita)
 }
 
 /* Selector de clase para marcar en el menú qué sección es la actual */
 .encabezado__enlace--activo {
     color: $dorado !important; /* Sobreescribe bootstrap */
-    @include estiloTexto(negrita);
-    @include estiloTexto(subrayado);
+    @include estilo-texto(negrita);
+    @include estilo-texto(subrayado);
     text-underline-offset: 40%;
 }
 
 /** Selectores para menú lateral responsive */
-.encabezado__menuLateral {
+.encabezado__menu-lateral {
     background-color: $negro;
     width: 300px;
 }
 
-.encabezado__listaEnlaces--margen .show {
+.encabezado__lista-enlaces--margen .show {
     @include margenes(-1,-1,18,-1);
 }
 
@@ -84,13 +84,13 @@
 /**************************** CONTENIDO (MAIN) ******************************/
 
 /* Selector para breadcrumb */
-.listaRutas {
+.lista-rutas {
     background-color: $blanco;  
     border-top: $border-size $dorado solid; 
     border-bottom: $border-size*1.5 $dorado solid;  
 }
 
-.listaRutas__contenido {
+.lista-rutas__contenido {
     background-color: $negro;
     
     ol {
@@ -98,7 +98,7 @@
         @include relleno(1,-1,1,2);
         li {
             font-family: $raleway;
-            @include estiloTexto(negrita);
+            @include estilo-texto(negrita);
             color: $dorado;
             a {
                 color: $blanco;
@@ -113,12 +113,12 @@
 }
 
 /* Selector para fondos de seccion */
-.fondoSeccion__contenido {
+.fondo-seccion__contenido {
     @include flex(column);
 }
 
 /* Selector para titulos h1 de las secciones */
-.tituloPrincipal {
+.titulo-principal {
     font-family: $staatliches;
     text-align: center;
     font-size: 7rem;
@@ -127,7 +127,7 @@
 /****************************/
 
 /* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
-.fondoSeccion {
+.fondo-seccion {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -135,22 +135,22 @@
 }
 
 /* Asigno estilos a imágenes de fondo de cada sección */
-@each $seccion in Index, Nosotros, Menu, Sucursales, Contacto {
-    .fondo#{$seccion} {
-        background-image: url("../images/fondos/fondo#{$seccion}.webp");
-        @extend .fondoSeccion; 
+@each $seccion in index, nosotros, menu, sucursales, contacto {
+    .fondo-#{$seccion} {
+        background-image: url("../images/fondos/fondo-#{$seccion}.webp");
+        @extend .fondo-seccion; 
     }
 }
 
 /* Selector de clase para contenido dentro del fondo de cada sección */
-.fondoSeccion .container {
+.fondo-seccion .container {
     height: 100%;
     overflow: hidden;
     justify-content: center;
 }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.tituloSeccion {
+.titulo-seccion {
     font-size: 2.5rem;
     font-family: $raleway;
     text-align: center;
@@ -163,19 +163,19 @@
 }
 
 /* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
-.iconoSubir__contenedor {
+.icono-subir__contenedor {
     @include flex(row);
     justify-content: flex-end;
 }
 
-.iconoSubir__enlace {
+.icono-subir__enlace {
     @include margenes(-1,-1,2,-1);
     display: block;
     transition: all 1s;
     width: 50px;
 }
 
-.iconoSubir__enlace:hover {
+.icono-subir__enlace:hover {
     @include rotar(360deg);
 }
 
@@ -184,49 +184,49 @@
 /**************************** FOOTER ******************************/
 
 /* Selectores para estructura del contenido */
-.footer {
+.pie-pagina {
     @include relleno(1,-1,1,-1);
     background-color: $negro;
     color: $blanco;
 }
 
-.footer__contenido {
+.pie-pagina__contenido {
     justify-content: center;
     align-items: center;
 }
 
-.footer__seccion {
+.pie-pagina__seccion {
     @include relleno(2,-1,2,-1);
     @include flex(column);
 }
 
-.footer__seccion-centrado {
+.pie-pagina__seccion-centrado {
     text-align: center;
 }
 
 /* Selector para textos */
-.footer__texto {
+.pie-pagina__texto {
     @include margenes(1,-1,1,-1);
-    @include estiloTexto(negrita);
+    @include estilo-texto(negrita);
     font-size: 1rem;
     text-align: center;
 }
 
 /* Selectores para iconos de redes sociales */
-.footer__redes, .footer__autor {
+.pie-pagina__redes, .pie-pagina__autor {
     justify-content: center;
 }
 
-.footer__contenedorRedSocial {
+.pie-pagina__contenedor-red-social {
     justify-content: center;
     width: 80px;
 }
 
-.footer__redSocial {
+.pie-pagina__red-social {
     transition: all 0.5s;
 }
 
-.footer__redSocial:hover {
+.pie-pagina__red-social:hover {
     @include zoom(20%,20%);
 }
 
@@ -235,36 +235,36 @@ $redesSociales: (
     facebook: "../images/redes_sociales/facebook.png",
     twitter: "../images/redes_sociales/twitter.png",
     instagram: "../images/redes_sociales/instagram.png",
-    linkedIn: "../images/redes_sociales/linkedin.png",
-    whatsApp: "../images/redes_sociales/whatsApp.png"
+    linkedin: "../images/redes_sociales/linkedin.png",
+    whats-app: "../images/redes_sociales/whatsApp.png"
 );
 
 /* Bucle que crea una clase para cada red social */
 @each $red, $ruta in $redesSociales {
-    .#{$red}Logo {
-        @extend .footer__redSocial;
+    .#{$red}-logo {
+        @extend .pie-pagina__red-social;
         content:url($ruta);
     }
 } 
 
-/* Selectores para logo en footer */
-.footer__contenedorLogo {
+/* Selectores para logo */
+.pie-pagina__contenedor-logo {
     @include flex(row);
     justify-content: center;
     width: 60%;
     margin: 0 auto;
 }
 
-.footer__logo {
+.pie-pagina__logo {
     @include relleno(2,-1,2,-1);
 }
 
-.footer__mapaSitio {
+.pie-pagina__mapa-sitio {
     @include margenes(1,1,1,1);
     align-self: center;
     a {
         color: $blanco;
-        @include estiloTexto(negrita);
+        @include estilo-texto(negrita);
     }
 }
 

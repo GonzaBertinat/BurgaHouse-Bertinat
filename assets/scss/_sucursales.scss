@@ -1,8 +1,8 @@
 /****** Selectores para sección Sucursales ******/
 
 /*** Selectores para imagen de fondo con título de la sección ***/
-.fondoSucursales__titulo {
-    @extend .tituloPrincipal;
+.fondo-sucursales__titulo {
+    @extend .titulo-principal;
     color: $negro;
     -webkit-text-stroke: 3px $blanco;
 }
@@ -11,11 +11,12 @@
 
 /** Selectores para estructurar contenido del section **/
 .sucursales {
+    @extend .seccion;
     background-color: $blanco;
 }
 
 .sucursales__titulo {
-    @include estiloTexto(italica);
+    @include estilo-texto(italica);
     font-weight: 600;
 }
 
@@ -41,7 +42,7 @@
 /** Selector para los nombres de las sucursales cuando están colapsadas en el acordeón **/
 .accordion-button__titulo {
     font-weight: 600;
-    font-family: $workSans;
+    font-family: $work-sans;
     font-size: 1.5rem;
     color: $blanco !important;
     border: $negro solid $border-size;
@@ -71,7 +72,7 @@
     justify-content: center;
 }
 
-.sucursal__tipoCategoria {
+.sucursal__tipo-categoria {
     @include flex(row);
     align-items: center;
 }
@@ -79,13 +80,13 @@
 /** Selectores para datos de la sucursal **/
 .sucursal__nombre {
     @include margenes(-1,-1,-1,1);
-    @include estiloTexto(negrita);
+    @include estilo-texto(negrita);
 }
 
 .sucursal__info {
-    color: $rojoOscuro;
+    color: $rojo-oscuro;
     font-size: 1.5rem;
-    @include estiloTexto(italica);
+    @include estilo-texto(italica);
 }
 
 .sucursal__dato {
@@ -104,68 +105,69 @@
 }
 
 /** Selectores para listas con las formas de entrega **/
-.formasEntrega {
+.formas-entrega {
     @include margenes(1,-1,1,-1);
     list-style-type: circle;
     color: $negro;
 }
 
-.formasEntrega__forma {
-    @include estiloTexto(subrayado);
+.formas-entrega__forma {
+    @include estilo-texto(subrayado);
 }
 
 /*** Selectores para sección 'Métodos de Pago' ***/
 
 /** Selectores para estructurar contenido dentro del section **/
-.metodosPago {
+.metodos-pago {
+    @extend .seccion;
     background-color: $dorado;
     border-top: solid $border-size $negro;
     text-align: center;
 }
 
-.metodosPago__fila {
+.metodos-pago__fila {
     justify-content: center;
 }
 
-.metodosPago__contenido {
+.metodos-pago__contenido {
     @include relleno(-1,4,-1,4);
 }
 
-.metodosPago__titulo {
-    @include estiloTexto(italica);
+.metodos-pago__titulo {
+    @include estilo-texto(italica);
     font-weight: 600;
 }
 
-.metodosPago__descripcion {
+.metodos-pago__descripcion {
     text-align: center;
     font-size: 1.5rem;
 }
 
 /* Selector para caja contenedora de métodos de pago */
-.listadoMetodos {
+.listado-metodos {
     border: solid $border-size*2 $negro;
     width: 90%;
     margin: $margin-size*2 auto;
 }
 
 /** Selectores para estructurar contenido de cada article **/
-.metodoPago {
+.metodo-pago {
     @include flex(column);
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.metodoPago__tipo {
+.metodo-pago__tipo {
     @include relleno(1,-1,1,-1);
-    @include estiloTexto(italica);
-    color: $rojoOscuro;
+    @include estilo-texto(italica);
+    color: $rojo-oscuro;
     font-size: 1.5rem;
-    font-family: $workSans;
+    font-family: $work-sans;
 }
 
 /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
-.metodoPago__logo {
+.metodo-pago__logo {
     @include margenes(2,2,2,2);
     width: 60px;
 }

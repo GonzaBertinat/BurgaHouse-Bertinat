@@ -1,22 +1,22 @@
 /** Selectores para mapa del sitio **/
 
 /* Selectores para estructurar contenido */
-.mapaSitio {
+.mapa-sitio {
     @include relleno(12,-1,-1,-1);
 }
 
-.mapaSitio__titulo {
-    @extend .tituloSeccion;
+.mapa-sitio__titulo {
+    @extend .titulo-seccion;
     @include margenes(2,-1,2,-1);
-    @include estiloTexto(negrita);
-    @include estiloTexto(italica);
+    @include estilo-texto(negrita);
+    @include estilo-texto(italica);
 }
 
-.mapaSitio__descripcion {
+.mapa-sitio__descripcion {
     text-align: center;
 }
 
-.mapaSitio__contenido {
+.mapa-sitio__contenido {
     justify-content: center;
     @include margenes(2,-1,2,-1);
 }

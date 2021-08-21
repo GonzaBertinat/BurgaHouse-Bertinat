@@ -1,8 +1,8 @@
 /****** Selectores para sección Menú Completo ******/
 
 /** Selector para imagen de fondo con título de la sección **/
-.fondoMenu__titulo {
-    @extend .tituloPrincipal;
+.fondo-menu__titulo {
+    @extend .titulo-principal;
     color: $dorado;
     -webkit-text-stroke: 4px $negro;
 }
@@ -14,13 +14,13 @@
 }
 
 .hamburguesas__titulo {
-    @extend .tituloSeccion;
+    @extend .titulo-seccion;
 }
 
 .hamburguesas__categoria {
     @include relleno(1,-1,1,-1);
     font-size: 2rem;
-    font-family: $workSans;
+    font-family: $work-sans;
     font-weight: 500;
     text-align: center;
 }
@@ -32,34 +32,34 @@
 .hamburguesas__nota {
     display: block;
     @include margenes(1,-1,-1,-1);
-    @include estiloTexto(negrita);
+    @include estilo-texto(negrita);
 }
 
 /* Selectores para Líneas de Hamburguesas */
-.lineaHamburguesas {
+.linea-hamburguesas {
     @include relleno(-1,-1,2,-1);
 }
 
 .hamburguesas__clasicas {    
-    @extend .lineaHamburguesas;
+    @extend .linea-hamburguesas;
     background-color: $negro;
     color: $dorado;
 }
 
 .hamburguesas__premium {
-    @extend .lineaHamburguesas;
+    @extend .linea-hamburguesas;
     background-color: $blanco;
     color: $negro;
 }
 
 .hamburguesas__hambrientas {
-    @extend .lineaHamburguesas;
+    @extend .linea-hamburguesas;
     background-color: $negro;
     color: $dorado;
 }
 
 /* Selector de clase con estilos comunes a los article de cada hamburguesa */
-.articuloMenu {
+.articulo-menu {
     @include relleno(-1,2,-1,2);
     @include flex(column);
     align-items: center;
@@ -71,13 +71,13 @@
 /** Selectores comunes para cada producto **/
 .hamburguesa__nombre {
     @include margenes(2,-1,2,-1);
-    font-family: $workSans;
+    font-family: $work-sans;
     font-weight: 700;
 }
 
 .hamburguesa__descripcion {
     @include margenes(1,-1,1,-1);
-    @include estiloTexto(italica);
+    @include estilo-texto(italica);
 }
 
 .hamburguesa__imagen {
@@ -93,13 +93,13 @@
 
 .hamburguesa__precio {
     @include relleno(0.5,1,0.5,1);
-    @include estiloTexto(negrita);
+    @include estilo-texto(negrita);
     @include margenes(1,-1,1,-1);
     font-family: $raleway;
     font-size: 1.5rem;
     color: $negro;
     border: solid $border-size $negro;
-    background-color: $rojoIntenso;
+    background-color: $rojo-intenso;
     border-radius: 10%;
     justify-content: center;
     align-content: center;
@@ -107,7 +107,7 @@
 
 /** Selectores para cada producto de Línea Clásica **/
 .clasica {
-    @extend .articuloMenu;
+    @extend .articulo-menu;
     border: solid $border-size $negro;
     background-color: $dorado;
 }
@@ -132,7 +132,7 @@
 
 /** Selectores para cada producto de Línea Premium **/
 .premium {
-    @extend .articuloMenu;
+    @extend .articulo-menu;
     border: solid $border-size $dorado;
     background-color: $negro;
     color: $dorado;
@@ -156,7 +156,7 @@
 
 /** Selectores para cada producto de Línea Hambrienta **/
 .hambrienta {
-    @extend .articuloMenu;
+    @extend .articulo-menu;
     border: solid $border-size $negro;
     background-color: $dorado;
 }
@@ -187,7 +187,7 @@
 }
 
 .bebidas__titulo {
-    @extend .tituloSeccion;
+    @extend .titulo-seccion;
     @include margenes(1,-1,-1,-1);
 }
 
@@ -216,8 +216,8 @@
 }
 
 .bebida__precio {
-    @include estiloTexto(negrita);
-    @include estiloTexto(italica);
+    @include estilo-texto(negrita);
+    @include estilo-texto(italica);
 }
 
 /************************************************/

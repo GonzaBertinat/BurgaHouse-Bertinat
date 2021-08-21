@@ -4,15 +4,15 @@
 $negro: #000000;
 $blanco: #ffffff;
 $dorado: #ffa500;
-$rojoOscuro: #551313;
-$rojoIntenso: rgb(255, 9, 9);
-$verdeWhatsApp: #25d366;
-$marronClaro: #b87c0c;
+$rojo-oscuro: #551313;
+$rojo-intenso: rgb(255, 9, 9);
+$verde-whats-app: #25d366;
+$marron-claro: #b87c0c;
 
 /** Fuentes **/
 $staatliches: 'Staatliches', cursive;
 $raleway: 'Raleway', sans-serif;
-$workSans: 'Work Sans', sans-serif;
+$work-sans: 'Work Sans', sans-serif;
 
 /** Medidas estándar para márgenes, rellenos y bordes **/
 $margin-size: 0.5rem;
@@ -20,7 +20,7 @@ $padding-size: 0.5rem;
 $border-size: 2px;
 
 /* Mixin que aplica un estilo determinado a un texto según el parámetro recibido */
-@mixin estiloTexto($tipo){
+@mixin estilo-texto($tipo){
     @if $tipo == negrita {
         font-weight: bold;
     }

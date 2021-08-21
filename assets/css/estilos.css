@@ -39,11 +39,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   width: 130px; }
 
 /* Selectores para agrupaciones de enlaces (lista y submenú) */
-.encabezado__listaEnlaces {
+.encabezado__lista-enlaces {
   padding-right: 0rem;
   list-style: none; }
 
-.encabezado__itemLista:hover {
+.encabezado__item-lista:hover {
   background-color: #000000;
   font-weight: bold; }
 
@@ -72,46 +72,46 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   text-underline-offset: 40%; }
 
 /** Selectores para menú lateral responsive */
-.encabezado__menuLateral {
+.encabezado__menu-lateral {
   background-color: #000000;
   width: 300px; }
 
-.encabezado__listaEnlaces--margen .show {
+.encabezado__lista-enlaces--margen .show {
   margin-bottom: 9rem; }
 
 /*********************************************************************/
 /**************************** CONTENIDO (MAIN) ******************************/
 /* Selector para breadcrumb */
-.listaRutas {
+.lista-rutas {
   background-color: #ffffff;
   border-top: 2px #ffa500 solid;
   border-bottom: 3px #ffa500 solid; }
 
-.listaRutas__contenido {
+.lista-rutas__contenido {
   background-color: #000000; }
-  .listaRutas__contenido ol {
+  .lista-rutas__contenido ol {
     margin-bottom: 0rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem; }
-    .listaRutas__contenido ol li {
+    .lista-rutas__contenido ol li {
       font-family: "Raleway", sans-serif;
       font-weight: bold;
       color: #ffa500; }
-      .listaRutas__contenido ol li a {
+      .lista-rutas__contenido ol li a {
         color: #ffffff;
         text-underline-offset: 20%;
         transition: all 0.5s; }
-      .listaRutas__contenido ol li a:hover {
+      .lista-rutas__contenido ol li a:hover {
         color: #ffa500; }
 
 /* Selector para fondos de seccion */
-.fondoSeccion__contenido {
+.fondo-seccion__contenido {
   display: flex;
   flex-direction: column; }
 
 /* Selector para titulos h1 de las secciones */
-.tituloPrincipal, .fondoIndex__titulo, .fondoIndex__slogan, .fondoNosotros__titulo, .fondoMenu__titulo, .fondoSucursales__titulo, .fondoContacto__titulo {
+.titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
   font-family: "Staatliches", cursive;
   text-align: center;
   font-size: 7rem;
@@ -119,85 +119,85 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /****************************/
 /* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
-.fondoSeccion, .fondoIndex, .fondoNosotros, .fondoMenu, .fondoSucursales, .fondoContacto {
+.fondo-seccion, .fondo-index, .fondo-nosotros, .fondo-menu, .fondo-sucursales, .fondo-contacto {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh; }
 
 /* Asigno estilos a imágenes de fondo de cada sección */
-.fondoIndex {
-  background-image: url("../images/fondos/fondoIndex.webp"); }
+.fondo-index {
+  background-image: url("../images/fondos/fondo-index.webp"); }
 
-.fondoNosotros {
-  background-image: url("../images/fondos/fondoNosotros.webp"); }
+.fondo-nosotros {
+  background-image: url("../images/fondos/fondo-nosotros.webp"); }
 
-.fondoMenu {
-  background-image: url("../images/fondos/fondoMenu.webp"); }
+.fondo-menu {
+  background-image: url("../images/fondos/fondo-menu.webp"); }
 
-.fondoSucursales {
-  background-image: url("../images/fondos/fondoSucursales.webp"); }
+.fondo-sucursales {
+  background-image: url("../images/fondos/fondo-sucursales.webp"); }
 
-.fondoContacto {
-  background-image: url("../images/fondos/fondoContacto.webp"); }
+.fondo-contacto {
+  background-image: url("../images/fondos/fondo-contacto.webp"); }
 
 /* Selector de clase para contenido dentro del fondo de cada sección */
-.fondoSeccion .container, .fondoIndex .container, .fondoNosotros .container, .fondoMenu .container, .fondoSucursales .container, .fondoContacto .container {
+.fondo-seccion .container, .fondo-index .container, .fondo-nosotros .container, .fondo-menu .container, .fondo-sucursales .container, .fondo-contacto .container {
   height: 100%;
   overflow: hidden;
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.tituloSeccion, .hamburguesas__titulo, .bebidas__titulo, .mapaSitio__titulo {
+.titulo-seccion, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
   font-size: 2.5rem;
   font-family: "Raleway", sans-serif;
   text-align: center;
   font-weight: 500; }
 
 /* Selector para darle relleno superior e inferior a las secciones del sitio */
-.seccion {
+.seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .sucursales, .metodos-pago, .formulario, .whats-app {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
 /* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
-.iconoSubir__contenedor {
+.icono-subir__contenedor {
   display: flex;
   flex-direction: row;
   justify-content: flex-end; }
 
-.iconoSubir__enlace {
+.icono-subir__enlace {
   margin-bottom: 1rem;
   display: block;
   transition: all 1s;
   width: 50px; }
 
-.iconoSubir__enlace:hover {
+.icono-subir__enlace:hover {
   transform: rotate(360deg); }
 
 /*********************************************************************/
 /**************************** FOOTER ******************************/
 /* Selectores para estructura del contenido */
-.footer {
+.pie-pagina {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #000000;
   color: #ffffff; }
 
-.footer__contenido {
+.pie-pagina__contenido {
   justify-content: center;
   align-items: center; }
 
-.footer__seccion {
+.pie-pagina__seccion {
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column; }
 
-.footer__seccion-centrado {
+.pie-pagina__seccion-centrado {
   text-align: center; }
 
 /* Selector para textos */
-.footer__texto {
+.pie-pagina__texto {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
@@ -205,55 +205,55 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   text-align: center; }
 
 /* Selectores para iconos de redes sociales */
-.footer__redes, .footer__autor {
+.pie-pagina__redes, .pie-pagina__autor {
   justify-content: center; }
 
-.footer__contenedorRedSocial {
+.pie-pagina__contenedor-red-social {
   justify-content: center;
   width: 80px; }
 
-.footer__redSocial, .facebookLogo, .twitterLogo, .instagramLogo, .linkedInLogo, .whatsAppLogo {
+.pie-pagina__red-social, .facebook-logo, .twitter-logo, .instagram-logo, .linkedin-logo, .whats-app-logo {
   transition: all 0.5s; }
 
-.footer__redSocial:hover, .facebookLogo:hover, .twitterLogo:hover, .instagramLogo:hover, .linkedInLogo:hover, .whatsAppLogo:hover {
+.pie-pagina__red-social:hover, .facebook-logo:hover, .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover, .whats-app-logo:hover {
   transform: scale(120%, 120%); }
 
 /* Mapa para cargar logos de redes sociales */
 /* Bucle que crea una clase para cada red social */
-.facebookLogo {
+.facebook-logo {
   content: url("../images/redes_sociales/facebook.png"); }
 
-.twitterLogo {
+.twitter-logo {
   content: url("../images/redes_sociales/twitter.png"); }
 
-.instagramLogo {
+.instagram-logo {
   content: url("../images/redes_sociales/instagram.png"); }
 
-.linkedInLogo {
+.linkedin-logo {
   content: url("../images/redes_sociales/linkedin.png"); }
 
-.whatsAppLogo {
+.whats-app-logo {
   content: url("../images/redes_sociales/whatsApp.png"); }
 
-/* Selectores para logo en footer */
-.footer__contenedorLogo {
+/* Selectores para logo */
+.pie-pagina__contenedor-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 60%;
   margin: 0 auto; }
 
-.footer__logo {
+.pie-pagina__logo {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-.footer__mapaSitio {
+.pie-pagina__mapa-sitio {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   align-self: center; }
-  .footer__mapaSitio a {
+  .pie-pagina__mapa-sitio a {
     color: #ffffff;
     font-weight: bold; }
 
@@ -261,7 +261,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /* Selectores utilizados en sección 'Inicio' */
 /****** Selectores para sección Inicio ******/
 /** Selectores para los botones que navegan a otros documentos del sitio **/
-.botonNavegacion, .visitarnos__boton, .destacadas__boton, .dondeEncontrarnos__boton {
+.boton-navegacion, .visitarnos__boton, .destacadas__boton, .donde-encontrarnos__boton {
   padding-top: 0.25rem;
   padding-right: 0.5rem;
   padding-bottom: 0.25rem;
@@ -273,15 +273,15 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   border-style: solid;
   transition: all 0.5s; }
 
-.botonNavegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .dondeEncontrarnos__boton:hover {
+.boton-navegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .donde-encontrarnos__boton:hover {
   transform: scale(120%, 120%); }
 
 /*** Selectores para imagen de fondo, título y slogan del documento ***/
-.fondoIndex__titulo {
+.fondo-index__titulo {
   color: #000000;
   -webkit-text-stroke: 3px #ffa500; }
 
-.fondoIndex__slogan {
+.fondo-index__slogan {
   -webkit-text-stroke: 1px #ffa500;
   color: #000000;
   font-size: 3.5rem;
@@ -365,52 +365,52 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   color: #000000; }
 
 /*** Selectores para sección '¿Dónde encontrarnos?' ***/
-.dondeEncontrarnos {
+.donde-encontrarnos {
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
 
-.dondeEncontrarnos__fila {
+.donde-encontrarnos__fila {
   align-items: center;
   justify-content: center; }
 
-.dondeEncontrarnos__titulo {
+.donde-encontrarnos__titulo {
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-.dondeEncontrarnos__seccion {
+.donde-encontrarnos__seccion {
   padding-right: 2rem;
   padding-left: 2rem; }
 
-.dondeEncontrarnos__subtitulo {
+.donde-encontrarnos__subtitulo {
   font-style: italic;
   text-align: center; }
 
-.dondeEncontrarnos__texto {
+.donde-encontrarnos__texto {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center; }
 
-.dondeEncontrarnos__contenedorImagen {
+.donde-encontrarnos__contenedor-imagen {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: solid 2px #000000; }
 
-.dondeEncontrarnos__imagen {
+.donde-encontrarnos__imagen {
   height: 100%; }
 
-.dondeEncontrarnos__boton {
+.donde-encontrarnos__boton {
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: #ffa500;
   border-color: #000000;
   background-color: #000000; }
 
-.dondeEncontrarnos__boton:hover {
+.donde-encontrarnos__boton:hover {
   color: #ffa500; }
 
 /* Selectores utilizados en sección 'Nosotros' */
 /****** Selectores para sección Nosotros ******/
 /*** Selectores para imagen de fondo con título de la sección ***/
-.fondoNosotros__titulo {
+.fondo-nosotros__titulo {
   color: #000000;
   -webkit-text-stroke: 3px #ffffff; }
 
@@ -456,6 +456,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /** Selectores para darle estilo a las opiniones de los clientes **/
 .recomendaciones__fila {
+  margin-top: 1rem;
   justify-content: center;
   align-items: center; }
 
@@ -522,7 +523,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /* Selectores utilizados en sección 'Menú Completo' */
 /****** Selectores para sección Menú Completo ******/
 /** Selector para imagen de fondo con título de la sección **/
-.fondoMenu__titulo {
+.fondo-menu__titulo {
   color: #ffa500;
   -webkit-text-stroke: 4px #000000; }
 
@@ -548,7 +549,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   font-weight: bold; }
 
 /* Selectores para Líneas de Hamburguesas */
-.lineaHamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas {
+.linea-hamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas {
   padding-bottom: 1rem; }
 
 .hamburguesas__clasicas {
@@ -564,7 +565,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   color: #ffa500; }
 
 /* Selector de clase con estilos comunes a los article de cada hamburguesa */
-.articuloMenu, .clasica, .premium, .hambrienta {
+.articulo-menu, .clasica, .premium, .hambrienta {
   padding-right: 1rem;
   padding-left: 1rem;
   display: flex;
@@ -686,7 +687,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /* Selectores utilizados en sección 'Sucursales' */
 /****** Selectores para sección Sucursales ******/
 /*** Selectores para imagen de fondo con título de la sección ***/
-.fondoSucursales__titulo {
+.fondo-sucursales__titulo {
   color: #000000;
   -webkit-text-stroke: 3px #ffffff; }
 
@@ -747,7 +748,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   flex-direction: row;
   justify-content: center; }
 
-.sucursal__tipoCategoria {
+.sucursal__tipo-categoria {
   display: flex;
   flex-direction: row;
   align-items: center; }
@@ -776,52 +777,52 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   width: 100%; }
 
 /** Selectores para listas con las formas de entrega **/
-.formasEntrega {
+.formas-entrega {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   list-style-type: circle;
   color: #000000; }
 
-.formasEntrega__forma {
+.formas-entrega__forma {
   text-decoration: underline; }
 
 /*** Selectores para sección 'Métodos de Pago' ***/
 /** Selectores para estructurar contenido dentro del section **/
-.metodosPago {
+.metodos-pago {
   background-color: #ffa500;
   border-top: solid 2px #000000;
   text-align: center; }
 
-.metodosPago__fila {
+.metodos-pago__fila {
   justify-content: center; }
 
-.metodosPago__contenido {
+.metodos-pago__contenido {
   padding-right: 2rem;
   padding-left: 2rem; }
 
-.metodosPago__titulo {
+.metodos-pago__titulo {
   font-style: italic;
   font-weight: 600; }
 
-.metodosPago__descripcion {
+.metodos-pago__descripcion {
   text-align: center;
   font-size: 1.5rem; }
 
 /* Selector para caja contenedora de métodos de pago */
-.listadoMetodos {
+.listado-metodos {
   border: solid 4px #000000;
   width: 90%;
   margin: 1rem auto; }
 
 /** Selectores para estructurar contenido de cada article **/
-.metodoPago {
+.metodo-pago {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   align-items: center; }
 
-.metodoPago__tipo {
+.metodo-pago__tipo {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-style: italic;
@@ -830,7 +831,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   font-family: "Work Sans", sans-serif; }
 
 /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
-.metodoPago__logo {
+.metodo-pago__logo {
   margin-top: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -841,7 +842,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /* Selectores utilizados en sección 'Contacto' */
 /****** Selectores para sección Contacto ******/
 /** Selectores para imagen de fondo con título de la sección **/
-.fondoContacto__titulo {
+.fondo-contacto__titulo {
   color: #ffffff;
   -webkit-text-stroke: 4px #000000; }
 
@@ -918,37 +919,39 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   transform: scale(110%, 110%); }
 
 /*** Selectores para la sección de contacto por WhatsApp ***/
-.whatsApp__link {
+.whats-app__link {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 50px; }
 
-.whatsApp__titulo {
+.whats-app__titulo {
   font-weight: bold; }
 
-.whatsApp__contenedor {
+.whats-app__contenedor {
   display: flex;
   flex-direction: row;
   justify-content: center; }
 
-.whatsApp__texto {
+.whats-app__texto {
   color: #25d366; }
 
 /************************************************/
 /* Selectores utilizados en el Mapa del Sitio */
 /** Selectores para mapa del sitio **/
 /* Selectores para estructurar contenido */
-.mapaSitio {
+.mapa-sitio {
   padding-top: 6rem; }
 
-.mapaSitio__titulo {
+.mapa-sitio__titulo {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
   font-style: italic; }
 
-.mapaSitio__descripcion {
+.mapa-sitio__descripcion {
   text-align: center; }
 
-.mapaSitio__contenido {
+.mapa-sitio__contenido {
   justify-content: center;
   margin-top: 1rem;
   margin-bottom: 1rem; }
@@ -979,17 +982,17 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 */
 /* Selectores para responsividad de elementos sin Bootstrap */
 @media only screen and (max-width: 575px) {
-  .encabezado__menuLateral {
+  .encabezado__menu-lateral {
     background-color: #000000;
     width: 260px; }
-  .mapaGoogle {
+  .sucursal__mapa {
     width: 100%;
     height: 300px; }
-  .tituloPrincipal, .fondoIndex__titulo, .fondoIndex__slogan, .fondoNosotros__titulo, .fondoMenu__titulo, .fondoSucursales__titulo, .fondoContacto__titulo {
+  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
     font-size: 5rem; }
-  .fondoIndex__slogan {
+  .fondo-index__slogan {
     font-size: 3rem; } }
 
 @media only screen and (max-width: 767px) {
-  .primerElemento {
+  .primer-elemento {
     order: -1; } }

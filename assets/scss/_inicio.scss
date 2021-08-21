@@ -1,7 +1,7 @@
 /****** Selectores para sección Inicio ******/
 
 /** Selectores para los botones que navegan a otros documentos del sitio **/
-.botonNavegacion {
+.boton-navegacion {
     @include relleno(0.5, 1, 0.5, 1);
     text-decoration: none;
     display: block;
@@ -11,19 +11,19 @@
     transition: all 0.5s;
 }
 
-.botonNavegacion:hover {
+.boton-navegacion:hover {
     @include zoom(20%,20%);
 }
 
 /*** Selectores para imagen de fondo, título y slogan del documento ***/
-.fondoIndex__titulo {
-    @extend .tituloPrincipal;
+.fondo-index__titulo {
+    @extend .titulo-principal;
     color: $negro;
     -webkit-text-stroke: 3px $dorado;
 }
 
-.fondoIndex__slogan {
-    @extend .tituloPrincipal;
+.fondo-index__slogan {
+    @extend .titulo-principal;
     -webkit-text-stroke: 1px $dorado;
     color: $negro;
     font-size: 3.5rem;
@@ -32,6 +32,7 @@
 
 /*** Selectores para seccion 'Por qué visitarnos?' ***/
 .visitarnos {
+    @extend .seccion;
     background-color: $blanco;
 }
 
@@ -54,7 +55,7 @@
 }
 
 .visitarnos__boton {
-    @extend .botonNavegacion;
+    @extend .boton-navegacion;
     @include margenes(-1,-1,2,-1);
     color: $blanco; 
     border-color: $negro;
@@ -67,6 +68,7 @@
 
 /*** Selectores para seccion 'Nuestras destacadas del mes' ***/
 .destacadas {
+    @extend .seccion;
     color: $dorado;
     background: $negro;
     background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(67,67,67,1) 50%, rgba(0,0,0,1) 95%);
@@ -77,7 +79,7 @@
 }
 
 .destacadas__titulo {
-    @include estiloTexto(italica);
+    @include estilo-texto(italica);
 }
 
 /** Selectores para cada producto destacado **/
@@ -104,12 +106,12 @@
 
 .destacada__nombre {
     @include margenes(1,-1,1,-1);
-    font-family: $workSans;
+    font-family: $work-sans;
     font-weight: 700;
 }
 
 .destacadas__boton {
-    @extend .botonNavegacion;
+    @extend .boton-navegacion;
     @include margenes(1,-1,2,-1);
     color: $negro;
     border-color: $dorado;
@@ -121,50 +123,51 @@
 }
 
 /*** Selectores para sección '¿Dónde encontrarnos?' ***/
-.dondeEncontrarnos {
+.donde-encontrarnos {
+    @extend .seccion;
     background: linear-gradient(130deg, rgb(255, 255, 255) 0%, rgba(255,165,0,1) 20%, rgba(246,182,66,1) 50%, rgba(255,165,0,1) 80%, rgb(255, 255, 255) 100%);
 }
 
-.dondeEncontrarnos__fila {
+.donde-encontrarnos__fila {
     align-items: center;
     justify-content: center;
 }
 
-.dondeEncontrarnos__titulo {
+.donde-encontrarnos__titulo {
     @include margenes(2,-1,2,-1);
 }
 
-.dondeEncontrarnos__seccion {
+.donde-encontrarnos__seccion {
     @include relleno(-1,4,-1,4);
 }
 
-.dondeEncontrarnos__subtitulo {
-    @include estiloTexto(italica);
+.donde-encontrarnos__subtitulo {
+    @include estilo-texto(italica);
     text-align: center;
 }
 
-.dondeEncontrarnos__texto {
+.donde-encontrarnos__texto {
     @include margenes(2,-1,2,-1);
     text-align: center;
 }
 
-.dondeEncontrarnos__contenedorImagen {
+.donde-encontrarnos__contenedor-imagen {
     @include margenes(2,-1,2,-1);
     border: solid $border-size $negro;
 }
 
-.dondeEncontrarnos__imagen {
+.donde-encontrarnos__imagen {
     height: 100%;
 }
 
-.dondeEncontrarnos__boton {
-    @extend .botonNavegacion;
+.donde-encontrarnos__boton {
+    @extend .boton-navegacion;
     @include margenes(2,-1,2,-1);
     color: $dorado;
     border-color: $negro;
     background-color: $negro;
 }
 
-.dondeEncontrarnos__boton:hover {
+.donde-encontrarnos__boton:hover {
     color: $dorado;
 }

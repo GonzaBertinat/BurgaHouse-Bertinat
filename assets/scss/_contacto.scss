@@ -1,8 +1,8 @@
 /****** Selectores para sección Contacto ******/
 
 /** Selectores para imagen de fondo con título de la sección **/
-.fondoContacto__titulo {
-    @extend .tituloPrincipal;
+.fondo-contacto__titulo {
+    @extend .titulo-principal;
     color: $blanco;
     -webkit-text-stroke: 4px $negro;
 }
@@ -11,6 +11,7 @@
 
 /** Selectores para estructura contenido del formulario **/
 .formulario {
+    @extend .seccion;
     form {
         @include relleno(-1,-1,-1,2);
         @include margenes(2,-1,-1,-1);
@@ -32,14 +33,14 @@
 }
 
 .formulario__titulo {
-    @include estiloTexto(negrita);
+    @include estilo-texto(negrita);
 }
 
 .formulario__parrafo {
     text-align: center;
     font-size: 1rem;
     em {
-        @include estiloTexto(subrayado);
+        @include estilo-texto(subrayado);
     }
 }
 
@@ -74,7 +75,7 @@
 
 .botones__boton {
     @include relleno(0.5,1,0.5,1);
-    @include estiloTexto(negrita);
+    @include estilo-texto(negrita);
     font-size: 1rem;
     background-color: $dorado;
     border: solid $border-size $negro;
@@ -88,21 +89,27 @@
 }
 
 /*** Selectores para la sección de contacto por WhatsApp ***/
-.whatsApp__link {
+.whats-app {
+    @extend .seccion;
+}
+
+.whats-app__link {
+    @include margenes(1,-1,1,-1);
     width: 50px;
 }
 
-.whatsApp__titulo {
-    @include estiloTexto(negrita)
+.whats-app__titulo {
+    @extend .titulo-seccion;
+    @include estilo-texto(negrita)
 }
 
-.whatsApp__contenedor {
+.whats-app__contenedor {
     @include flex(row);
     justify-content: center;
 }
 
-.whatsApp__texto {
-    color: $verdeWhatsApp;
+.whats-app__texto {
+    color: $verde-whats-app;
 }
 
 /************************************************/
