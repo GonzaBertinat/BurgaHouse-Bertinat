@@ -9,12 +9,13 @@
 
 /** Selectores para sección de Hamburguesas **/
 .hamburguesas {
-    @include relleno(-1,-1,2,-1);
+    @extend .seccion;
     text-align: center;
 }
 
 .hamburguesas__titulo {
     @extend .titulo-seccion;
+    @include relleno(-1,-1,1,-1);
 }
 
 .hamburguesas__categoria {
@@ -37,7 +38,7 @@
 
 /* Selectores para Líneas de Hamburguesas */
 .linea-hamburguesas {
-    @include relleno(-1,-1,2,-1);
+    @extend .seccion;
 }
 
 .hamburguesas__clasicas {    

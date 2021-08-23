@@ -155,7 +155,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   font-weight: 500; }
 
 /* Selector para darle relleno superior e inferior a las secciones del sitio */
-.seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .sucursales, .metodos-pago, .formulario, .whats-app {
+.seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .hamburguesas, .linea-hamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas, .sucursales, .metodos-pago, .formulario, .whats-app {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
@@ -529,8 +529,10 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /** Selectores para sección de Hamburguesas **/
 .hamburguesas {
-  padding-bottom: 1rem;
   text-align: center; }
+
+.hamburguesas__titulo {
+  padding-bottom: 0.5rem; }
 
 .hamburguesas__categoria {
   padding-top: 0.5rem;
@@ -549,9 +551,6 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   font-weight: bold; }
 
 /* Selectores para Líneas de Hamburguesas */
-.linea-hamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas {
-  padding-bottom: 1rem; }
-
 .hamburguesas__clasicas {
   background-color: #000000;
   color: #ffa500; }
