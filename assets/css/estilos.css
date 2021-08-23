@@ -980,6 +980,14 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
  Subtitulos: Work Sans
 */
 /* Selectores para responsividad de elementos sin Bootstrap */
+@media only screen and (max-width: 375px) {
+  /* Adapto grid para móbiles chicos */
+  .opinion {
+    display: grid;
+    grid-template-areas: "nombre" "foto" "valoracion" "texto";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr; } }
+
 @media only screen and (max-width: 575px) {
   .encabezado__menu-lateral {
     background-color: #000000;
