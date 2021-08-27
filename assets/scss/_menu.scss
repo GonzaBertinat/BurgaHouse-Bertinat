@@ -4,7 +4,7 @@
 .fondo-menu__titulo {
     @extend .titulo-principal;
     color: $dorado;
-    -webkit-text-stroke: 4px $negro;
+    -webkit-text-stroke-color: $negro;
 }
 
 /** Selectores para sección de Hamburguesas **/

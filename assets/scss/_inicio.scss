@@ -18,14 +18,14 @@
 /*** Selectores para imagen de fondo, título y slogan del documento ***/
 .fondo-index__titulo {
     @extend .titulo-principal;
-    color: $negro;
-    -webkit-text-stroke: 3px $dorado;
+    color: $dorado;
+    -webkit-text-stroke-color: $negro;
 }
 
 .fondo-index__slogan {
     @extend .titulo-principal;
-    -webkit-text-stroke: 1px $dorado;
-    color: $negro;
+    -webkit-text-stroke: 4px $negro;
+    color: $dorado;
     font-size: 3.5rem;
     letter-spacing: 2px;
 }
@@ -52,6 +52,7 @@
     @include relleno(2,-1,2,-1);
     @include margenes(-1,-1,0,-1);
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .visitarnos__boton {
@@ -149,6 +150,7 @@
 .donde-encontrarnos__texto {
     @include margenes(2,-1,2,-1);
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .donde-encontrarnos__contenedor-imagen {

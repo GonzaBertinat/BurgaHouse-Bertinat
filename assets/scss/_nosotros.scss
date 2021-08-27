@@ -3,8 +3,8 @@
 /*** Selectores para imagen de fondo con título de la sección ***/
 .fondo-nosotros__titulo {
     @extend .titulo-principal;
-    color: $negro;
-    -webkit-text-stroke: 3px $blanco;
+    color: $blanco;
+    -webkit-text-stroke-color: $negro;
 }
 
 /*** Selectores para sección 'Nuestra historia', y algunos para '¿Qué nos hace diferentes?' ***/

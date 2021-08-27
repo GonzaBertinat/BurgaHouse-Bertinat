@@ -40,7 +40,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selectores para agrupaciones de enlaces (lista y submenú) */
 .encabezado__lista-enlaces {
-  padding-right: 0rem;
+  padding-inline-start: 0px;
   list-style: none; }
 
 .encabezado__item-lista:hover {
@@ -49,14 +49,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .encabezado__submenu {
   background-color: #000000;
-  width: 250px; }
+  width: 230px; }
 
 /* Selectores para enlaces a diferentes secciones */
 .encabezado__enlace {
+  padding-left: 1.5rem;
   color: #ffffff !important; }
-
-.encabezado__enlace--centrado {
-  text-align: center; }
 
 .encabezado__enlace:hover {
   background-color: #000000;
@@ -75,6 +73,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .encabezado__menu-lateral {
   background-color: #000000;
   width: 300px; }
+  .encabezado__menu-lateral .encabezado__submenu li a {
+    padding-left: 2.5rem; }
 
 .encabezado__lista-enlaces--margen .show {
   margin-bottom: 9rem; }
@@ -105,41 +105,42 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
       .lista-rutas__contenido ol li a:hover {
         color: #ffa500; }
 
-/* Selector para fondos de seccion */
-.fondo-seccion__contenido {
-  display: flex;
-  flex-direction: column; }
-
 /* Selector para titulos h1 de las secciones */
 .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
   font-family: "Staatliches", cursive;
   text-align: center;
   font-size: 7rem;
-  font-weight: 300; }
+  font-weight: 300;
+  -webkit-text-stroke-width: 6px; }
 
 /****************************/
+/* Selector para fondos de seccion */
+.fondo-seccion__contenido {
+  display: flex;
+  flex-direction: column; }
+
+/* Asigno estilos a imágenes de fondo de cada sección */
+.fondo-index {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-index.webp"); }
+
+.fondo-nosotros {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-nosotros.webp"); }
+
+.fondo-menu {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-menu.webp"); }
+
+.fondo-sucursales {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-sucursales.webp"); }
+
+.fondo-contacto {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-contacto.webp"); }
+
 /* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
 .fondo-seccion, .fondo-index, .fondo-nosotros, .fondo-menu, .fondo-sucursales, .fondo-contacto {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh; }
-
-/* Asigno estilos a imágenes de fondo de cada sección */
-.fondo-index {
-  background-image: url("../images/fondos/fondo-index.webp"); }
-
-.fondo-nosotros {
-  background-image: url("../images/fondos/fondo-nosotros.webp"); }
-
-.fondo-menu {
-  background-image: url("../images/fondos/fondo-menu.webp"); }
-
-.fondo-sucursales {
-  background-image: url("../images/fondos/fondo-sucursales.webp"); }
-
-.fondo-contacto {
-  background-image: url("../images/fondos/fondo-contacto.webp"); }
 
 /* Selector de clase para contenido dentro del fondo de cada sección */
 .fondo-seccion .container, .fondo-index .container, .fondo-nosotros .container, .fondo-menu .container, .fondo-sucursales .container, .fondo-contacto .container {
@@ -149,10 +150,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
 .titulo-seccion, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+  font-style: italic;
+  font-weight: 600;
   font-size: 2.5rem;
   font-family: "Raleway", sans-serif;
-  text-align: center;
-  font-weight: 500; }
+  text-align: center; }
 
 /* Selector para darle relleno superior e inferior a las secciones del sitio */
 .seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .hamburguesas, .linea-hamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas, .sucursales, .metodos-pago, .formulario, .whats-app {
@@ -278,12 +280,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /*** Selectores para imagen de fondo, título y slogan del documento ***/
 .fondo-index__titulo {
-  color: #000000;
-  -webkit-text-stroke: 3px #ffa500; }
+  color: #ffa500;
+  -webkit-text-stroke-color: #000000; }
 
 .fondo-index__slogan {
-  -webkit-text-stroke: 1px #ffa500;
-  color: #000000;
+  -webkit-text-stroke: 4px #000000;
+  color: #ffa500;
   font-size: 3.5rem;
   letter-spacing: 2px; }
 
@@ -305,7 +307,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 0rem;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.2rem; }
 
 .visitarnos__boton {
   margin-bottom: 1rem;
@@ -387,7 +390,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .donde-encontrarnos__texto {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.2rem; }
 
 .donde-encontrarnos__contenedor-imagen {
   margin-top: 1rem;
@@ -411,8 +415,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /****** Selectores para sección Nosotros ******/
 /*** Selectores para imagen de fondo con título de la sección ***/
 .fondo-nosotros__titulo {
-  color: #000000;
-  -webkit-text-stroke: 3px #ffffff; }
+  color: #ffffff;
+  -webkit-text-stroke-color: #000000; }
 
 /*** Selectores para sección 'Nuestra historia', y algunos para '¿Qué nos hace diferentes?' ***/
 .historia {
@@ -525,7 +529,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /** Selector para imagen de fondo con título de la sección **/
 .fondo-menu__titulo {
   color: #ffa500;
-  -webkit-text-stroke: 4px #000000; }
+  -webkit-text-stroke-color: #000000; }
 
 /** Selectores para sección de Hamburguesas **/
 .hamburguesas {
@@ -687,8 +691,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /****** Selectores para sección Sucursales ******/
 /*** Selectores para imagen de fondo con título de la sección ***/
 .fondo-sucursales__titulo {
-  color: #000000;
-  -webkit-text-stroke: 3px #ffffff; }
+  color: #ffffff;
+  -webkit-text-stroke-color: #000000; }
 
 /*** Selectores para sección con las sucursales en acordeón ***/
 /** Selectores para estructurar contenido del section **/
@@ -842,8 +846,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /****** Selectores para sección Contacto ******/
 /** Selectores para imagen de fondo con título de la sección **/
 .fondo-contacto__titulo {
-  color: #ffffff;
-  -webkit-text-stroke: 4px #000000; }
+  color: #ffa500;
+  -webkit-text-stroke-color: #000000; }
 
 /*** Selectores para section con formulario ***/
 /** Selectores para estructura contenido del formulario **/

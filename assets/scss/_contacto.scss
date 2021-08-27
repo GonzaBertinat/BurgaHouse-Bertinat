@@ -3,8 +3,8 @@
 /** Selectores para imagen de fondo con título de la sección **/
 .fondo-contacto__titulo {
     @extend .titulo-principal;
-    color: $blanco;
-    -webkit-text-stroke: 4px $negro;
+    color: $dorado;
+    -webkit-text-stroke-color: $negro;
 }
 
 /*** Selectores para section con formulario ***/
