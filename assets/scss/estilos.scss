@@ -69,4 +69,19 @@
     .primer-elemento {
         order: -1;
     }
+
+    .destacada__nombre {
+        @include margenes(-1,-1,2,-1);
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .destacada__article {
+        width: 90%;
+    }
+
+    .donde-encontrarnos__seccion{
+        @include margenes(-1,-1,2,-1);
+    }
+    
 }

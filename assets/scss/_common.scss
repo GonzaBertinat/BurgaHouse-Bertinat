@@ -164,7 +164,7 @@
 
 /* Selector para darle relleno superior e inferior a las secciones del sitio */
 .seccion {
-    @include relleno(4,-1,4,-1);
+    @include relleno(2,-1,2,-1);
 }
 
 /* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
@@ -174,7 +174,7 @@
 }
 
 .icono-subir__enlace {
-    @include margenes(-1,-1,2,-1);
+    @include margenes(-1,2,-1,-1);
     display: block;
     transition: all 1s;
     width: 50px;

@@ -149,7 +149,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.titulo-seccion, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
   font-style: italic;
   font-weight: 600;
   font-size: 2.5rem;
@@ -158,8 +158,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selector para darle relleno superior e inferior a las secciones del sitio */
 .seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .hamburguesas, .linea-hamburguesas, .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas, .sucursales, .metodos-pago, .formulario, .whats-app {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
 /* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
 .icono-subir__contenedor {
@@ -168,7 +168,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: flex-end; }
 
 .icono-subir__enlace {
-  margin-bottom: 1rem;
+  margin-right: 1rem;
   display: block;
   transition: all 1s;
   width: 50px; }
@@ -273,7 +273,10 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   text-align: center;
   font-weight: 700;
   border-style: solid;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  border-radius: 20px;
+  max-width: 250px;
+  margin: 0 auto; }
 
 .boton-navegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .donde-encontrarnos__boton:hover {
   transform: scale(120%, 120%); }
@@ -294,24 +297,22 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   background-color: #ffffff; }
 
 .visitarnos__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   justify-content: center; }
 
 .visitarnos__titulo {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 0rem; }
 
 .visitarnos__imagen {
-  border: solid 2px #000000; }
+  border: solid 4px #000000; }
 
 .visitarnos__texto {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   margin-bottom: 0rem;
   text-align: center;
   font-size: 1.2rem; }
 
 .visitarnos__boton {
-  margin-bottom: 1rem;
   color: #ffffff;
   border-color: #000000;
   background-color: #000000; }
@@ -326,10 +327,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
 
 .destacadas__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   justify-content: center; }
 
 .destacadas__titulo {
-  font-style: italic; }
+  margin-bottom: 0rem; }
 
 /** Selectores para cada producto destacado **/
 .destacada__contenedor {
@@ -338,7 +341,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 .destacada__article {
-  width: 80%;
+  width: 75%;
   text-align: center; }
 
 .destacada__imagen {
@@ -352,14 +355,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   transform: scale(120%, 120%); }
 
 .destacada__nombre {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 700; }
 
 .destacadas__boton {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
   color: #000000;
   border-color: #ffa500;
   background-color: #ffa500; }
@@ -372,38 +373,32 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
 
 .donde-encontrarnos__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   align-items: center;
   justify-content: center; }
 
-.donde-encontrarnos__titulo {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
 .donde-encontrarnos__seccion {
-  padding-right: 2rem;
-  padding-left: 2rem; }
+  padding-right: 1rem;
+  padding-left: 1rem; }
+  .donde-encontrarnos__seccion .row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center; }
 
 .donde-encontrarnos__subtitulo {
+  margin-bottom: 0rem;
   font-style: italic;
   text-align: center; }
 
 .donde-encontrarnos__texto {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   text-align: center;
   font-size: 1.2rem; }
 
 .donde-encontrarnos__contenedor-imagen {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   border: solid 2px #000000; }
 
-.donde-encontrarnos__imagen {
-  height: 100%; }
-
 .donde-encontrarnos__boton {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   color: #ffa500;
   border-color: #000000;
   background-color: #000000; }
@@ -1006,4 +1001,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 @media only screen and (max-width: 767px) {
   .primer-elemento {
-    order: -1; } }
+    order: -1; }
+  .destacada__nombre {
+    margin-bottom: 1rem; } }
+
+@media only screen and (max-width: 991px) {
+  .destacada__article {
+    width: 90%; }
+  .donde-encontrarnos__seccion {
+    margin-bottom: 1rem; } }

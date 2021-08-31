@@ -136,26 +136,30 @@
         <section id="seccionVisitarnos" class="visitarnos">
             <div class="container">
                 <div class="visitarnos__fila row">
-                    <div class="col-10 col-md-8 animate__animated animate__bounceInLeft wow bounceInLeft animate__slower">
-                        <h2 class="visitarnos__titulo titulo-seccion">¿Por qué visitarnos?</h2>
+                    <div class="col-12 animate__animated animate__bounceInLeft wow bounceInLeft animate__slower">
+                        <h2 class="visitarnos__titulo">¿Por qué visitarnos?</h2>
                     </div>
                 </div>
                 <div class="visitarnos__fila row">
-                    <div class="col-10 col-md-8">
-                        <img class="visitarnos__imagen img-fluid" src="assets/images/index1.jpg" alt="Hamburguesas con papas fritas">
+                    <div class="col-11 col-md-9">
+                        <picture>
+                            <source srcset="assets/images/index1-s.webp" media="(max-width: 767px)">
+                            <img class="visitarnos__imagen img-fluid" src="assets/images/index1-l.webp" alt="Hamburguesas con papas fritas">
+                        </picture>
                     </div>
                 </div>
                 <div class="visitarnos__fila row">
-                    <div class="col-10 col-md-8">
+                    <div class="col-10">
                         <p class="visitarnos__texto">
                             Somos una casa de hamburguesas que te propone algo distinto.
                             <br> Todas nuestras preparaciones se realizan con productos de la mejor calidad y con recetas especiales para sientas que estás como en casa.
-                            <br> Llegamos para consentir a tu paladar, y para brindarte una experiencia deliciosa e inigualable.  
-                            <br> Queremos que te deleites con el mejor sabor 100% casero, queremos que pruebes EL SABOR DE LO DIFERENTE...</p>
+                            <br> Llegamos para consentir a tu paladar y brindarte una experiencia deliciosa e inigualable.  
+                            <br> Queremos que te deleites con el mejor sabor 100% casero, queremos que pruebes 
+                            <br> <strong>EL SABOR DE LO DIFERENTE.</strong></p>
                     </div>
                 </div>
                 <div class="visitarnos__fila row">
-                    <div class="col-8 col-md-3">
+                    <div class="col-7 col-md-4">
                         <a class="visitarnos__boton" href="pages/nosotros.html">Quiero conocer más!</a>
                     </div>
                 </div>
@@ -165,18 +169,18 @@
         <section id="seccionDestacadas" class="destacadas">
             <div class="container">
                 <div class="destacadas__fila row">
-                    <div class="col-12 mt-3 mb-4 animate__animated animate__fadeInDown wow fadeInDown">
+                    <div class="col-12 animate__animated animate__fadeInDown wow fadeInDown">
                         <h2 class="destacadas__titulo titulo-seccion">Nuestras destacadas del mes</h2>
                     </div>
                 </div>
                 <div class="destacadas__fila row">
-                    <div class="destacada__contenedor col-10 col-md-5">
+                    <div class="destacada__contenedor col-10 col-md-6">
                         <article class="destacada__article animate__animated animate__slideInLeft wow slideInLeft animate__slow">
                             <img class="destacada__imagen img-fluid" src="assets/images/burgas/azulyprovoleta.jpg" alt="Hamburguesa con queso roquefort y provoleta">
                             <h3 class="destacada__nombre">Burga Azul</h3>
                         </article>
                     </div>
-                    <div class="destacada__contenedor col-10 col-md-5">
+                    <div class="destacada__contenedor col-10 col-md-6">
                         <article class="destacada__article animate__animated animate__slideInRight wow slideInRight animate__slow">
                             <img class="destacada__imagen img-fluid" src="assets/images/burgas/burgahousedoble.jpg" alt="Hamburguesa doble con salsa especial">
                             <h3 class="destacada__nombre">Burga House Doble</h3>
@@ -185,7 +189,7 @@
                 </div>
                 <div class="destacadas__fila row">
                     <div class="col-8 col-md-4">
-                        <a class="destacadas__boton boton-navegacion" href="pages/menu.html">Ver menú completo</a>
+                        <a class="destacadas__boton" href="pages/menu.html">Ver menú completo</a>
                     </div>
                 </div>
             </div>
@@ -195,38 +199,42 @@
             <div class="container">
                 <div class="donde-encontrarnos__fila row">
                     <div class="col-12 animate__animated animate__jackInTheBox wow jackInTheBox">
-                        <h2 class="donde-encontrarnos__titulo titulo-seccion">¿Dónde encontrarnos?</h2>
+                        <h2 class="donde-encontrarnos__titulo">¿Dónde encontrarnos?</h2>
                     </div>
                 </div>
                 <div class="donde-encontrarnos__fila row">
-                    <div class="donde-encontrarnos__seccion col-10 col-md-6 animate__animated animate__fadeInLeft wow fadeInLeft animate__slow">
-                        <!-- Hay que cambiar esta foto por una que tenga una relación de aspecto cuadrada -->
+                    <div class="donde-encontrarnos__seccion col-11 col-lg-7 animate__animated animate__fadeInLeft wow fadeInLeft animate__slow">
                         <div class="donde-encontrarnos__contenedor-imagen" class="animate__animated animate__fadeInLeft wow fadeInLeft animate__slow">
-                            <img class="donde-encontrarnos__imagen img-fluid" src="assets/images/index2.jpg" alt="Salón con barra">
+                            <picture>
+                                <source srcset="assets/images/index2-s.jpg" media="(max-width: 767px)">
+                                <img class="img-fluid" src="assets/images/index2-l.jpg" alt="Salón">
+                            </picture>
                         </div>
                     </div>
-                    <div class="donde-encontrarnos__seccion col-10 col-md-6 animate__animated animate__fadeInRight wow fadeInRight animate__slow">
-                        <div class="donde-encontrarnos__fila row">
+                    <div class="donde-encontrarnos__seccion col-12 col-lg-5 animate__animated animate__fadeInRight wow fadeInRight animate__slow">
+                        <div class="row">
                             <h3 class="donde-encontrarnos__subtitulo">¿Te dio hambre?</h3>
                         </div>
-                        <div class="donde-encontrarnos__fila row">
+                        <div class="row">
                             <p class="donde-encontrarnos__texto">
                                 Viste nuestras Burgas y te encantaron...
                                 <br>
-                                ¿Qué estás esperando para venir a probarlas?
+                                <em>¿Qué estás esperando para venir a probarlas?</em>
                                 <br>
                                 Te invitamos a que revises nuestras sucursales para que encuentres la más cercana a tu domicilio.
                                 <br> ¡Te esperamos!
 
                                 </p>
                         </div>
-                        <div class="donde-encontrarnos__fila row">
+                        <div class="row">
                             <div class="col-9 col-md-6">
-                                <a class="donde-encontrarnos__boton boton-navegacion" href="pages/sucursales.html">Ver sucursales</a>
+                                <a class="donde-encontrarnos__boton" href="pages/sucursales.html">Ver sucursales</a>
                             </div>
                         </div>
                     </div>
-                    <div class="donde-encontrarnos__seccion icono-subir__contenedor col-12 animate__animated animate__fadeInDownBig wow fadeInDownBig animate__delay-1s">
+                </div>
+                <div class="donde-encontrarnos__fila row">
+                    <div class="icono-subir__contenedor col-12 animate__animated animate__fadeInDownBig wow fadeInDownBig animate__delay-1s">
                         <a href="#" class="icono-subir__enlace">
                             <img class="img-fluid" src="assets/images/icono-subir.png" alt="Ir al principio de la página">
                         </a>
@@ -276,7 +284,7 @@
                 <!-- Información del autor del sitio -->
                 <div class="pie-pagina__seccion pie-pagina__seccion-centrado col-10 col-md-4">
                     <div class="row pie-pagina__autor">
-                        <span class="pie-pagina__texto">Developed by Gonzalo Bertinat</span>
+                        <span class="pie-pagina__texto">Desarrollado por Gonzalo Bertinat</span>
                         <div class="pie-pagina__contenedor-red-social">
                             <a href="https://www.linkedin.com/in/gonzabertinat/" target="_blank">
                                 <img class="linkedin-logo img-fluid" alt="LinkedIn">
