@@ -9,6 +9,9 @@
 
 .encabezado__navegacion {
     background-color: $negro;
+    .container {
+        justify-content: center;
+    }
 }
 
 .encabezado__contenido {
@@ -24,38 +27,36 @@
     @include flex(row);
     justify-content: flex-end;
 }
-
-/* Selector para logo del sitio */
-.encabezado__logo {
-    width: 130px;
-}
-
 /* Selectores para agrupaciones de enlaces (lista y submenú) */
 .encabezado__lista-enlaces {
     padding-inline-start: 0px;
     list-style: none;
 }
 
-.encabezado__item-lista:hover {
-    background-color: $negro;
-    @include estilo-texto(negrita)
+/* Selector para logo del sitio */
+.encabezado__logo {
+    width: 130px;
+}
+
+.encabezado__logo:hover {
+    @include zoom(5%,5%);
 }
 
 .encabezado__submenu {
     background-color: $negro;
-    width: 230px;
+    width: 250px;
 }
 
 /* Selectores para enlaces a diferentes secciones */
 .encabezado__enlace {
     @include relleno(-1,-1,-1,3);
+    @include estilo-texto(negrita);
     color: $blanco !important;
 }
 
 .encabezado__enlace:hover {
     background-color: $negro;
     color: $dorado !important;
-    @include estilo-texto(negrita)
 }
 
 /* Selector de clase para marcar en el menú qué sección es la actual */
@@ -69,7 +70,7 @@
 /** Selectores para menú lateral responsive */
 .encabezado__menu-lateral{
     background-color: $negro;
-    width: 300px;
+    width: 320px;
     .encabezado__submenu li a{
         @include relleno(-1,-1,-1,5);
     }

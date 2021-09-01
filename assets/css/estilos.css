@@ -20,6 +20,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .encabezado__navegacion {
   background-color: #000000; }
+  .encabezado__navegacion .container {
+    justify-content: center; }
 
 .encabezado__contenido {
   width: 100%;
@@ -34,32 +36,31 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   flex-direction: row;
   justify-content: flex-end; }
 
-/* Selector para logo del sitio */
-.encabezado__logo {
-  width: 130px; }
-
 /* Selectores para agrupaciones de enlaces (lista y submenú) */
 .encabezado__lista-enlaces {
   padding-inline-start: 0px;
   list-style: none; }
 
-.encabezado__item-lista:hover {
-  background-color: #000000;
-  font-weight: bold; }
+/* Selector para logo del sitio */
+.encabezado__logo {
+  width: 130px; }
+
+.encabezado__logo:hover {
+  transform: scale(105%, 105%); }
 
 .encabezado__submenu {
   background-color: #000000;
-  width: 230px; }
+  width: 250px; }
 
 /* Selectores para enlaces a diferentes secciones */
 .encabezado__enlace {
   padding-left: 1.5rem;
+  font-weight: bold;
   color: #ffffff !important; }
 
 .encabezado__enlace:hover {
   background-color: #000000;
-  color: #ffa500 !important;
-  font-weight: bold; }
+  color: #ffa500 !important; }
 
 /* Selector de clase para marcar en el menú qué sección es la actual */
 .encabezado__enlace--activo {
@@ -72,7 +73,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /** Selectores para menú lateral responsive */
 .encabezado__menu-lateral {
   background-color: #000000;
-  width: 300px; }
+  width: 320px; }
   .encabezado__menu-lateral .encabezado__submenu li a {
     padding-left: 2.5rem; }
 
@@ -999,7 +1000,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 @media only screen and (max-width: 575px) {
   .encabezado__menu-lateral {
     background-color: #000000;
-    width: 260px; }
+    width: 280px; }
   .sucursal__mapa {
     width: 100%;
     height: 300px; }
