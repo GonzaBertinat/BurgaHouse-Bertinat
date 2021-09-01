@@ -149,7 +149,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
   font-style: italic;
   font-weight: 600;
   font-size: 2.5rem;
@@ -417,7 +417,15 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .historia {
   background-color: #ffffff; }
 
-.historia__contenido, .diferentes__contenido {
+.historia__contenido {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center; }
+
+.diferentes__contenido {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   justify-content: center;
   align-items: center; }
 
@@ -426,43 +434,44 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-left: 1.5rem; }
 
 .historia__titulo {
-  font-style: italic; }
+  margin-bottom: 1.5rem; }
 
 .historia__texto {
+  margin-bottom: 0.5rem;
   text-align: start; }
 
 /* Selector para controlar las imagenes de la sección */
-.historia__imagen, .diferentes_imagen {
-  width: 100%;
-  border: solid 2px #000000; }
+.historia__imagen, .diferentes__imagen {
+  border: solid 4px #000000; }
 
 /*** Selectores para sección '¿Qué nos hace diferentes?' ***/
 .diferentes {
   background-color: #000000;
-  color: #ffa500; }
+  color: #ffa500;
+  background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
 
 .diferentes__texto {
+  margin-bottom: 0.5rem;
   text-align: end;
   color: #ffffff; }
 
 .diferentes__titulo {
-  font-weight: bold; }
+  margin-bottom: 1.5rem; }
 
 /*** Selectores para sección 'Opiniones de nuestros clientes' ***/
 /* Selector para section */
 .recomendaciones {
-  background-color: #ffa500; }
+  background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
 
 /** Selectores para darle estilo a las opiniones de los clientes **/
 .recomendaciones__fila {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   justify-content: center;
   align-items: center; }
 
 .recomendaciones__titulo {
-  margin-bottom: 1rem;
-  font-weight: bold;
-  font-style: oblique; }
+  margin-bottom: 0rem; }
 
 .opinion {
   padding-top: 0.5rem;
@@ -487,7 +496,6 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   .opinion__imagen img {
     border: solid 2px #ffa500;
     border-radius: 100%;
-    width: 100%;
     height: 100%; }
 
 .opinion__nombre {
@@ -502,11 +510,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .opinion__valoracion {
   grid-area: valoracion; }
   .opinion__valoracion span {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: center;
     color: #ffa500;
     font-family: "Work Sans", sans-serif; }
   .opinion__valoracion img {
-    padding-top: 2%;
-    padding-bottom: 2%;
     width: 15%; }
 
 .opinion__texto {
@@ -1009,4 +1018,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   .destacada__article {
     width: 90%; }
   .donde-encontrarnos__seccion {
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem; }
+  .historia__columna, .diferentes__columna {
+    margin-bottom: 1.5rem; }
+  .historia__contenido, .diferentes__contenido {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .opinion {
+    margin-bottom: 1.5rem; } }
