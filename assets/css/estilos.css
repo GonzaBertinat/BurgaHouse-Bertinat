@@ -150,7 +150,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .whats-app__titulo, .mapa-sitio__titulo {
   font-style: italic;
   font-weight: 600;
   font-size: 2.5rem;
@@ -705,13 +705,17 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   background-color: #ffffff; }
 
 .sucursales__titulo {
-  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 600; }
 
 /** Selectores para el acordeón con las sucursales **/
 /* Sobreescribe estilos de bootstrap */
 .accordion {
-  margin-top: 2rem; }
+  margin-bottom: 1.5rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
   .accordion h4, .accordion h5 {
     margin-bottom: 0rem; }
 
@@ -797,11 +801,13 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /*** Selectores para sección 'Métodos de Pago' ***/
 /** Selectores para estructurar contenido dentro del section **/
 .metodos-pago {
-  background-color: #ffa500;
   border-top: solid 2px #000000;
-  text-align: center; }
+  text-align: center;
+  background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
 
 .metodos-pago__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   justify-content: center; }
 
 .metodos-pago__contenido {
@@ -809,33 +815,40 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-left: 2rem; }
 
 .metodos-pago__titulo {
-  font-style: italic;
+  padding-bottom: 0rem;
   font-weight: 600; }
 
 .metodos-pago__descripcion {
+  padding-top: 1rem;
+  padding-bottom: 0rem;
   text-align: center;
   font-size: 1.5rem; }
 
 /* Selector para caja contenedora de métodos de pago */
 .listado-metodos {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: linear-gradient(90deg, #0b0b0b 1%, #4b4b4b 50%, #0b0b0b 99%);
   border: solid 4px #000000;
   width: 90%;
-  margin: 1rem auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 /** Selectores para estructurar contenido de cada article **/
 .metodo-pago {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   align-items: center; }
 
 .metodo-pago__tipo {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-style: italic;
-  color: #551313;
-  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffa500;
+  letter-spacing: -2px;
+  font-size: 1.7rem;
   font-family: "Work Sans", sans-serif; }
 
 /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
