@@ -150,7 +150,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .formulario__titulo, .whats-app__titulo, .mapa-sitio__titulo {
   font-style: italic;
   font-weight: 600;
   font-size: 2.5rem;
@@ -870,58 +870,63 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /*** Selectores para section con formulario ***/
 /** Selectores para estructura contenido del formulario **/
 .formulario form {
-  padding-left: 1rem;
-  margin-top: 1rem;
-  border: 4px solid #ffa500;
-  width: 85%;
+  border: solid 4px #ffa500;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 60%;
   color: #ffa500;
   background-color: #000000;
-  text-align: start; }
+  text-align: start;
+  font-size: 1.1rem; }
   .formulario form span {
-    text-align: center;
-    margin-bottom: 0.5rem; }
+    display: block;
+    text-align: center; }
+  .formulario form input, .formulario form select, .formulario form textarea {
+    background-color: #000000;
+    border: solid 2px #ffa500;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 1.1rem; }
+    .formulario form input:focus, .formulario form select:focus, .formulario form textarea:focus {
+      background-color: #000000;
+      border: solid 2px #ffa500;
+      color: #ffffff; }
 
-.formulario__contenido {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+.formulario__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 .formulario__titulo {
-  font-weight: bold; }
+  margin-bottom: 0rem; }
 
 .formulario__parrafo {
   text-align: center;
-  font-size: 1rem; }
+  font-size: 1.2rem; }
   .formulario__parrafo em {
     text-decoration: underline; }
 
 /** Selectores para los campos dentro del formulario **/
 .campo {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-left: auto;
+  margin-right: auto; }
   .campo .form-check-input {
-    margin-top: 0.75rem;
     margin-bottom: 0.5rem;
     margin-left: 0.5rem; }
-
-.campo__label {
-  margin-left: 1rem; }
-
-.campo__input {
-  width: 90%;
-  margin: 0 auto; }
+  .campo div {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-top: 0.5rem; }
 
 /** Selectores botones de Enviar y Limpiar Campos **/
 .botones {
-  justify-content: center;
-  align-items: center; }
+  justify-content: center; }
 
 .botones__contenedor {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .botones__boton {
   padding-top: 0.25rem;
@@ -929,12 +934,15 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   font-weight: bold;
-  font-size: 1rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 1.2rem;
   background-color: #ffa500;
   border: solid 2px #000000;
   color: #000000;
   font-family: "Raleway", sans-serif;
-  width: 100%; }
+  width: 80%; }
 
 .botones__boton:hover {
   transform: scale(110%, 110%); }
@@ -947,6 +955,10 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .whats-app__titulo {
   font-weight: bold; }
+
+.whats-app__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 .whats-app__contenedor {
   display: flex;
@@ -994,40 +1006,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .enlaces__lista {
   list-style: disc; }
 
-/* Fuentes
- h1: Staatliches
- slogan: Staatliches
- Titulos de secciones: Raleway
- Textos: Defecto de Bootstrap (por ahora)
- Subtitulos: Work Sans
-*/
 /* Selectores para responsividad de elementos sin Bootstrap */
-@media only screen and (max-width: 375px) {
-  /* Adapto grid para móbiles chicos */
-  .opinion {
-    display: grid;
-    grid-template-areas: "nombre" "foto" "valoracion" "texto";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 2fr; } }
-
-@media only screen and (max-width: 575px) {
-  .encabezado__menu-lateral {
-    background-color: #000000;
-    width: 280px; }
-  .sucursal__mapa {
-    width: 100%;
-    height: 300px; }
-  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
-    font-size: 5rem; }
-  .fondo-index__slogan {
-    font-size: 3rem; } }
-
-@media only screen and (max-width: 767px) {
-  .primer-elemento {
-    order: -1; }
-  .destacada__nombre {
-    margin-bottom: 1rem; } }
-
 @media only screen and (max-width: 991px) {
   .destacada__article {
     width: 90%; }
@@ -1039,4 +1018,34 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     margin-top: 1.5rem;
     margin-bottom: 1.5rem; }
   .opinion {
-    margin-bottom: 1.5rem; } }
+    margin-bottom: 1.5rem; }
+  .formulario form {
+    width: 80%; } }
+
+@media only screen and (max-width: 767px) {
+  .primer-elemento {
+    order: -1; }
+  .destacada__nombre {
+    margin-bottom: 1rem; } }
+
+@media only screen and (max-width: 575px) {
+  .encabezado__menu-lateral {
+    background-color: #000000;
+    width: 280px; }
+  .sucursal__mapa {
+    width: 100%;
+    height: 300px; }
+  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
+    font-size: 5rem; }
+  .fondo-index__slogan {
+    font-size: 3rem; }
+  .formulario form {
+    width: 90%; } }
+
+@media only screen and (max-width: 375px) {
+  /* Adapto grid para móbiles chicos */
+  .opinion {
+    display: grid;
+    grid-template-areas: "nombre" "foto" "valoracion" "texto";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr; } }
