@@ -203,6 +203,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .pie-pagina__texto {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   font-weight: bold;
   font-size: 1rem;
   text-align: center; }
@@ -240,15 +242,16 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selectores para logo */
 .pie-pagina__contenedor-logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: 60%;
   margin: 0 auto; }
 
 .pie-pagina__logo {
   padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  width: 100%; }
+
+.pie-pagina__logo:hover {
+  transform: scale(110%, 110%); }
 
 .pie-pagina__mapa-sitio {
   margin-top: 0.5rem;
@@ -920,6 +923,9 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     padding-left: 2rem;
     margin-top: 0.5rem; }
 
+.campo__label {
+  display: inline; }
+
 /** Selectores botones de Enviar y Limpiar Campos **/
 .botones {
   justify-content: center; }
@@ -1020,13 +1026,17 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   .opinion {
     margin-bottom: 1.5rem; }
   .formulario form {
-    width: 80%; } }
+    width: 80%; }
+  .pie-pagina__contenedor-logo {
+    width: 85%; } }
 
 @media only screen and (max-width: 767px) {
   .primer-elemento {
     order: -1; }
   .destacada__nombre {
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem; }
+  .pie-pagina__contenedor-logo {
+    width: 60%; } }
 
 @media only screen and (max-width: 575px) {
   .encabezado__menu-lateral {
@@ -1040,7 +1050,9 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   .fondo-index__slogan {
     font-size: 3rem; }
   .formulario form {
-    width: 90%; } }
+    width: 90%; }
+  .pie-pagina__contenedor-logo {
+    width: 65%; } }
 
 @media only screen and (max-width: 375px) {
   /* Adapto grid para móbiles chicos */
@@ -1048,4 +1060,6 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     display: grid;
     grid-template-areas: "nombre" "foto" "valoracion" "texto";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 2fr; } }
+    grid-template-rows: 1fr 1fr 1fr 2fr; }
+  .pie-pagina__contenedor-logo {
+    width: 80%; } }

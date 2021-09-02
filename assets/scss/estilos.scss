@@ -49,6 +49,10 @@
             width: 80%;
         }
     }
+
+    .pie-pagina__contenedor-logo {
+        width: 85%;
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -58,6 +62,10 @@
 
     .destacada__nombre {
         @include margenes(-1,-1,2,-1);
+    }
+
+    .pie-pagina__contenedor-logo {
+        width: 60%;
     }
 }
 
@@ -85,7 +93,10 @@
             width: 90%;
         }
     }
-    
+
+    .pie-pagina__contenedor-logo {
+        width: 65%;
+    }
 }
 
 @media only screen and (max-width: 375px){
@@ -99,5 +110,9 @@
             "texto";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 2fr;
+    }
+
+    .pie-pagina__contenedor-logo {
+        width: 80%;
     }
 }

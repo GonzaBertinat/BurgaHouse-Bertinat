@@ -213,6 +213,7 @@
 /* Selector para textos */
 .pie-pagina__texto {
     @include margenes(1,-1,1,-1);
+    @include relleno(-1,0,-1,0);
     @include estilo-texto(negrita);
     font-size: 1rem;
     text-align: center;
@@ -255,14 +256,17 @@ $redesSociales: (
 
 /* Selectores para logo */
 .pie-pagina__contenedor-logo {
-    @include flex(row);
-    justify-content: center;
     width: 60%;
     margin: 0 auto;
 }
 
 .pie-pagina__logo {
     @include relleno(2,-1,2,-1);
+    width: 100%;
+}
+
+.pie-pagina__logo:hover {
+    @include zoom(10%,10%);
 }
 
 .pie-pagina__mapa-sitio {
