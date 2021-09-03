@@ -9,17 +9,20 @@
 
 /** Selectores para sección de Hamburguesas **/
 .hamburguesas {
-    @extend .seccion;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(67,67,67,1) 50%, rgba(0,0,0,1) 95%);
+    border-bottom: solid $border-size $blanco;
     text-align: center;
 }
 
 .hamburguesas__titulo {
     @extend .titulo-seccion;
-    @include relleno(-1,-1,1,-1);
+    @include relleno(3,-1,3,-1);
+    color: $negro;
+    background-color: $blanco;
 }
 
 .hamburguesas__categoria {
-    @include relleno(1,-1,1,-1);
+    @include margenes(3,-1,3,-1);
     font-size: 2rem;
     font-family: $work-sans;
     font-weight: 500;
@@ -32,30 +35,13 @@
 
 .hamburguesas__nota {
     display: block;
-    @include margenes(1,-1,-1,-1);
+    @include margenes(2,-1,2,-1);
     @include estilo-texto(negrita);
-}
-
-/* Selectores para Líneas de Hamburguesas */
-.linea-hamburguesas {
-    @extend .seccion;
-}
-
-.hamburguesas__clasicas {    
-    @extend .linea-hamburguesas;
-    background-color: $negro;
     color: $dorado;
 }
 
-.hamburguesas__premium {
-    @extend .linea-hamburguesas;
-    background-color: $blanco;
-    color: $negro;
-}
-
-.hamburguesas__hambrientas {
-    @extend .linea-hamburguesas;
-    background-color: $negro;
+/* Selectores para Líneas de Hamburguesas */
+.hamburguesas__clasicas,.hamburguesas__premium, .hamburguesas__hambrientas {    
     color: $dorado;
 }
 
@@ -66,7 +52,7 @@
     align-items: center;
     font-size: 1rem;
     text-align: center;
-    overflow: hidden;
+    height: 100%;
 }
 
 /** Selectores comunes para cada producto **/
@@ -79,17 +65,20 @@
 .hamburguesa__descripcion {
     @include margenes(1,-1,1,-1);
     @include estilo-texto(italica);
+    @include flex(row);
+    align-items: center;
+    height: 30%;
 }
 
 .hamburguesa__imagen {
     border: solid $border-size $negro;
     border-radius: 5%;
     transition: all 0.2s;
+    filter: brightness(0.6);
 }
 
 .hamburguesa__imagen:hover {
-    @include margenes(2,-1,3,-1);
-    @include zoom(20%,20%);
+    filter: brightness(1);
 }
 
 .hamburguesa__precio {
@@ -182,29 +171,38 @@
 
 /** Selectores para la sección de Bebidas **/
 .bebidas {
-    @include relleno(-1,-1,4,-1);
-    border-top: solid $border-size*2 $negro;
-    background-color: $dorado;
+    @include relleno(-1,-1,2,-1);
+    border-top: solid $border-size $blanco;
+    background: linear-gradient(130deg, rgb(255, 255, 255) 0%, rgba(255,165,0,1) 20%, rgba(246,182,66,1) 50%, rgba(255,165,0,1) 80%, rgb(255, 255, 255) 100%);
 }
 
 .bebidas__titulo {
     @extend .titulo-seccion;
-    @include margenes(1,-1,-1,-1);
+    @include margenes(3,-1,3,-1);
 }
 
 .bebidas__listado {
-    @include margenes(3,3,3,3);
+    width: 90%;
+    margin: 0 auto;
     border: solid $border-size*2 $negro;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(67,67,67,1) 50%, rgba(0,0,0,1) 95%);
+}
+
+.bebidas__fila {
+    @include margenes(3,-1,3,-1);
 }
 
 .bebidas__categoria {
     @include relleno(1,-1,1,-1);
+    color: $dorado;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
 .bebidas__items {
-    @include relleno(0,0,0,0);
-    font-size: 1.3rem;
+    @include relleno(-1,-1,0,0);
+    font-size: 1.2rem;
 }
 
 /** Selectores para los items de las listas de bebidas **/
@@ -212,13 +210,18 @@
     @include flex(row);
     justify-content: space-between;
     span {
-        @include margenes(-1,3,-1,3);
+        @include margenes(-1,3,1,3);
     }
+}
+
+.bebida__nombre {
+    color: $blanco;
 }
 
 .bebida__precio {
     @include estilo-texto(negrita);
     @include estilo-texto(italica);
+    color: $dorado;
 }
 
 /************************************************/

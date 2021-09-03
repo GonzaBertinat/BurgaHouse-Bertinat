@@ -53,6 +53,24 @@
     .pie-pagina__contenedor-logo {
         width: 85%;
     }
+
+    .bebidas__items {
+        font-size: 1rem;
+    }
+
+    .bebidas__listado {
+        width: 100%;
+    }
+
+    .articulo-menu {
+        @include margenes(-1,-1,3,-1);
+        height: auto;
+    }
+
+    .hamburguesas__nota {
+        @include margenes(0,-1,3,-1);
+    }
+
 }
 
 @media only screen and (max-width: 767px){
@@ -114,5 +132,14 @@
 
     .pie-pagina__contenedor-logo {
         width: 80%;
+    }
+
+    .bebida {
+        @include flex(column);
+        align-items: center;
+    }
+
+    .bebida__nombre {
+        text-align: center  ;
     }
 }
