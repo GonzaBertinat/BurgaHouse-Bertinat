@@ -7,18 +7,20 @@
 
 .mapa-sitio__titulo {
     @extend .titulo-seccion;
-    @include margenes(2,-1,2,-1);
+    @include relleno(3,-1,-1,-1);
+    @include margenes(-1,-1,3,-1);
     @include estilo-texto(negrita);
     @include estilo-texto(italica);
 }
 
 .mapa-sitio__descripcion {
+    @include margenes(3,-1,3,-1);
     text-align: center;
 }
 
 .mapa-sitio__contenido {
     justify-content: center;
-    @include margenes(2,-1,2,-1);
+    @include margenes(3,-1,3,-1);
 }
 
 /* Selectores para enlaces */
@@ -27,6 +29,7 @@
 }
 
 .enlaces__titulo {
+    @include margenes(2,-1,2,-1);
     font-size: 2rem;
     a {
         color: $negro;
@@ -39,5 +42,9 @@
 
 /* Selector para lista de enlaces */
 .enlaces__lista {
+    @include margenes(2,-1,2,-1);
     list-style: disc;
+    ul {
+        list-style: disc;    
+    }
 }

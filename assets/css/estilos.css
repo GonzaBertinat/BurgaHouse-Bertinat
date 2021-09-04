@@ -998,18 +998,20 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-top: 6rem; }
 
 .mapa-sitio__titulo {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
   font-style: italic; }
 
 .mapa-sitio__descripcion {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   text-align: center; }
 
 .mapa-sitio__contenido {
   justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 /* Selectores para enlaces */
 .enlaces {
@@ -1017,6 +1019,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-left: 1.5rem; }
 
 .enlaces__titulo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 2rem; }
   .enlaces__titulo a {
     color: #000000;
@@ -1026,7 +1030,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selector para lista de enlaces */
 .enlaces__lista {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   list-style: disc; }
+  .enlaces__lista ul {
+    list-style: disc; }
 
 /* Selectores para responsividad de elementos sin Bootstrap */
 @media only screen and (max-width: 991px) {
