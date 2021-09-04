@@ -4,40 +4,41 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/pages/nosotros.html</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/pages/nosotros.html</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/pages/menu.html</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/pages/menu.html</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/pages/sucursales.html</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/pages/sucursales.html</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/pages/contacto.html</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/pages/contacto.html</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/index.html</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/index.html</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://burgahousebertinat.000webhostapp.com/pages/mapa-sitio.html</loc>
-  <lastmod>2021-08-21T05:13:26+00:00</lastmod>
+  <loc>https://gonzabertinat.github.io/BurgaHouse-Bertinat/pages/mapa-sitio.html</loc>
+  <lastmod>2021-09-04T19:56:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
+
 </urlset>
