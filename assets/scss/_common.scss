@@ -93,7 +93,7 @@
 
 .lista-rutas__contenido {
     background-color: $negro;
-    
+    text-transform: uppercase;
     ol {
         @include margenes(-1,-1,0,-1);
         @include relleno(1,-1,1,2);
@@ -103,7 +103,7 @@
             color: $dorado;
             a {
                 color: $blanco;
-                text-underline-offset: 20%;
+                text-decoration: none;
                 transition: all 0.5s;
             }
             a:hover {

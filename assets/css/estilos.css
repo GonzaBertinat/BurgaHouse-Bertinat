@@ -89,7 +89,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   border-bottom: 3px #ffa500 solid; }
 
 .lista-rutas__contenido {
-  background-color: #000000; }
+  background-color: #000000;
+  text-transform: uppercase; }
   .lista-rutas__contenido ol {
     margin-bottom: 0rem;
     padding-top: 0.5rem;
@@ -101,7 +102,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
       color: #ffa500; }
       .lista-rutas__contenido ol li a {
         color: #ffffff;
-        text-underline-offset: 20%;
+        text-decoration: none;
         transition: all 0.5s; }
       .lista-rutas__contenido ol li a:hover {
         color: #ffa500; }
