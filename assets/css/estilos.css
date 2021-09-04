@@ -1036,7 +1036,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   .enlaces__lista ul {
     list-style: disc; }
 
-/* Selectores para responsividad de elementos sin Bootstrap */
+/* Selectores para adaptar elementos a pantallas de distintos dispositivos */
+/* Selectores para responsividad de elementos */
 @media only screen and (max-width: 991px) {
   .destacada__article {
     width: 90%; }
@@ -1080,7 +1081,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     width: 100%;
     height: 300px; }
   .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
-    font-size: 5rem; }
+    font-size: 5rem;
+    -webkit-text-stroke-width: 4px; }
   .fondo-index__slogan {
     font-size: 3rem; }
   .formulario form {
@@ -1102,4 +1104,10 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     flex-direction: column;
     align-items: center; }
   .bebida__nombre {
-    text-align: center; } }
+    text-align: center; }
+  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
+    font-size: 4rem;
+    -webkit-text-stroke-width: 4px; }
+  .fondo-index__slogan {
+    font-size: 2.5rem;
+    -webkit-text-stroke-width: 3px; } }
