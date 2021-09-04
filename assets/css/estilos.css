@@ -601,13 +601,18 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   height: 30%; }
 
 .hamburguesa__imagen, .clasica__imagen, .premium__imagen, .hambrienta__imagen {
-  border: solid 2px #000000;
-  border-radius: 5%;
   transition: all 0.2s;
   filter: brightness(0.6); }
 
 .hamburguesa__imagen:hover, .clasica__imagen:hover, .premium__imagen:hover, .hambrienta__imagen:hover {
+  transform: scale(110%, 110%);
   filter: brightness(1); }
+
+.hamburguesa__contenedor-imagen {
+  overflow: hidden;
+  height: 100%;
+  border: solid 2px #000000;
+  border-radius: 5%; }
 
 .hamburguesa__precio, .clasica__precio, .premium__precio, .hambrienta__precio {
   padding-top: 0.25rem;

@@ -70,15 +70,21 @@
     height: 30%;
 }
 
-.hamburguesa__imagen {
-    border: solid $border-size $negro;
-    border-radius: 5%;
+.hamburguesa__imagen {   
     transition: all 0.2s;
     filter: brightness(0.6);
 }
 
 .hamburguesa__imagen:hover {
+    @include zoom(10%,10%);
     filter: brightness(1);
+}
+
+.hamburguesa__contenedor-imagen {
+    overflow: hidden;
+    height: 100%;
+    border: solid $border-size $negro;
+    border-radius: 5%;
 }
 
 .hamburguesa__precio {
