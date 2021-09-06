@@ -13,10 +13,15 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /* Transformaciones */
 /* Selectores comunes a todos los documentos */
 /****** Selectores comunes a todos los documentos ******/
+/* Selector universal, asigna fuente por defecto para todos los textos.
+Se aplican fuentes en titulos y subtitulos sobreescribiendo la fuente base */
+* {
+  font-family: "Glory", sans-serif; }
+
 /**************************** HEADER ******************************/
 /* Selectores para estructura del contenido */
 .encabezado {
-  font-size: 1rem; }
+  font-size: 1.3rem; }
 
 .encabezado__navegacion {
   background-color: #000000; }
@@ -50,7 +55,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .encabezado__submenu {
   background-color: #000000;
-  width: 250px; }
+  width: 250px;
+  font-size: 1.3rem; }
 
 /* Selectores para enlaces a diferentes secciones */
 .encabezado__enlace {
@@ -78,7 +84,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     padding-left: 2.5rem; }
 
 .encabezado__lista-enlaces--margen .show {
-  margin-bottom: 9rem; }
+  margin-bottom: 11rem; }
 
 /*********************************************************************/
 /**************************** CONTENIDO (MAIN) ******************************/
@@ -97,7 +103,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     padding-bottom: 0.5rem;
     padding-left: 1rem; }
     .lista-rutas__contenido ol li {
-      font-family: "Raleway", sans-serif;
+      font-size: 1.3rem;
       font-weight: bold;
       color: #ffa500; }
       .lista-rutas__contenido ol li a {
@@ -109,10 +115,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selector para titulos h1 de las secciones */
 .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
-  font-family: "Staatliches", cursive;
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
-  font-size: 7rem;
-  font-weight: 300;
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -5px;
   -webkit-text-stroke-width: 6px; }
 
 /****************************/
@@ -151,11 +158,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   justify-content: center; }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
-.titulo-seccion, .visitarnos__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .formulario__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+.titulo-seccion, .visitarnos__titulo, .destacadas__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .formulario__titulo, .whats-app__titulo, .mapa-sitio__titulo {
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Crete Round", serif;
   text-align: center; }
 
 /* Selector para darle relleno superior e inferior a las secciones del sitio */
@@ -185,7 +192,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #000000;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 1.2rem; }
 
 .pie-pagina__contenido {
   justify-content: center;
@@ -207,7 +215,6 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-right: 0rem;
   padding-left: 0rem;
   font-weight: bold;
-  font-size: 1rem;
   text-align: center; }
 
 /* Selectores para iconos de redes sociales */
@@ -281,7 +288,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   transition: all 0.5s;
   border-radius: 20px;
   max-width: 250px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 1.2rem; }
 
 .boton-navegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .donde-encontrarnos__boton:hover {
   transform: scale(120%, 120%); }
@@ -295,7 +303,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   -webkit-text-stroke: 4px #000000;
   color: #ffa500;
   font-size: 3.5rem;
-  letter-spacing: 2px; }
+  letter-spacing: -2px; }
 
 /*** Selectores para seccion 'Por qué visitarnos?' ***/
 .visitarnos {
@@ -315,7 +323,9 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .visitarnos__texto {
   margin-bottom: 0rem;
   text-align: center;
-  font-size: 1.2rem; }
+  font-size: 1.3rem; }
+  .visitarnos__texto strong {
+    font-size: 1.5rem; }
 
 .visitarnos__boton {
   color: #ffffff;
@@ -351,19 +361,20 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .destacada__imagen {
   border: solid 2px #ffa500;
-  border-radius: 5%;
+  border-radius: 80px;
   transition: all 0.2s; }
 
 .destacada__imagen:hover {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  transform: scale(120%, 120%); }
+  transform: scale(110%, 110%); }
 
 .destacada__nombre {
   margin-top: 1rem;
   margin-bottom: 0rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 700; }
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem; }
 
 .destacadas__boton {
   color: #000000;
@@ -393,12 +404,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .donde-encontrarnos__subtitulo {
   margin-bottom: 0rem;
-  font-style: italic;
-  text-align: center; }
+  text-align: center;
+  font-family: "Ubuntu", sans-serif; }
 
 .donde-encontrarnos__texto {
   text-align: center;
-  font-size: 1.2rem; }
+  font-size: 1.3rem; }
 
 .donde-encontrarnos__contenedor-imagen {
   border: solid 2px #000000; }
@@ -443,6 +454,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .historia__texto {
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
   text-align: start; }
 
 /* Selector para controlar las imagenes de la sección */
@@ -458,7 +470,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .diferentes__texto {
   margin-bottom: 0.5rem;
   text-align: end;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 1.2rem; }
 
 .diferentes__titulo {
   margin-bottom: 1.5rem; }
@@ -509,7 +522,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   grid-area: nombre; }
   .opinion__nombre h3 {
     color: #ffa500;
-    font-family: "Work Sans", sans-serif;
+    font-family: "Glory", sans-serif;
     font-size: 1.5rem; }
 
 .opinion__valoracion {
@@ -519,7 +532,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     margin-top: 0.5rem;
     text-align: center;
     color: #ffa500;
-    font-family: "Work Sans", sans-serif; }
+    font-family: "Glory", sans-serif;
+    font-size: 1.4rem; }
   .opinion__valoracion img {
     width: 15%; }
 
@@ -529,6 +543,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-left: 5%;
   padding-right: 5%; }
   .opinion__texto p {
+    font-size: 1.2rem;
     color: #ffffff;
     font-style: italic; }
 
@@ -543,7 +558,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /** Selectores para sección de Hamburguesas **/
 .hamburguesas {
   background: linear-gradient(90deg, black 5%, #434343 50%, black 95%);
-  border-bottom: solid 2px #ffffff;
+  border-bottom: solid 2px #000000;
   text-align: center; }
 
 .hamburguesas__titulo {
@@ -556,8 +571,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
+  font-family: "Glory", sans-serif;
+  font-weight: 700;
   text-align: center; }
 
 .hamburguesas__listado {
@@ -568,7 +583,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: #ffa500; }
+  color: #ffa500;
+  font-size: 1.4rem; }
 
 /* Selectores para Líneas de Hamburguesas */
 .hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas {
@@ -576,44 +592,43 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 /* Selector de clase con estilos comunes a los article de cada hamburguesa */
 .articulo-menu, .clasica, .premium, .hambrienta {
-  padding-right: 1rem;
-  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1rem;
   text-align: center;
-  height: 100%; }
+  height: 100%;
+  border-radius: 30px; }
 
 /** Selectores comunes para cada producto **/
 .hamburguesa__nombre, .clasica__nombre, .premium__nombre, .hambrienta__nombre {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 700; }
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem; }
 
 .hamburguesa__descripcion, .clasica__descripcion, .premium__descripcion, .hambrienta__descripcion {
   margin-top: 0.5rem;
+  margin-right: 1rem;
   margin-bottom: 0.5rem;
+  margin-left: 1rem;
   font-style: italic;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 30%; }
+  height: 30%;
+  font-size: 1.2rem; }
 
 .hamburguesa__imagen, .clasica__imagen, .premium__imagen, .hambrienta__imagen {
   transition: all 0.2s;
-  filter: brightness(0.6); }
+  filter: brightness(0.75); }
 
 .hamburguesa__imagen:hover, .clasica__imagen:hover, .premium__imagen:hover, .hambrienta__imagen:hover {
-  transform: scale(110%, 110%);
   filter: brightness(1); }
 
 .hamburguesa__contenedor-imagen {
-  overflow: hidden;
-  height: 100%;
-  border: solid 2px #000000;
-  border-radius: 5%; }
+  border-top: solid 2px #000000;
+  border-bottom: solid 2px #000000; }
 
 .hamburguesa__precio, .clasica__precio, .premium__precio, .hambrienta__precio {
   padding-top: 0.25rem;
@@ -622,8 +637,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-left: 0.5rem;
   font-weight: bold;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem;
+  font-family: "Glory", sans-serif;
   font-size: 1.5rem;
   color: #000000;
   border: solid 2px #000000;
@@ -663,7 +678,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /** Selectores para la sección de Bebidas **/
 .bebidas {
   padding-bottom: 1rem;
-  border-top: solid 2px #ffffff;
+  border-top: solid 2px #000000;
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
 
 .bebidas__titulo {
@@ -683,20 +698,21 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .bebidas__categoria {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-weight: bold;
   color: #ffa500;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: -1px; }
+  letter-spacing: 1px; }
 
 .bebidas__items {
   padding-bottom: 0rem;
-  padding-left: 0rem;
-  font-size: 1.2rem; }
+  padding-left: 0rem; }
 
 /** Selectores para los items de las listas de bebidas **/
 .bebida {
   display: flex;
   flex-direction: row;
+  font-size: 1.5rem;
   justify-content: space-between; }
   .bebida span {
     margin-right: 1.5rem;
@@ -750,8 +766,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /** Selector para los nombres de las sucursales cuando están colapsadas en el acordeón **/
 .accordion-button__titulo {
   font-weight: 600;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Glory", sans-serif;
+  font-size: 1.7rem;
   color: #ffffff !important;
   border: #000000 solid 2px;
   background-color: #000000 !important; }
@@ -788,7 +804,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 /** Selectores para datos de la sucursal **/
 .sucursal__nombre {
   margin-left: 0.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 1.7rem; }
 
 .sucursal__info {
   color: #551313;
@@ -797,7 +814,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .sucursal__dato {
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem; }
 
 /* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
 .sucursal__icono {
@@ -816,7 +834,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   color: #000000; }
 
 .formas-entrega__forma {
-  text-decoration: underline; }
+  font-size: 1.3rem; }
 
 /*** Selectores para sección 'Métodos de Pago' ***/
 /** Selectores para estructurar contenido dentro del section **/
@@ -842,7 +860,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   padding-top: 1rem;
   padding-bottom: 0rem;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1.3rem; }
 
 /* Selector para caja contenedora de métodos de pago */
 .listado-metodos {
@@ -867,9 +885,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   font-weight: bold;
   text-transform: uppercase;
   color: #ffa500;
-  letter-spacing: -2px;
   font-size: 1.7rem;
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Glory", sans-serif; }
 
 /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
 .metodo-pago__logo {
@@ -897,7 +914,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   color: #ffa500;
   background-color: #000000;
   text-align: start;
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
   .formulario form span {
     display: block;
     text-align: center; }
@@ -906,7 +923,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     border: solid 2px #ffa500;
     color: #ffffff;
     border-radius: 10px;
-    font-size: 1.1rem; }
+    font-size: 1.3rem; }
     .formulario form input:focus, .formulario form select:focus, .formulario form textarea:focus {
       background-color: #000000;
       border: solid 2px #ffa500;
@@ -921,7 +938,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .formulario__parrafo {
   text-align: center;
-  font-size: 1.2rem; }
+  font-size: 1.3rem; }
   .formulario__parrafo em {
     text-decoration: underline; }
 
@@ -960,11 +977,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   display: block;
   margin: 0 auto;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   background-color: #ffa500;
   border: solid 2px #000000;
   color: #000000;
-  font-family: "Raleway", sans-serif;
+  font-family: "Glory", sans-serif;
   width: 80%; }
 
 .botones__boton:hover {
@@ -1007,6 +1024,7 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .mapa-sitio__descripcion {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-size: 1.3rem;
   text-align: center; }
 
 .mapa-sitio__contenido {
@@ -1021,11 +1039,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 
 .enlaces__titulo {
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 2rem; }
+  margin-bottom: 1rem; }
   .enlaces__titulo a {
     color: #000000;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2rem; }
   .enlaces__titulo a:hover {
     color: #ffa500; }
 
@@ -1033,7 +1052,8 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
 .enlaces__lista {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  list-style: disc; }
+  list-style: disc;
+  font-size: 1.3rem; }
   .enlaces__lista ul {
     list-style: disc; }
 
@@ -1055,10 +1075,10 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     width: 80%; }
   .pie-pagina__contenedor-logo {
     width: 85%; }
-  .bebidas__items {
-    font-size: 1rem; }
   .bebidas__listado {
     width: 100%; }
+  .bebida {
+    font-size: 1.3rem; }
   .articulo-menu, .clasica, .premium, .hambrienta {
     margin-bottom: 1.5rem;
     height: auto; }
@@ -1067,12 +1087,20 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     margin-bottom: 1.5rem; } }
 
 @media only screen and (max-width: 767px) {
+  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
+    font-size: 5rem;
+    -webkit-text-stroke-width: 5px; }
+  .fondo-index__slogan {
+    font-size: 3rem;
+    -webkit-text-stroke-width: 4px; }
   .primer-elemento {
     order: -1; }
   .destacada__nombre {
     margin-bottom: 1rem; }
   .pie-pagina__contenedor-logo {
-    width: 60%; } }
+    width: 60%; }
+  .bebidas__listado {
+    width: 90%; } }
 
 @media only screen and (max-width: 575px) {
   .encabezado__menu-lateral {
@@ -1082,10 +1110,11 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     width: 100%;
     height: 300px; }
   .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
-    font-size: 5rem;
+    font-size: 4rem;
     -webkit-text-stroke-width: 4px; }
   .fondo-index__slogan {
-    font-size: 3rem; }
+    font-size: 3rem;
+    -webkit-text-stroke-width: 4px; }
   .formulario form {
     width: 90%; }
   .pie-pagina__contenedor-logo {
@@ -1103,12 +1132,13 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
   .bebida {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    font-size: 1.4rem; }
   .bebida__nombre {
     text-align: center; }
   .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
-    font-size: 4rem;
-    -webkit-text-stroke-width: 4px; }
+    font-size: 3rem;
+    -webkit-text-stroke-width: 3px; }
   .fondo-index__slogan {
-    font-size: 2.5rem;
-    -webkit-text-stroke-width: 3px; } }
+    font-size: 2rem;
+    -webkit-text-stroke-width: 2px; } }

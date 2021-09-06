@@ -20,7 +20,7 @@
         color: $dorado;
         background-color: $negro;
         text-align: start;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         span {
             display: block;
             text-align: center;
@@ -30,7 +30,7 @@
             border: solid $border-size $dorado;
             color: $blanco;
             border-radius: 10px;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             &:focus {
                 background-color: $negro;
                 border: solid $border-size $dorado;
@@ -51,7 +51,7 @@
 
 .formulario__parrafo {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     em {
         @include estilo-texto(subrayado);
     }
@@ -95,11 +95,11 @@
     display: block;
     margin: 0 auto;
     border-radius: 20px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     background-color: $dorado;
     border: solid $border-size $negro;
     color: $negro;
-    font-family: $raleway;
+    font-family: $glory;
     width: 80%;
 }
 

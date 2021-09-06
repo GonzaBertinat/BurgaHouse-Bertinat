@@ -36,6 +36,7 @@
 
 .historia__texto {
     @include margenes(-1,-1,1,-1);
+    font-size: 1.2rem;
     text-align: start;
 }
 
@@ -57,6 +58,7 @@
     @include margenes(-1,-1,1,-1);
     text-align: end;
     color: $blanco;
+    font-size: 1.2rem;
 }
 
 .diferentes__titulo {
@@ -118,7 +120,7 @@
     grid-area: nombre;
     h3{
         color: $dorado;
-        font-family: $work-sans;
+        font-family: $glory;
         font-size: 1.5rem;
     }
 }
@@ -130,7 +132,8 @@
         @include margenes(1,-1,-1,-1);
         text-align: center;
         color: $dorado;
-        font-family: $work-sans;
+        font-family: $glory;
+        font-size: 1.4rem;
     }
     img {
         width: 15%;     
@@ -143,6 +146,7 @@
     padding-left: 5%;
     padding-right: 5%;
     p {
+        font-size: 1.2rem;
         color: $blanco;
         @include estilo-texto(italica);
     }

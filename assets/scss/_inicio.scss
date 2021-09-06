@@ -12,6 +12,7 @@
     border-radius: 20px;
     max-width: 250px;
     margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 .boton-navegacion:hover {
@@ -30,7 +31,7 @@
     -webkit-text-stroke: 4px $negro;
     color: $dorado;
     font-size: 3.5rem;
-    letter-spacing: 2px;
+    letter-spacing: -2px;
 }
 
 /*** Selectores para seccion 'Por qué visitarnos?' ***/
@@ -56,7 +57,10 @@
 .visitarnos__texto {
     @include margenes(-1,-1,0,-1);
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    strong {
+        font-size: 1.5rem;
+    }
 }
 
 .visitarnos__boton {
@@ -84,6 +88,7 @@
 }
 
 .destacadas__titulo {
+    @extend .titulo-seccion;
     @include margenes(-1,-1,0,-1);
 }
 
@@ -100,19 +105,20 @@
 
 .destacada__imagen {
     border: solid $border-size $dorado;
-    border-radius: 5%;
+    border-radius: 80px;
     transition: all 0.2s;
 }
 
 .destacada__imagen:hover {
     @include margenes(3,-1,3,-1);
-    @include zoom(20%,20%);
+    @include zoom(10%,10%);
 }
 
 .destacada__nombre {
     @include margenes(2,-1,0,-1);
-    font-family: $work-sans;
-    font-weight: 700;
+    font-family: $ubuntu;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .destacadas__boton {
@@ -153,13 +159,13 @@
 
 .donde-encontrarnos__subtitulo {
     @include margenes(-1,-1,0,-1);
-    @include estilo-texto(italica);
     text-align: center;
+    font-family: $ubuntu;
 }
 
 .donde-encontrarnos__texto {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .donde-encontrarnos__contenedor-imagen {

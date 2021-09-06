@@ -46,8 +46,8 @@
 /** Selector para los nombres de las sucursales cuando están colapsadas en el acordeón **/
 .accordion-button__titulo {
     font-weight: 600;
-    font-family: $work-sans;
-    font-size: 1.5rem;
+    font-family: $glory;
+    font-size: 1.7rem;
     color: $blanco !important;
     border: $negro solid $border-size;
     background-color: $negro!important;
@@ -85,6 +85,7 @@
 .sucursal__nombre {
     @include margenes(-1,-1,-1,1);
     @include estilo-texto(negrita);
+    font-size: 1.7rem;
 }
 
 .sucursal__info {
@@ -95,6 +96,7 @@
 
 .sucursal__dato {
     @include margenes(1,-1,1,-1);
+    font-size: 1.3rem;
 }
 
 /* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
@@ -116,7 +118,7 @@
 }
 
 .formas-entrega__forma {
-    @include estilo-texto(subrayado);
+    font-size: 1.3rem;
 }
 
 /*** Selectores para sección 'Métodos de Pago' ***/
@@ -147,7 +149,7 @@
 .metodos-pago__descripcion {
     @include relleno(2,-1,0,-1);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* Selector para caja contenedora de métodos de pago */
@@ -172,9 +174,8 @@
     @include estilo-texto(negrita);
     text-transform: uppercase;
     color: $dorado;
-    letter-spacing: -2px;
     font-size: 1.7rem;
-    font-family: $work-sans;
+    font-family: $glory;
 }
 
 /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/

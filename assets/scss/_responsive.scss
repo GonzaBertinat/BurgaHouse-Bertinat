@@ -31,12 +31,12 @@
         width: 85%;
     }
 
-    .bebidas__items {
-        font-size: 1rem;
-    }
-
     .bebidas__listado {
         width: 100%;
+    }
+
+    .bebida {
+        font-size: 1.3rem;
     }
 
     .articulo-menu {
@@ -51,6 +51,16 @@
 }
 
 @media only screen and (max-width: 767px){
+    .titulo-principal {
+        font-size: 5rem;
+        -webkit-text-stroke-width: 5px;
+    }
+
+    .fondo-index__slogan {
+        font-size: 3rem;
+        -webkit-text-stroke-width: 4px;
+    }
+
     .primer-elemento {
         order: -1;
     }
@@ -61,6 +71,10 @@
 
     .pie-pagina__contenedor-logo {
         width: 60%;
+    }
+
+    .bebidas__listado {
+        width: 90%;
     }
 }
 
@@ -76,12 +90,13 @@
     }
 
     .titulo-principal {
-        font-size: 5rem;
+        font-size: 4rem;
         -webkit-text-stroke-width: 4px;
     }
 
     .fondo-index__slogan {
         font-size: 3rem;
+        -webkit-text-stroke-width: 4px;
     }
 
     .formulario {
@@ -115,6 +130,7 @@
     .bebida {
         @include flex(column);
         align-items: center;
+        font-size: 1.4rem;
     }
 
     .bebida__nombre {
@@ -122,12 +138,12 @@
     }
 
     .titulo-principal {
-        font-size: 4rem;
-        -webkit-text-stroke-width: 4px;
+        font-size: 3rem;
+        -webkit-text-stroke-width: 3px;
     }
 
     .fondo-index__slogan {
-        font-size: 2.5rem;
-        -webkit-text-stroke-width: 3px;
+        font-size: 2rem;
+        -webkit-text-stroke-width: 2px;
     }
 }
