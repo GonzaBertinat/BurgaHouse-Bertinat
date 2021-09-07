@@ -27,96 +27,74 @@ html {
 /* Selectores para estructura del contenido */
 .encabezado {
   font-size: 1.3rem; }
-
-.encabezado__navegacion {
-  background-color: #000000; }
-  .encabezado__navegacion .container {
-    justify-content: center; }
-
-.encabezado__contenido {
-  width: 100%;
-  align-items: center; }
-
-.encabezado__seccion {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-
-.encabezado__seccion--end {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
-
-/* Selectores para agrupaciones de enlaces (lista y submenú) */
-.encabezado__lista-enlaces {
-  padding-inline-start: 0px;
-  list-style: none; }
-
-/* Selector para logo del sitio */
-.encabezado__logo {
-  width: 130px; }
-
-.encabezado__logo:hover {
-  transform: scale(105%, 105%); }
-
-.encabezado__submenu {
-  background-color: #000000;
-  width: 250px;
-  font-size: 1.3rem; }
-
-/* Selectores para enlaces a diferentes secciones */
-.encabezado__enlace {
-  padding-left: 1.5rem;
-  font-weight: bold;
-  color: #ffffff !important; }
-
-.encabezado__enlace:hover {
-  background-color: #000000;
-  color: #ffa500 !important; }
-
-/* Selector de clase para marcar en el menú qué sección es la actual */
-.encabezado__enlace--activo {
-  color: #ffa500 !important;
-  /* Sobreescribe bootstrap */
-  font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 40%; }
-
-/** Selectores para menú lateral responsive */
-.encabezado__menu-lateral {
-  background-color: #000000;
-  width: 320px; }
-  .encabezado__menu-lateral .encabezado__submenu li a {
+  .encabezado__navegacion {
+    background-color: #000000; }
+    .encabezado__navegacion .container {
+      justify-content: center; }
+  .encabezado__seccion {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+    .encabezado__seccion--end {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+  .encabezado__contenido {
+    width: 100%;
+    align-items: center; }
+  .encabezado__lista-enlaces {
+    padding-inline-start: 0px;
+    list-style: none; }
+  .encabezado__logo {
+    width: 130px; }
+    .encabezado__logo:hover {
+      transform: scale(105%, 105%); }
+  .encabezado__submenu {
+    background-color: #000000;
+    width: 250px;
+    font-size: 1.3rem; }
+  .encabezado__enlace {
+    padding-left: 1.5rem;
+    font-weight: bold;
+    color: #ffffff !important; }
+    .encabezado__enlace:hover {
+      background-color: #000000;
+      color: #ffa500 !important; }
+    .encabezado__enlace--activo {
+      color: #ffa500 !important;
+      /* Sobreescribe bootstrap */
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 40%; }
+  .encabezado__menu-lateral {
+    background-color: #000000;
+    width: 320px; }
+  .encabezado__submenu li a {
     padding-left: 2.5rem; }
+  .encabezado__lista-enlaces--margen .show {
+    margin-bottom: 11rem; }
 
-.encabezado__lista-enlaces--margen .show {
-  margin-bottom: 11rem; }
-
-/*********************************************************************/
-/**************************** CONTENIDO (MAIN) ******************************/
-/* Selector para breadcrumb */
 .lista-rutas {
   background-color: #ffffff;
   border-top: 2px #ffa500 solid;
   border-bottom: 3px #ffa500 solid; }
-
-.lista-rutas__contenido {
-  background-color: #000000;
-  text-transform: uppercase; }
-  .lista-rutas__contenido ol {
-    margin-bottom: 0rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem; }
-    .lista-rutas__contenido ol li {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #ffa500; }
-      .lista-rutas__contenido ol li a {
-        color: #ffffff;
-        text-decoration: none;
-        transition: all 0.5s; }
-      .lista-rutas__contenido ol li a:hover {
+  .lista-rutas__contenido {
+    background-color: #000000;
+    text-transform: uppercase; }
+    .lista-rutas__contenido ol {
+      margin-bottom: 0rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem; }
+      .lista-rutas__contenido ol li {
+        font-weight: bold;
+        font-size: 1.3rem;
         color: #ffa500; }
+        .lista-rutas__contenido ol li a {
+          color: #ffffff;
+          text-decoration: none;
+          transition: all 0.5s; }
+        .lista-rutas__contenido ol li:hover {
+          color: #ffa500; }
 
 /* Selector para titulos h1 de las secciones */
 .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
@@ -127,11 +105,32 @@ html {
   letter-spacing: -5px;
   -webkit-text-stroke-width: 6px; }
 
-/****************************/
-/* Selector para fondos de seccion */
-.fondo-seccion__contenido {
-  display: flex;
-  flex-direction: column; }
+/* Selector para darle relleno superior e inferior a las secciones del sitio */
+.seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .sucursales, .metodos-pago, .formulario, .whats-app {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+/* Selector de clase para los titulos de las secciones de todas las páginas */
+.titulo-seccion, .visitarnos__titulo, .destacadas__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .formulario__titulo, .whats-app__titulo, .mapa-sitio__titulo {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2.5rem;
+  font-family: "Crete Round", serif;
+  text-align: center; }
+
+/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
+.fondo-seccion, .fondo-index, .fondo-nosotros, .fondo-menu, .fondo-sucursales, .fondo-contacto {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; }
+  .fondo-seccion .container, .fondo-index .container, .fondo-nosotros .container, .fondo-menu .container, .fondo-sucursales .container, .fondo-contacto .container {
+    height: 100%;
+    overflow: hidden;
+    justify-content: center; }
+  .fondo-seccion__contenido {
+    display: flex;
+    flex-direction: column; }
 
 /* Asigno estilos a imágenes de fondo de cada sección */
 .fondo-index {
@@ -149,49 +148,18 @@ html {
 .fondo-contacto {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-contacto.webp"); }
 
-/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
-.fondo-seccion, .fondo-index, .fondo-nosotros, .fondo-menu, .fondo-sucursales, .fondo-contacto {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh; }
-
-/* Selector de clase para contenido dentro del fondo de cada sección */
-.fondo-seccion .container, .fondo-index .container, .fondo-nosotros .container, .fondo-menu .container, .fondo-sucursales .container, .fondo-contacto .container {
-  height: 100%;
-  overflow: hidden;
-  justify-content: center; }
-
-/* Selector de clase para los titulos de las secciones de todas las páginas */
-.titulo-seccion, .visitarnos__titulo, .destacadas__titulo, .donde-encontrarnos__titulo, .historia__titulo, .diferentes__titulo, .recomendaciones__titulo, .hamburguesas__titulo, .bebidas__titulo, .sucursales__titulo, .metodos-pago__titulo, .formulario__titulo, .whats-app__titulo, .mapa-sitio__titulo {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 2.5rem;
-  font-family: "Crete Round", serif;
-  text-align: center; }
-
-/* Selector para darle relleno superior e inferior a las secciones del sitio */
-.seccion, .visitarnos, .destacadas, .donde-encontrarnos, .historia, .diferentes, .recomendaciones, .sucursales, .metodos-pago, .formulario, .whats-app {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-
-/* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
 .icono-subir__contenedor {
   display: flex;
   flex-direction: row;
   justify-content: flex-end; }
+  .icono-subir__contenedor .icono-subir__enlace {
+    margin-right: 1rem;
+    display: block;
+    transition: all 1s;
+    width: 50px; }
+    .icono-subir__contenedor .icono-subir__enlace:hover {
+      transform: rotate(360deg); }
 
-.icono-subir__enlace {
-  margin-right: 1rem;
-  display: block;
-  transition: all 1s;
-  width: 50px; }
-
-.icono-subir__enlace:hover {
-  transform: rotate(360deg); }
-
-/*********************************************************************/
-/**************************** FOOTER ******************************/
 /* Selectores para estructura del contenido */
 .pie-pagina {
   padding-top: 0.5rem;
@@ -199,42 +167,52 @@ html {
   background-color: #000000;
   color: #ffffff;
   font-size: 1.2rem; }
-
-.pie-pagina__contenido {
-  justify-content: center;
-  align-items: center; }
-
-.pie-pagina__seccion {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column; }
-
-.pie-pagina__seccion-centrado {
-  text-align: center; }
-
-/* Selector para textos */
-.pie-pagina__texto {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-right: 0rem;
-  padding-left: 0rem;
-  font-weight: bold;
-  text-align: center; }
-
-/* Selectores para iconos de redes sociales */
-.pie-pagina__redes, .pie-pagina__autor {
-  justify-content: center; }
-
-.pie-pagina__contenedor-red-social {
-  justify-content: center;
-  width: 80px; }
-
-.pie-pagina__red-social, .facebook-logo, .twitter-logo, .instagram-logo, .linkedin-logo, .whats-app-logo {
-  transition: all 0.5s; }
-
-.pie-pagina__red-social:hover, .facebook-logo:hover, .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover, .whats-app-logo:hover {
-  transform: scale(120%, 120%); }
+  .pie-pagina__contenido {
+    justify-content: center;
+    align-items: center; }
+  .pie-pagina__seccion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column; }
+    .pie-pagina__seccion--centrado {
+      text-align: center; }
+  .pie-pagina__texto {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+    font-weight: bold;
+    text-align: center; }
+  .pie-pagina__redes {
+    justify-content: center; }
+  .pie-pagina__autor {
+    justify-content: center; }
+  .pie-pagina__contenedor-red-social {
+    justify-content: center;
+    width: 80px; }
+  .pie-pagina__red-social, .facebook-logo, .twitter-logo, .instagram-logo, .linkedin-logo, .whats-app-logo {
+    transition: all 0.5s; }
+    .pie-pagina__red-social:hover, .facebook-logo:hover, .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover, .whats-app-logo:hover {
+      transform: scale(120%, 120%); }
+  .pie-pagina__contenedor-logo {
+    width: 60%;
+    margin: 0 auto; }
+  .pie-pagina__logo {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%; }
+    .pie-pagina__logo:hover {
+      transform: scale(110%, 110%); }
+  .pie-pagina__mapa-sitio {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    align-self: center; }
+    .pie-pagina__mapa-sitio a {
+      color: #ffffff;
+      font-weight: bold; }
 
 /* Mapa para cargar logos de redes sociales */
 /* Bucle que crea una clase para cada red social */
@@ -253,30 +231,6 @@ html {
 .whats-app-logo {
   content: url("../images/redes_sociales/whatsApp.png"); }
 
-/* Selectores para logo */
-.pie-pagina__contenedor-logo {
-  width: 60%;
-  margin: 0 auto; }
-
-.pie-pagina__logo {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 100%; }
-
-.pie-pagina__logo:hover {
-  transform: scale(110%, 110%); }
-
-.pie-pagina__mapa-sitio {
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
-  align-self: center; }
-  .pie-pagina__mapa-sitio a {
-    color: #ffffff;
-    font-weight: bold; }
-
-/*********************************************************************/
 /* Selectores utilizados en sección 'Inicio' */
 /****** Selectores para sección Inicio ******/
 /** Selectores para los botones que navegan a otros documentos del sitio **/
@@ -295,9 +249,8 @@ html {
   max-width: 250px;
   margin: 0 auto;
   font-size: 1.2rem; }
-
-.boton-navegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .donde-encontrarnos__boton:hover {
-  transform: scale(120%, 120%); }
+  .boton-navegacion:hover, .visitarnos__boton:hover, .destacadas__boton:hover, .donde-encontrarnos__boton:hover {
+    transform: scale(120%, 120%); }
 
 /*** Selectores para imagen de fondo, título y slogan del documento ***/
 .fondo-index__titulo {
@@ -313,119 +266,98 @@ html {
 /*** Selectores para seccion 'Por qué visitarnos?' ***/
 .visitarnos {
   background-color: #ffffff; }
-
-.visitarnos__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  justify-content: center; }
-
-.visitarnos__titulo {
-  margin-bottom: 0rem; }
-
-.visitarnos__imagen {
-  border: solid 4px #000000; }
-
-.visitarnos__texto {
-  margin-bottom: 0rem;
-  text-align: center;
-  font-size: 1.3rem; }
-  .visitarnos__texto strong {
-    font-size: 1.5rem; }
-
-.visitarnos__boton {
-  color: #ffffff;
-  border-color: #000000;
-  background-color: #000000; }
-
-.visitarnos__boton:hover {
-  color: #ffffff; }
+  .visitarnos__fila {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center; }
+  .visitarnos__titulo {
+    margin-bottom: 0rem; }
+  .visitarnos__imagen {
+    border: solid 4px #000000; }
+  .visitarnos__texto {
+    margin-bottom: 0rem;
+    text-align: center;
+    font-size: 1.3rem; }
+    .visitarnos__texto strong {
+      font-size: 1.5rem; }
+  .visitarnos__boton {
+    color: #ffffff;
+    border-color: #000000;
+    background-color: #000000; }
+    .visitarnos__boton:hover {
+      color: #ffffff; }
 
 /*** Selectores para seccion 'Nuestras destacadas del mes' ***/
 .destacadas {
   color: #ffa500;
   background: #000000;
   background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
-
-.destacadas__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  justify-content: center; }
-
-.destacadas__titulo {
-  margin-bottom: 0rem; }
+  .destacadas__fila {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center; }
+  .destacadas__titulo {
+    margin-bottom: 0rem; }
+  .destacadas__boton {
+    color: #000000;
+    border-color: #ffa500;
+    background-color: #ffa500; }
+    .destacadas__boton:hover {
+      color: #000000; }
 
 /** Selectores para cada producto destacado **/
-.destacada__contenedor {
+.destacada {
   display: flex;
   flex-direction: row;
   justify-content: center; }
-
-.destacada__article {
-  width: 75%;
-  text-align: center; }
-
-.destacada__imagen {
-  border: solid 2px #ffa500;
-  border-radius: 80px;
-  transition: all 0.2s; }
-
-.destacada__imagen:hover {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  transform: scale(110%, 110%); }
-
-.destacada__nombre {
-  margin-top: 1rem;
-  margin-bottom: 0rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem; }
-
-.destacadas__boton {
-  color: #000000;
-  border-color: #ffa500;
-  background-color: #ffa500; }
-
-.destacadas__boton:hover {
-  color: #000000; }
+  .destacada__article {
+    width: 75%;
+    text-align: center; }
+  .destacada__imagen {
+    border: solid 2px #ffa500;
+    border-radius: 80px;
+    transition: all 0.2s; }
+    .destacada__imagen:hover {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      transform: scale(110%, 110%); }
+  .destacada__nombre {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem; }
 
 /*** Selectores para sección '¿Dónde encontrarnos?' ***/
 .donde-encontrarnos {
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
-
-.donde-encontrarnos__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  align-items: center;
-  justify-content: center; }
-
-.donde-encontrarnos__seccion {
-  padding-right: 1rem;
-  padding-left: 1rem; }
-  .donde-encontrarnos__seccion .row {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  .donde-encontrarnos__fila {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
     justify-content: center; }
-
-.donde-encontrarnos__subtitulo {
-  margin-bottom: 0rem;
-  text-align: center;
-  font-family: "Ubuntu", sans-serif; }
-
-.donde-encontrarnos__texto {
-  text-align: center;
-  font-size: 1.3rem; }
-
-.donde-encontrarnos__contenedor-imagen {
-  border: solid 2px #000000; }
-
-.donde-encontrarnos__boton {
-  color: #ffa500;
-  border-color: #000000;
-  background-color: #000000; }
-
-.donde-encontrarnos__boton:hover {
-  color: #ffa500; }
+  .donde-encontrarnos__seccion {
+    padding-right: 1rem;
+    padding-left: 1rem; }
+    .donde-encontrarnos__seccion .row {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      justify-content: center; }
+  .donde-encontrarnos__subtitulo {
+    margin-bottom: 0rem;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif; }
+  .donde-encontrarnos__texto {
+    text-align: center;
+    font-size: 1.3rem; }
+  .donde-encontrarnos__contenedor-imagen {
+    border: solid 2px #000000; }
+  .donde-encontrarnos__boton {
+    color: #ffa500;
+    border-color: #000000;
+    background-color: #000000; }
+    .donde-encontrarnos__boton:hover {
+      color: #ffa500; }
 
 /* Selectores utilizados en sección 'Nosotros' */
 /****** Selectores para sección Nosotros ******/
@@ -437,64 +369,57 @@ html {
 /*** Selectores para sección 'Nuestra historia', y algunos para '¿Qué nos hace diferentes?' ***/
 .historia {
   background-color: #ffffff; }
-
-.historia__contenido {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  justify-content: center;
-  align-items: center; }
-
-.diferentes__contenido {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  justify-content: center;
-  align-items: center; }
-
-.historia__columna, .diferentes__columna {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem; }
-
-.historia__titulo {
-  margin-bottom: 1.5rem; }
-
-.historia__texto {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  text-align: start; }
-
-/* Selector para controlar las imagenes de la sección */
-.historia__imagen, .diferentes__imagen {
-  border: solid 4px #000000; }
+  .historia__contenido {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center; }
+  .historia__columna {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem; }
+  .historia__titulo {
+    margin-bottom: 1.5rem; }
+  .historia__texto {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-align: start; }
+  .historia__imagen {
+    border: solid 4px #000000; }
 
 /*** Selectores para sección '¿Qué nos hace diferentes?' ***/
 .diferentes {
   background-color: #000000;
   color: #ffa500;
   background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
-
-.diferentes__texto {
-  margin-bottom: 0.5rem;
-  text-align: end;
-  color: #ffffff;
-  font-size: 1.2rem; }
-
-.diferentes__titulo {
-  margin-bottom: 1.5rem; }
+  .diferentes__contenido {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center; }
+  .diferentes__columna {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem; }
+  .diferentes__titulo {
+    margin-bottom: 1.5rem; }
+  .diferentes__texto {
+    margin-bottom: 0.5rem;
+    text-align: end;
+    color: #ffffff;
+    font-size: 1.2rem; }
+  .diferentes__imagen {
+    border: solid 4px #000000; }
 
 /*** Selectores para sección 'Opiniones de nuestros clientes' ***/
 /* Selector para section */
 .recomendaciones {
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
-
-/** Selectores para darle estilo a las opiniones de los clientes **/
-.recomendaciones__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  justify-content: center;
-  align-items: center; }
-
-.recomendaciones__titulo {
-  margin-bottom: 0rem; }
+  .recomendaciones__fila {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center; }
+  .recomendaciones__titulo {
+    margin-bottom: 0rem; }
 
 .opinion {
   padding-top: 0.5rem;
@@ -511,48 +436,43 @@ html {
   align-items: center;
   align-content: end;
   text-align: center; }
-
-.opinion__imagen {
-  height: 125px;
-  width: 125px;
-  grid-area: foto; }
-  .opinion__imagen img {
-    border: solid 2px #ffa500;
-    border-radius: 100%;
-    height: 100%; }
-
-.opinion__nombre {
-  margin-top: 1.5rem;
-  font-style: italic;
-  grid-area: nombre; }
-  .opinion__nombre h3 {
-    color: #ffa500;
-    font-family: "Glory", sans-serif;
-    font-size: 1.5rem; }
-
-.opinion__valoracion {
-  grid-area: valoracion; }
-  .opinion__valoracion span {
-    display: block;
+  .opinion__imagen {
+    height: 125px;
+    width: 125px;
+    grid-area: foto; }
+    .opinion__imagen img {
+      border: solid 2px #ffa500;
+      border-radius: 100%;
+      height: 100%; }
+  .opinion__nombre {
+    margin-top: 1.5rem;
+    font-style: italic;
+    grid-area: nombre; }
+    .opinion__nombre h3 {
+      color: #ffa500;
+      font-family: "Glory", sans-serif;
+      font-size: 1.5rem; }
+  .opinion__valoracion {
+    grid-area: valoracion; }
+    .opinion__valoracion span {
+      display: block;
+      margin-top: 0.5rem;
+      text-align: center;
+      color: #ffa500;
+      font-family: "Glory", sans-serif;
+      font-size: 1.4rem; }
+    .opinion__valoracion img {
+      width: 15%; }
+  .opinion__texto {
     margin-top: 0.5rem;
-    text-align: center;
-    color: #ffa500;
-    font-family: "Glory", sans-serif;
-    font-size: 1.4rem; }
-  .opinion__valoracion img {
-    width: 15%; }
+    grid-area: texto;
+    padding-left: 5%;
+    padding-right: 5%; }
+    .opinion__texto p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-style: italic; }
 
-.opinion__texto {
-  margin-top: 0.5rem;
-  grid-area: texto;
-  padding-left: 5%;
-  padding-right: 5%; }
-  .opinion__texto p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    font-style: italic; }
-
-/************************************************/
 /* Selectores utilizados en sección 'Menú Completo' */
 /****** Selectores para sección Menú Completo ******/
 /** Selector para imagen de fondo con título de la sección **/

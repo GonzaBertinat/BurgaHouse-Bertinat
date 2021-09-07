@@ -17,110 +17,104 @@ html{
 /* Selectores para estructura del contenido */
 .encabezado {
     font-size: 1.3rem;
-}
 
-.encabezado__navegacion {
-    background-color: $negro;
-    .container {
-        justify-content: center;
+    &__navegacion {
+        background-color: $negro;
+        .container {
+            justify-content: center;
+        }
+    }
+    &__seccion {
+        @include relleno(1,-1,1,-1);
+
+        &--end {
+            @include flex(row);
+            justify-content: flex-end;
+        }
+    }
+
+    &__contenido {
+        width: 100%;
+        align-items: center;
+    }
+
+    &__lista-enlaces {
+        padding-inline-start: 0px;
+        list-style: none;
+    }
+
+    &__logo {
+        width: 130px;
+        
+        &:hover {
+            @include zoom(5%,5%);
+        }
+    }
+
+    &__submenu {
+        background-color: $negro;
+        width: 250px;
+        font-size: 1.3rem;
+    }
+
+    &__enlace {
+        @include relleno(-1,-1,-1,3);
+        @include estilo-texto(negrita);
+        color: $blanco !important;
+
+        &:hover {
+            background-color: $negro;
+            color: $dorado !important;
+        }
+
+        &--activo {
+            color: $dorado !important; /* Sobreescribe bootstrap */
+            @include estilo-texto(negrita);
+            @include estilo-texto(subrayado);
+            text-underline-offset: 40%;
+        }
+    }
+
+    &__menu-lateral {
+        background-color: $negro;
+        width: 320px;
+    }
+
+    &__submenu {
+        li {
+            a {
+                @include relleno(-1,-1,-1,5);
+            }
+        }
+    }
+    
+    &__lista-enlaces--margen .show {
+        @include margenes(-1,-1,22,-1);
     }
 }
 
-.encabezado__contenido {
-    width: 100%;
-    align-items: center;
-}
-
-.encabezado__seccion {
-    @include relleno(1,-1,1,-1);
-}
-
-.encabezado__seccion--end {
-    @include flex(row);
-    justify-content: flex-end;
-}
-/* Selectores para agrupaciones de enlaces (lista y submenú) */
-.encabezado__lista-enlaces {
-    padding-inline-start: 0px;
-    list-style: none;
-}
-
-/* Selector para logo del sitio */
-.encabezado__logo {
-    width: 130px;
-}
-
-.encabezado__logo:hover {
-    @include zoom(5%,5%);
-}
-
-.encabezado__submenu {
-    background-color: $negro;
-    width: 250px;
-    font-size: 1.3rem;
-}
-
-/* Selectores para enlaces a diferentes secciones */
-.encabezado__enlace {
-    @include relleno(-1,-1,-1,3);
-    @include estilo-texto(negrita);
-    color: $blanco !important;
-}
-
-.encabezado__enlace:hover {
-    background-color: $negro;
-    color: $dorado !important;
-}
-
-/* Selector de clase para marcar en el menú qué sección es la actual */
-.encabezado__enlace--activo {
-    color: $dorado !important; /* Sobreescribe bootstrap */
-    @include estilo-texto(negrita);
-    @include estilo-texto(subrayado);
-    text-underline-offset: 40%;
-}
-
-/** Selectores para menú lateral responsive */
-.encabezado__menu-lateral{
-    background-color: $negro;
-    width: 320px;
-    .encabezado__submenu li a{
-        @include relleno(-1,-1,-1,5);
-    }
-}
-
-.encabezado__lista-enlaces--margen .show {
-    @include margenes(-1,-1,22,-1);
-}
-
-/*********************************************************************/
-
-/**************************** CONTENIDO (MAIN) ******************************/
-
-/* Selector para breadcrumb */
 .lista-rutas {
     background-color: $blanco;  
     border-top: $border-size $dorado solid; 
     border-bottom: $border-size*1.5 $dorado solid;  
-}
-
-.lista-rutas__contenido {
-    background-color: $negro;
-    text-transform: uppercase;
-    ol {
-        @include margenes(-1,-1,0,-1);
-        @include relleno(1,-1,1,2);
-        li {
-            font-size: 1.3rem;
-            @include estilo-texto(negrita);
-            color: $dorado;
-            a {
-                color: $blanco;
-                text-decoration: none;
-                transition: all 0.5s;
-            }
-            a:hover {
+    &__contenido {
+        background-color: $negro;
+        text-transform: uppercase;
+        ol {
+            @include margenes(-1,-1,0,-1);
+            @include relleno(1,-1,1,2);
+            li {
+                @include estilo-texto(negrita);
+                font-size: 1.3rem;
                 color: $dorado;
+                a {
+                    color: $blanco;
+                    text-decoration: none;
+                    transition: all 0.5s;
+                }
+                &:hover {
+                    color: $dorado;
+                }
             }
         }
     }
@@ -135,35 +129,10 @@ html{
     letter-spacing: -5px;
     -webkit-text-stroke-width: 6px;
 }
-/****************************/
 
-
-/* Selector para fondos de seccion */
-.fondo-seccion__contenido {
-    @include flex(column);
-}
-
-/* Asigno estilos a imágenes de fondo de cada sección */
-@each $seccion in index, nosotros, menu, sucursales, contacto {
-    .fondo-#{$seccion} {
-        @extend .fondo-seccion;
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/fondos/fondo-#{$seccion}.webp");
-    }
-}
-
-/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
-.fondo-seccion {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-/* Selector de clase para contenido dentro del fondo de cada sección */
-.fondo-seccion .container {
-    height: 100%;
-    overflow: hidden;
-    justify-content: center;
+/* Selector para darle relleno superior e inferior a las secciones del sitio */
+.seccion {
+    @include relleno(2,-1,2,-1);
 }
 
 /* Selector de clase para los titulos de las secciones de todas las páginas */
@@ -175,31 +144,47 @@ html{
     text-align: center;
 }
 
-/* Selector para darle relleno superior e inferior a las secciones del sitio */
-.seccion {
-    @include relleno(2,-1,2,-1);
+/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
+.fondo-seccion {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .container {
+        height: 100%;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    &__contenido {
+        @include flex(column);
+    }
 }
 
-/* Selectores de clase para el ícono con flecha hacia arriba para volver al comienzo del documento */
+/* Asigno estilos a imágenes de fondo de cada sección */
+@each $seccion in index, nosotros, menu, sucursales, contacto {
+    .fondo-#{$seccion} {
+        @extend .fondo-seccion;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/fondos/fondo-#{$seccion}.webp");
+    }
+}
+
 .icono-subir__contenedor {
     @include flex(row);
     justify-content: flex-end;
+
+    .icono-subir__enlace {
+        @include margenes(-1,2,-1,-1);
+        display: block;
+        transition: all 1s;
+        width: 50px;
+
+        &:hover {
+            @include rotar(360deg);
+        }
+    }
 }
-
-.icono-subir__enlace {
-    @include margenes(-1,2,-1,-1);
-    display: block;
-    transition: all 1s;
-    width: 50px;
-}
-
-.icono-subir__enlace:hover {
-    @include rotar(360deg);
-}
-
-/*********************************************************************/
-
-/**************************** FOOTER ******************************/
 
 /* Selectores para estructura del contenido */
 .pie-pagina {
@@ -207,46 +192,71 @@ html{
     background-color: $negro;
     color: $blanco;
     font-size: 1.2rem;
-}
 
-.pie-pagina__contenido {
-    justify-content: center;
-    align-items: center;
-}
+    &__contenido {
+        justify-content: center;
+        align-items: center;
+    }
 
-.pie-pagina__seccion {
-    @include relleno(2,-1,2,-1);
-    @include flex(column);
-}
+    &__seccion {
+        @include relleno(2,-1,2,-1);
+        @include flex(column);
 
-.pie-pagina__seccion-centrado {
-    text-align: center;
-}
+        &--centrado {
+            text-align: center;
+        }
+    }
 
-/* Selector para textos */
-.pie-pagina__texto {
-    @include margenes(1,-1,1,-1);
-    @include relleno(-1,0,-1,0);
-    @include estilo-texto(negrita);
-    text-align: center;
-}
+    &__texto {
+        @include margenes(1,-1,1,-1);
+        @include relleno(-1,0,-1,0);
+        @include estilo-texto(negrita);
+        text-align: center;
+    }
 
-/* Selectores para iconos de redes sociales */
-.pie-pagina__redes, .pie-pagina__autor {
-    justify-content: center;
-}
+    &__redes {
+        justify-content: center;
+    }
 
-.pie-pagina__contenedor-red-social {
-    justify-content: center;
-    width: 80px;
-}
+    &__autor {
+        justify-content: center;
+    }
 
-.pie-pagina__red-social {
-    transition: all 0.5s;
-}
+    &__contenedor-red-social {
+        justify-content: center;
+        width: 80px;
+    }
 
-.pie-pagina__red-social:hover {
-    @include zoom(20%,20%);
+    &__red-social {
+        transition: all 0.5s;
+
+        &:hover {
+            @include zoom(20%,20%);
+        }
+    }
+
+    &__contenedor-logo {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        @include relleno(2,-1,2,-1);
+        width: 100%;
+
+        &:hover {
+            @include zoom(10%,10%);
+        }
+    }
+
+    &__mapa-sitio {
+        @include margenes(1,1,1,1);
+        align-self: center;
+        a {
+            color: $blanco;
+            @include estilo-texto(negrita);
+        }
+    }
 }
 
 /* Mapa para cargar logos de redes sociales */
@@ -264,30 +274,4 @@ $redesSociales: (
         @extend .pie-pagina__red-social;
         content:url($ruta);
     }
-} 
-
-/* Selectores para logo */
-.pie-pagina__contenedor-logo {
-    width: 60%;
-    margin: 0 auto;
 }
-
-.pie-pagina__logo {
-    @include relleno(2,-1,2,-1);
-    width: 100%;
-}
-
-.pie-pagina__logo:hover {
-    @include zoom(10%,10%);
-}
-
-.pie-pagina__mapa-sitio {
-    @include margenes(1,1,1,1);
-    align-self: center;
-    a {
-        color: $blanco;
-        @include estilo-texto(negrita);
-    }
-}
-
-/*********************************************************************/
