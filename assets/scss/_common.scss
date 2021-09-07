@@ -5,6 +5,13 @@ Se aplican fuentes en titulos y subtitulos sobreescribiendo la fuente base */
 * {
     font-family: $glory;
 }
+
+/* Agrego selector para todos los documentos, para incluir un scroll a la 
+hora de acceder a secciones vía anclas */
+html{
+    scroll-padding-top: 5.5rem;
+}
+
 /**************************** HEADER ******************************/
 
 /* Selectores para estructura del contenido */
