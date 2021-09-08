@@ -77,15 +77,7 @@ html{
 
     &__menu-lateral {
         background-color: $negro;
-        width: 320px;
-    }
-
-    &__submenu {
-        li {
-            a {
-                @include relleno(-1,-1,-1,5);
-            }
-        }
+        width: 350px;
     }
     
     &__lista-enlaces--margen .show {
@@ -97,6 +89,7 @@ html{
     background-color: $blanco;  
     border-top: $border-size $dorado solid; 
     border-bottom: $border-size*1.5 $dorado solid;  
+    
     &__contenido {
         background-color: $negro;
         text-transform: uppercase;
@@ -110,10 +103,10 @@ html{
                 a {
                     color: $blanco;
                     text-decoration: none;
-                    transition: all 0.5s;
-                }
-                &:hover {
-                    color: $dorado;
+                    transition: all 1s;
+                    &:hover {
+                        color: $dorado;
+                    }
                 }
             }
         }
@@ -166,7 +159,7 @@ html{
 @each $seccion in index, nosotros, menu, sucursales, contacto {
     .fondo-#{$seccion} {
         @extend .fondo-seccion;
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/fondos/fondo-#{$seccion}.webp");
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/fondos/fondo-#{$seccion}.webp");
     }
 }
 

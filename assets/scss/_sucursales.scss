@@ -13,12 +13,12 @@
 .sucursales {
     @extend .seccion;
     background-color: $blanco;
-}
-
-.sucursales__titulo {
-    @extend .titulo-seccion;
-    @include margenes(3,-1,3,-1);
-    font-weight: 600;
+    
+    &__titulo {
+        @extend .titulo-seccion;
+        @include margenes(3,-1,3,-1);
+        font-weight: 600;
+    }
 }
 
 /** Selectores para el acordeón con las sucursales **/
@@ -31,83 +31,84 @@
     h4, h5 {
         @include margenes(-1,-1,0,-1);
     }
-}
 
-.accordion-button:focus {
-    border-color: $negro;
-    border-width: $border-size*2;
-    box-shadow: 0 0 0 0 $negro;
-}
+    &-button {
+        &__titulo {
+            font-weight: 600;
+            font-family: $glory;
+            font-size: 1.7rem;
+            color: $blanco !important;
+            border: $negro solid $border-size;
+            background-color: $negro!important;
 
-.accordion-collapse {
-    border: solid $border-size $negro;
-}
+            &:hover {
+                color: $dorado !important;
+            }
+        }
 
-/** Selector para los nombres de las sucursales cuando están colapsadas en el acordeón **/
-.accordion-button__titulo {
-    font-weight: 600;
-    font-family: $glory;
-    font-size: 1.7rem;
-    color: $blanco !important;
-    border: $negro solid $border-size;
-    background-color: $negro!important;
-}
-
-.accordion-button__titulo:hover{
-    color: $dorado !important;
+        &:focus {
+            border-color: $negro;
+            border-width: $border-size*2;
+            box-shadow: 0 0 0 0 $negro;
+        }
+    }
+    
+    &-collapse {
+        border: solid $border-size $negro;
+    }
 }
 
 /** Selectores para estructurar contenido dentro de cada item del acordeon **/
 .sucursal {
     @include relleno(2,3,2,3);
-}
 
-.sucursal__contenido {
-    @include flex(column);
-    justify-content: center;
-}
+    &__contenido {
+        @include flex(column);
+        justify-content: center;
+    }
+    
+    &__categoria {
+        @include margenes(1,-1,1,-1);
 
-.sucursal__categoria {
-    @include margenes(1,-1,1,-1);
-}
-
-.sucursal__categoria--centrada {
-    @include flex(row);
-    justify-content: center;
-}
-
-.sucursal__tipo-categoria {
-    @include flex(row);
-    align-items: center;
-}
-
-/** Selectores para datos de la sucursal **/
-.sucursal__nombre {
-    @include margenes(-1,-1,-1,1);
-    @include estilo-texto(negrita);
-    font-size: 1.7rem;
-}
-
-.sucursal__info {
-    color: $rojo-oscuro;
-    font-size: 1.5rem;
-    @include estilo-texto(italica);
-}
-
-.sucursal__dato {
-    @include margenes(1,-1,1,-1);
-    font-size: 1.3rem;
-}
-
-/* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
-.sucursal__icono {
-    @include margenes(-1,2,-1,-1);
-    width: 25px;
-}
-
-/* Selector para los iframe de Google Maps */
-.sucursal__mapa {
-    width: 100%;
+        &--centrada {
+            @include flex(row);
+            justify-content: center;
+        }
+    }
+    
+    &__tipo-categoria {
+        @include flex(row);
+        align-items: center;
+    }
+    
+    /** Selectores para datos de la sucursal **/
+    &__nombre {
+        @include margenes(-1,-1,-1,1);
+        @include estilo-texto(negrita);
+        font-size: 1.7rem;
+    }
+    
+    &__info {
+        color: $rojo-oscuro;
+        font-size: 1.5rem;
+        @include estilo-texto(italica);
+    }
+    
+    &__dato {
+        @include margenes(1,-1,1,-1);
+        font-size: 1.3rem;
+    }
+    
+    /* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
+    &__icono {
+        @include margenes(-1,2,-1,-1);
+        width: 25px;
+    }
+    
+    /* Selector para los iframe de Google Maps */
+    &__mapa {
+        width: 100%;
+    }
 }
 
 /** Selectores para listas con las formas de entrega **/
@@ -115,10 +116,10 @@
     @include margenes(1,-1,1,-1);
     list-style-type: circle;
     color: $negro;
-}
 
-.formas-entrega__forma {
-    font-size: 1.3rem;
+    &__forma {
+        font-size: 1.3rem;
+    }
 }
 
 /*** Selectores para sección 'Métodos de Pago' ***/
@@ -129,27 +130,27 @@
     border-top: solid $border-size $negro;
     text-align: center;    
     background: linear-gradient(130deg, rgb(255, 255, 255) 0%, rgba(255,165,0,1) 20%, rgba(246,182,66,1) 50%, rgba(255,165,0,1) 80%, rgb(255, 255, 255) 100%);
-}
 
-.metodos-pago__fila {
-    @include margenes(3,-1,3,-1);
-    justify-content: center;
-}
-
-.metodos-pago__contenido {
-    @include relleno(-1,4,-1,4);
-}
-
-.metodos-pago__titulo {
-    @extend .titulo-seccion;
-    @include relleno(-1,-1,0,-1);
-    font-weight: 600;
-}
-
-.metodos-pago__descripcion {
-    @include relleno(2,-1,0,-1);
-    text-align: center;
-    font-size: 1.3rem;
+    &__fila {
+        @include margenes(3,-1,3,-1);
+        justify-content: center;
+    }
+    
+    &__contenido {
+        @include relleno(-1,4,-1,4);
+    }
+    
+    &__titulo {
+        @extend .titulo-seccion;
+        @include relleno(-1,-1,0,-1);
+        font-weight: 600;
+    }
+    
+    &__descripcion {
+        @include relleno(2,-1,0,-1);
+        text-align: center;
+        font-size: 1.3rem;
+    }
 }
 
 /* Selector para caja contenedora de métodos de pago */
@@ -167,20 +168,19 @@
     @include flex(column);
     justify-content: center;
     align-items: center;
-}
 
-.metodo-pago__tipo {
-    @include relleno(1,-1,1,-1);
-    @include estilo-texto(negrita);
-    text-transform: uppercase;
-    color: $dorado;
-    font-size: 1.7rem;
-    font-family: $glory;
+    &__tipo {
+        @include relleno(1,-1,1,-1);
+        @include estilo-texto(negrita);
+        text-transform: uppercase;
+        color: $dorado;
+        font-size: 1.7rem;
+        font-family: $glory;
+    }
+    
+    /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
+    &__logo {
+        @include margenes(2,2,2,2);
+        width: 60px;
+    }
 }
-
-/* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
-.metodo-pago__logo {
-    @include margenes(2,2,2,2);
-    width: 60px;
-}
-/************************************************/

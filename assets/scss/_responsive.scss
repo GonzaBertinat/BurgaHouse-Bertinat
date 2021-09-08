@@ -1,6 +1,11 @@
 
 /* Selectores para responsividad de elementos */
 @media only screen and (max-width: 991px){
+    
+    .pie-pagina__contenedor-logo {
+        width: 85%;
+    }
+
     .destacada__article {
         width: 90%;
     }
@@ -21,14 +26,13 @@
         @include margenes(-1,-1,3,-1);
     }
 
-    .formulario {
-        form {
-            width: 80%;
-        }
+    .articulo-menu {
+        @include margenes(-1,-1,3,-1);
+        height: auto;
     }
 
-    .pie-pagina__contenedor-logo {
-        width: 85%;
+    .hamburguesas__nota {
+        @include margenes(0,-1,3,-1);
     }
 
     .bebidas__listado {
@@ -39,15 +43,11 @@
         font-size: 1.3rem;
     }
 
-    .articulo-menu {
-        @include margenes(-1,-1,3,-1);
-        height: auto;
+    .formulario {
+        form {
+            width: 80%;
+        }
     }
-
-    .hamburguesas__nota {
-        @include margenes(0,-1,3,-1);
-    }
-
 }
 
 @media only screen and (max-width: 767px){
@@ -55,22 +55,22 @@
         font-size: 5rem;
         -webkit-text-stroke-width: 5px;
     }
+    
+    .primer-elemento {
+        order: -1;
+    }
+    
+    .pie-pagina__contenedor-logo {
+        width: 60%;
+    }
 
     .fondo-index__slogan {
         font-size: 3rem;
         -webkit-text-stroke-width: 4px;
     }
 
-    .primer-elemento {
-        order: -1;
-    }
-
     .destacada__nombre {
         @include margenes(-1,-1,2,-1);
-    }
-
-    .pie-pagina__contenedor-logo {
-        width: 60%;
     }
 
     .bebidas__listado {
@@ -84,9 +84,8 @@
         width: 280px;
     }
 
-    .sucursal__mapa {
-        width: 100%;
-        height: 300px;
+    .pie-pagina__contenedor-logo {
+        width: 65%;
     }
 
     .titulo-principal {
@@ -99,18 +98,34 @@
         -webkit-text-stroke-width: 4px;
     }
 
+    .sucursal__mapa {
+        width: 100%;
+        height: 300px;
+    }
+
     .formulario {
         form {
             width: 90%;
         }
     }
-
-    .pie-pagina__contenedor-logo {
-        width: 65%;
-    }
 }
 
 @media only screen and (max-width: 375px){
+    
+    .pie-pagina__contenedor-logo {
+        width: 80%;
+    }
+
+    .titulo-principal {
+        font-size: 3rem;
+        -webkit-text-stroke-width: 3px;
+    }
+    
+    .fondo-index__slogan {
+        font-size: 2rem;
+        -webkit-text-stroke-width: 2px;
+    }
+
     /* Adapto grid para móbiles chicos */
     .opinion {
         display: grid;
@@ -123,27 +138,13 @@
         grid-template-rows: 1fr 1fr 1fr 2fr;
     }
 
-    .pie-pagina__contenedor-logo {
-        width: 80%;
-    }
-
     .bebida {
         @include flex(column);
         align-items: center;
         font-size: 1.4rem;
-    }
-
-    .bebida__nombre {
-        text-align: center;
-    }
-
-    .titulo-principal {
-        font-size: 3rem;
-        -webkit-text-stroke-width: 3px;
-    }
-
-    .fondo-index__slogan {
-        font-size: 2rem;
-        -webkit-text-stroke-width: 2px;
+        
+        &__nombre {
+            text-align: center;
+        }
     }
 }

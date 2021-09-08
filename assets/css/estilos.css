@@ -67,9 +67,7 @@ html {
       text-underline-offset: 40%; }
   .encabezado__menu-lateral {
     background-color: #000000;
-    width: 320px; }
-  .encabezado__submenu li a {
-    padding-left: 2.5rem; }
+    width: 350px; }
   .encabezado__lista-enlaces--margen .show {
     margin-bottom: 11rem; }
 
@@ -92,9 +90,9 @@ html {
         .lista-rutas__contenido ol li a {
           color: #ffffff;
           text-decoration: none;
-          transition: all 0.5s; }
-        .lista-rutas__contenido ol li:hover {
-          color: #ffa500; }
+          transition: all 1s; }
+          .lista-rutas__contenido ol li a:hover {
+            color: #ffa500; }
 
 /* Selector para titulos h1 de las secciones */
 .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
@@ -134,19 +132,19 @@ html {
 
 /* Asigno estilos a imágenes de fondo de cada sección */
 .fondo-index {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-index.webp"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-index.webp"); }
 
 .fondo-nosotros {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-nosotros.webp"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-nosotros.webp"); }
 
 .fondo-menu {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-menu.webp"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-menu.webp"); }
 
 .fondo-sucursales {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-sucursales.webp"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-sucursales.webp"); }
 
 .fondo-contacto {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-contacto.webp"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondos/fondo-contacto.webp"); }
 
 .icono-subir__contenedor {
   display: flex;
@@ -485,35 +483,28 @@ html {
   background: linear-gradient(90deg, black 5%, #434343 50%, black 95%);
   border-bottom: solid 2px #000000;
   text-align: center; }
-
-.hamburguesas__titulo {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  color: #000000;
-  background-color: #ffffff; }
-
-.hamburguesas__categoria {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  font-family: "Glory", sans-serif;
-  font-weight: 700;
-  text-align: center; }
-
-.hamburguesas__listado {
-  justify-content: center; }
-
-.hamburguesas__nota {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  color: #ffa500;
-  font-size: 1.4rem; }
-
-/* Selectores para Líneas de Hamburguesas */
-.hamburguesas__clasicas, .hamburguesas__premium, .hamburguesas__hambrientas {
-  color: #ffa500; }
+  .hamburguesas__titulo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #000000;
+    background-color: #ffffff; }
+  .hamburguesas__categoria {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-family: "Glory", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #ffa500; }
+  .hamburguesas__listado {
+    justify-content: center; }
+  .hamburguesas__nota {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #ffa500;
+    font-size: 1.4rem; }
 
 /* Selector de clase con estilos comunes a los article de cada hamburguesa */
 .articulo-menu, .clasica, .premium, .hambrienta {
@@ -547,9 +538,8 @@ html {
 .hamburguesa__imagen, .clasica__imagen, .premium__imagen, .hambrienta__imagen {
   transition: all 0.2s;
   filter: brightness(0.75); }
-
-.hamburguesa__imagen:hover, .clasica__imagen:hover, .premium__imagen:hover, .hambrienta__imagen:hover {
-  filter: brightness(1); }
+  .hamburguesa__imagen:hover, .clasica__imagen:hover, .premium__imagen:hover, .hambrienta__imagen:hover {
+    filter: brightness(1); }
 
 .hamburguesa__contenedor-imagen {
   border-top: solid 2px #000000;
@@ -576,12 +566,10 @@ html {
 .clasica {
   border: solid 2px #000000;
   background-color: #ffa500; }
-
-.clasica__nombre {
-  color: #000000; }
-
-.clasica__descripcion {
-  color: #000000; }
+  .clasica__nombre {
+    color: #000000; }
+  .clasica__descripcion {
+    color: #000000; }
 
 /** Selectores para cada producto de Línea Premium **/
 .premium {
@@ -593,45 +581,38 @@ html {
 .hambrienta {
   border: solid 2px #000000;
   background-color: #ffa500; }
-
-.hambrienta__nombre {
-  color: #000000; }
-
-.hambrienta__descripcion {
-  color: #000000; }
+  .hambrienta__nombre {
+    color: #000000; }
+  .hambrienta__descripcion {
+    color: #000000; }
 
 /** Selectores para la sección de Bebidas **/
 .bebidas {
   padding-bottom: 1rem;
   border-top: solid 2px #000000;
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
-
-.bebidas__titulo {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
-
-.bebidas__listado {
-  width: 90%;
-  margin: 0 auto;
-  border: solid 4px #000000;
-  background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
-
-.bebidas__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
-
-.bebidas__categoria {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-  color: #ffa500;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
-.bebidas__items {
-  padding-bottom: 0rem;
-  padding-left: 0rem; }
+  .bebidas__titulo {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .bebidas__listado {
+    width: 90%;
+    margin: 0 auto;
+    border: solid 4px #000000;
+    background: linear-gradient(90deg, black 5%, #434343 50%, black 95%); }
+  .bebidas__fila {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .bebidas__categoria {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ffa500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .bebidas__items {
+    padding-bottom: 0rem;
+    padding-left: 0rem; }
 
 /** Selectores para los items de las listas de bebidas **/
 .bebida {
@@ -643,16 +624,13 @@ html {
     margin-right: 1.5rem;
     margin-bottom: 0.5rem;
     margin-left: 1.5rem; }
+  .bebida__nombre {
+    color: #ffffff; }
+  .bebida__precio {
+    font-weight: bold;
+    font-style: italic;
+    color: #ffa500; }
 
-.bebida__nombre {
-  color: #ffffff; }
-
-.bebida__precio {
-  font-weight: bold;
-  font-style: italic;
-  color: #ffa500; }
-
-/************************************************/
 /* Selectores utilizados en sección 'Sucursales' */
 /****** Selectores para sección Sucursales ******/
 /*** Selectores para imagen de fondo con título de la sección ***/
@@ -664,11 +642,10 @@ html {
 /** Selectores para estructurar contenido del section **/
 .sucursales {
   background-color: #ffffff; }
-
-.sucursales__titulo {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600; }
+  .sucursales__titulo {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600; }
 
 /** Selectores para el acordeón con las sucursales **/
 /* Sobreescribe estilos de bootstrap */
@@ -679,77 +656,63 @@ html {
   margin-right: auto; }
   .accordion h4, .accordion h5 {
     margin-bottom: 0rem; }
-
-.accordion-button:focus {
-  border-color: #000000;
-  border-width: 4px;
-  box-shadow: 0 0 0 0 #000000; }
-
-.accordion-collapse {
-  border: solid 2px #000000; }
-
-/** Selector para los nombres de las sucursales cuando están colapsadas en el acordeón **/
-.accordion-button__titulo {
-  font-weight: 600;
-  font-family: "Glory", sans-serif;
-  font-size: 1.7rem;
-  color: #ffffff !important;
-  border: #000000 solid 2px;
-  background-color: #000000 !important; }
-
-.accordion-button__titulo:hover {
-  color: #ffa500 !important; }
+  .accordion-button__titulo {
+    font-weight: 600;
+    font-family: "Glory", sans-serif;
+    font-size: 1.7rem;
+    color: #ffffff !important;
+    border: #000000 solid 2px;
+    background-color: #000000 !important; }
+    .accordion-button__titulo:hover {
+      color: #ffa500 !important; }
+  .accordion-button:focus {
+    border-color: #000000;
+    border-width: 4px;
+    box-shadow: 0 0 0 0 #000000; }
+  .accordion-collapse {
+    border: solid 2px #000000; }
 
 /** Selectores para estructurar contenido dentro de cada item del acordeon **/
 .sucursal {
   padding-top: 1rem;
   padding-right: 1.5rem;
   padding-bottom: 1rem;
-  padding-left: 1.5rem; }
-
-.sucursal__contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.sucursal__categoria {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
-
-.sucursal__categoria--centrada {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-.sucursal__tipo-categoria {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
-/** Selectores para datos de la sucursal **/
-.sucursal__nombre {
-  margin-left: 0.5rem;
-  font-weight: bold;
-  font-size: 1.7rem; }
-
-.sucursal__info {
-  color: #551313;
-  font-size: 1.5rem;
-  font-style: italic; }
-
-.sucursal__dato {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem; }
-
-/* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
-.sucursal__icono {
-  margin-right: 1rem;
-  width: 25px; }
-
-/* Selector para los iframe de Google Maps */
-.sucursal__mapa {
-  width: 100%; }
+  padding-left: 1.5rem;
+  /** Selectores para datos de la sucursal **/
+  /* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
+  /* Selector para los iframe de Google Maps */ }
+  .sucursal__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .sucursal__categoria {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; }
+    .sucursal__categoria--centrada {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+  .sucursal__tipo-categoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .sucursal__nombre {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 1.7rem; }
+  .sucursal__info {
+    color: #551313;
+    font-size: 1.5rem;
+    font-style: italic; }
+  .sucursal__dato {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem; }
+  .sucursal__icono {
+    margin-right: 1rem;
+    width: 25px; }
+  .sucursal__mapa {
+    width: 100%; }
 
 /** Selectores para listas con las formas de entrega **/
 .formas-entrega {
@@ -757,9 +720,8 @@ html {
   margin-bottom: 0.5rem;
   list-style-type: circle;
   color: #000000; }
-
-.formas-entrega__forma {
-  font-size: 1.3rem; }
+  .formas-entrega__forma {
+    font-size: 1.3rem; }
 
 /*** Selectores para sección 'Métodos de Pago' ***/
 /** Selectores para estructurar contenido dentro del section **/
@@ -767,25 +729,21 @@ html {
   border-top: solid 2px #000000;
   text-align: center;
   background: linear-gradient(130deg, white 0%, orange 20%, #f6b642 50%, orange 80%, white 100%); }
-
-.metodos-pago__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  justify-content: center; }
-
-.metodos-pago__contenido {
-  padding-right: 2rem;
-  padding-left: 2rem; }
-
-.metodos-pago__titulo {
-  padding-bottom: 0rem;
-  font-weight: 600; }
-
-.metodos-pago__descripcion {
-  padding-top: 1rem;
-  padding-bottom: 0rem;
-  text-align: center;
-  font-size: 1.3rem; }
+  .metodos-pago__fila {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center; }
+  .metodos-pago__contenido {
+    padding-right: 2rem;
+    padding-left: 2rem; }
+  .metodos-pago__titulo {
+    padding-bottom: 0rem;
+    font-weight: 600; }
+  .metodos-pago__descripcion {
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    text-align: center;
+    font-size: 1.3rem; }
 
 /* Selector para caja contenedora de métodos de pago */
 .listado-metodos {
@@ -802,26 +760,23 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/ }
+  .metodo-pago__tipo {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffa500;
+    font-size: 1.7rem;
+    font-family: "Glory", sans-serif; }
+  .metodo-pago__logo {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    width: 60px; }
 
-.metodo-pago__tipo {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ffa500;
-  font-size: 1.7rem;
-  font-family: "Glory", sans-serif; }
-
-/* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
-.metodo-pago__logo {
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  width: 60px; }
-
-/************************************************/
 /* Selectores utilizados en sección 'Contacto' */
 /****** Selectores para sección Contacto ******/
 /** Selectores para imagen de fondo con título de la sección **/
@@ -831,6 +786,19 @@ html {
 
 /*** Selectores para section con formulario ***/
 /** Selectores para estructura contenido del formulario **/
+.formulario__fila {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.formulario__titulo {
+  margin-bottom: 0rem; }
+
+.formulario__parrafo {
+  text-align: center;
+  font-size: 1.3rem; }
+  .formulario__parrafo em {
+    text-decoration: underline; }
+
 .formulario form {
   border: solid 4px #ffa500;
   border-radius: 10px;
@@ -854,19 +822,6 @@ html {
       border: solid 2px #ffa500;
       color: #ffffff; }
 
-.formulario__fila {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
-
-.formulario__titulo {
-  margin-bottom: 0rem; }
-
-.formulario__parrafo {
-  text-align: center;
-  font-size: 1.3rem; }
-  .formulario__parrafo em {
-    text-decoration: underline; }
-
 /** Selectores para los campos dentro del formulario **/
 .campo {
   margin-top: 1rem;
@@ -881,36 +836,32 @@ html {
     padding-right: 2rem;
     padding-left: 2rem;
     margin-top: 0.5rem; }
-
-.campo__label {
-  display: inline; }
+  .campo__label {
+    display: inline; }
 
 /** Selectores botones de Enviar y Limpiar Campos **/
 .botones {
   justify-content: center; }
-
-.botones__contenedor {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
-.botones__boton {
-  padding-top: 0.25rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  font-weight: bold;
-  display: block;
-  margin: 0 auto;
-  border-radius: 20px;
-  font-size: 1.3rem;
-  background-color: #ffa500;
-  border: solid 2px #000000;
-  color: #000000;
-  font-family: "Glory", sans-serif;
-  width: 80%; }
-
-.botones__boton:hover {
-  transform: scale(110%, 110%); }
+  .botones__contenedor {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .botones__boton {
+    padding-top: 0.25rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    background-color: #ffa500;
+    border: solid 2px #000000;
+    color: #000000;
+    font-family: "Glory", sans-serif;
+    width: 80%; }
+    .botones__boton:hover {
+      transform: scale(110%, 110%); }
 
 /*** Selectores para la sección de contacto por WhatsApp ***/
 .whats-app__link {
@@ -933,58 +884,54 @@ html {
 .whats-app__texto {
   color: #25d366; }
 
-/************************************************/
 /* Selectores utilizados en el Mapa del Sitio */
 /** Selectores para mapa del sitio **/
 /* Selectores para estructurar contenido */
 .mapa-sitio {
   padding-top: 6rem; }
-
-.mapa-sitio__titulo {
-  padding-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  font-style: italic; }
-
-.mapa-sitio__descripcion {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
-  text-align: center; }
-
-.mapa-sitio__contenido {
-  justify-content: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
+  .mapa-sitio__titulo {
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-style: italic; }
+  .mapa-sitio__descripcion {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center; }
+  .mapa-sitio__contenido {
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
 
 /* Selectores para enlaces */
 .enlaces {
   padding-right: 1.5rem;
-  padding-left: 1.5rem; }
-
-.enlaces__titulo {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-  .enlaces__titulo a {
-    color: #000000;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2rem; }
-  .enlaces__titulo a:hover {
-    color: #ffa500; }
-
-/* Selector para lista de enlaces */
-.enlaces__lista {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  list-style: disc;
-  font-size: 1.3rem; }
-  .enlaces__lista ul {
-    list-style: disc; }
+  padding-left: 1.5rem;
+  /* Selector para lista de enlaces */ }
+  .enlaces__titulo {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .enlaces__titulo a {
+      color: #000000;
+      text-decoration: none;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 2rem; }
+      .enlaces__titulo a:hover {
+        color: #ffa500; }
+  .enlaces__lista {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style: disc;
+    font-size: 1.3rem; }
+    .enlaces__lista ul {
+      list-style: disc; }
 
 /* Selectores para adaptar elementos a pantallas de distintos dispositivos */
 /* Selectores para responsividad de elementos */
 @media only screen and (max-width: 991px) {
+  .pie-pagina__contenedor-logo {
+    width: 85%; }
   .destacada__article {
     width: 90%; }
   .donde-encontrarnos__seccion {
@@ -996,34 +943,32 @@ html {
     margin-bottom: 1.5rem; }
   .opinion {
     margin-bottom: 1.5rem; }
-  .formulario form {
-    width: 80%; }
-  .pie-pagina__contenedor-logo {
-    width: 85%; }
-  .bebidas__listado {
-    width: 100%; }
-  .bebida {
-    font-size: 1.3rem; }
   .articulo-menu, .clasica, .premium, .hambrienta {
     margin-bottom: 1.5rem;
     height: auto; }
   .hamburguesas__nota {
     margin-top: 0rem;
-    margin-bottom: 1.5rem; } }
+    margin-bottom: 1.5rem; }
+  .bebidas__listado {
+    width: 100%; }
+  .bebida {
+    font-size: 1.3rem; }
+  .formulario form {
+    width: 80%; } }
 
 @media only screen and (max-width: 767px) {
   .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
     font-size: 5rem;
     -webkit-text-stroke-width: 5px; }
+  .primer-elemento {
+    order: -1; }
+  .pie-pagina__contenedor-logo {
+    width: 60%; }
   .fondo-index__slogan {
     font-size: 3rem;
     -webkit-text-stroke-width: 4px; }
-  .primer-elemento {
-    order: -1; }
   .destacada__nombre {
     margin-bottom: 1rem; }
-  .pie-pagina__contenedor-logo {
-    width: 60%; }
   .bebidas__listado {
     width: 90%; } }
 
@@ -1031,39 +976,39 @@ html {
   .encabezado__menu-lateral {
     background-color: #000000;
     width: 280px; }
-  .sucursal__mapa {
-    width: 100%;
-    height: 300px; }
+  .pie-pagina__contenedor-logo {
+    width: 65%; }
   .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
     font-size: 4rem;
     -webkit-text-stroke-width: 4px; }
   .fondo-index__slogan {
     font-size: 3rem;
     -webkit-text-stroke-width: 4px; }
+  .sucursal__mapa {
+    width: 100%;
+    height: 300px; }
   .formulario form {
-    width: 90%; }
-  .pie-pagina__contenedor-logo {
-    width: 65%; } }
+    width: 90%; } }
 
 @media only screen and (max-width: 375px) {
+  .pie-pagina__contenedor-logo {
+    width: 80%; }
+  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
+    font-size: 3rem;
+    -webkit-text-stroke-width: 3px; }
+  .fondo-index__slogan {
+    font-size: 2rem;
+    -webkit-text-stroke-width: 2px; }
   /* Adapto grid para móbiles chicos */
   .opinion {
     display: grid;
     grid-template-areas: "nombre" "foto" "valoracion" "texto";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 2fr; }
-  .pie-pagina__contenedor-logo {
-    width: 80%; }
   .bebida {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.4rem; }
-  .bebida__nombre {
-    text-align: center; }
-  .titulo-principal, .fondo-index__titulo, .fondo-index__slogan, .fondo-nosotros__titulo, .fondo-menu__titulo, .fondo-sucursales__titulo, .fondo-contacto__titulo {
-    font-size: 3rem;
-    -webkit-text-stroke-width: 3px; }
-  .fondo-index__slogan {
-    font-size: 2rem;
-    -webkit-text-stroke-width: 2px; } }
+    .bebida__nombre {
+      text-align: center; } }

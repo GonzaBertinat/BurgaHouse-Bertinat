@@ -3,51 +3,53 @@
 /* Selectores para estructurar contenido */
 .mapa-sitio {
     @include relleno(12,-1,-1,-1);
-}
 
-.mapa-sitio__titulo {
-    @extend .titulo-seccion;
-    @include relleno(3,-1,-1,-1);
-    @include margenes(-1,-1,3,-1);
-    @include estilo-texto(negrita);
-    @include estilo-texto(italica);
-}
-
-.mapa-sitio__descripcion {
-    @include margenes(3,-1,3,-1);
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.mapa-sitio__contenido {
-    justify-content: center;
-    @include margenes(3,-1,3,-1);
+    &__titulo {
+        @extend .titulo-seccion;
+        @include relleno(3,-1,-1,-1);
+        @include margenes(-1,-1,3,-1);
+        @include estilo-texto(negrita);
+        @include estilo-texto(italica);
+    }
+    
+    &__descripcion {
+        @include margenes(3,-1,3,-1);
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    &__contenido {
+        justify-content: center;
+        @include margenes(3,-1,3,-1);
+    }
 }
 
 /* Selectores para enlaces */
 .enlaces {
     @include relleno(-1,3,-1,3);
-}
 
-.enlaces__titulo {
-    @include margenes(2,-1,2,-1);
-    a {
-        color: $negro;
-        text-decoration: none;
-        font-family: $ubuntu;
-        font-size: 2rem;    
-    }
-    a:hover {
-        color: $dorado;
-    }
-}
+    &__titulo {
+        @include margenes(2,-1,2,-1);
 
-/* Selector para lista de enlaces */
-.enlaces__lista {
-    @include margenes(2,-1,2,-1);
-    list-style: disc;
-    font-size: 1.3rem;
-    ul {
-        list-style: disc;    
+        a {
+            color: $negro;
+            text-decoration: none;
+            font-family: $ubuntu;
+            font-size: 2rem;    
+
+            &:hover {
+                color: $dorado;
+            }
+        }
+    }
+    
+    /* Selector para lista de enlaces */
+    &__lista {
+        @include margenes(2,-1,2,-1);
+        list-style: disc;
+        font-size: 1.3rem;
+        ul {
+            list-style: disc;    
+        }
     }
 }
