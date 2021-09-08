@@ -1,4 +1,8 @@
-/* Archivo con colores y fuentes */
+/*  
+    Archivo de utilidades 
+    Contiene colores, fuentes, medidas y gradientes utilizados en todo el sitio.
+    También incluye mixines para facilitar la inclusión de estilos.
+*/
 
 /** Colores **/
 $negro: #000000;
@@ -14,12 +18,18 @@ $ubuntu: 'Ubuntu', sans-serif;
 $crete-round: 'Crete Round', serif;
 $glory: 'Glory', sans-serif;
 
+/** Gradientes **/
+$gradiente-negro: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(67,67,67,1) 50%, rgba(0,0,0,1) 95%);
+$gradiente-dorado: linear-gradient(130deg, rgb(255, 255, 255) 0%, rgba(255,165,0,1) 20%, rgba(246,182,66,1) 50%, rgba(255,165,0,1) 80%, rgb(255, 255, 255) 100%);
+
 /** Medidas estándar para márgenes, rellenos y bordes **/
 $margin-size: 0.5rem;
 $padding-size: 0.5rem;
 $border-size: 2px;
 
-/* Mixin que aplica un estilo determinado a un texto según el parámetro recibido */
+/** Mixins **/
+
+/* Aplica un estilo determinado a un texto según el parámetro recibido */
 @mixin estilo-texto($tipo){
     @if $tipo == negrita {
         font-weight: bold;
@@ -75,11 +85,12 @@ Si el valor es negativo, no se aplica - No contempla valor AUTO */
     flex-direction: $direccion;
 }
 
-/* Transformaciones */
+/* Transformación de rotación - Valor positivo aplica sentido horario, negativo aplica sentido antihorario */
 @mixin rotar($grados){
     transform: rotate($grados);
 }
 
+/* Transformación de crecimiento - se indica el tamaño del escalado en porcentajes (Ej 10%) */
 @mixin zoom($x, $y){
     transform: scale(100 + $x, 100 + $y);
 }

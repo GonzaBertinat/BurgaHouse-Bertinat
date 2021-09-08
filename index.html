@@ -141,10 +141,12 @@
                 </div>
                 <div class="visitarnos__fila row">
                     <div class="col-11 col-md-9">
-                        <picture class="animate__animated animate__fadeIn wow fadeIn animate__slower">
-                            <source srcset="assets/images/index1-s.webp" media="(max-width: 767px)">
-                            <img class="visitarnos__imagen img-fluid" src="assets/images/index1-l.webp" alt="Hamburguesas con papas fritas">
-                        </picture>
+                        <div class="visitarnos__contenedor-imagen animate__animated animate__fadeIn wow fadeIn animate__slower">
+                            <picture>
+                                <source srcset="assets/images/index1-s.webp" media="(max-width: 767px)">
+                                <img class="visitarnos__imagen img-fluid" src="assets/images/index1-l.webp" alt="Hamburguesas con papas fritas">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="visitarnos__fila row">
@@ -202,8 +204,8 @@
                     </div>
                 </div>
                 <div class="donde-encontrarnos__fila row">
-                    <div class="donde-encontrarnos__seccion col-11 col-lg-7 animate__animated animate__fadeInLeft wow fadeInLeft animate__slow">
-                        <div class="donde-encontrarnos__contenedor-imagen" class="animate__animated animate__fadeInLeft wow fadeInLeft animate__slow">
+                    <div class="donde-encontrarnos__seccion col-11 col-lg-7">
+                        <div class="donde-encontrarnos__contenedor-imagen animate__animated animate__fadeInLeft wow fadeInLeft animate__slow">
                             <picture>
                                 <source srcset="assets/images/index2-s.jpg" media="(max-width: 767px)">
                                 <img class="img-fluid" src="assets/images/index2-l.jpg" alt="Salón">
@@ -212,18 +214,21 @@
                     </div>
                     <div class="donde-encontrarnos__seccion col-12 col-lg-5 animate__animated animate__fadeInRight wow fadeInRight animate__slow">
                         <div class="row">
-                            <h3 class="donde-encontrarnos__subtitulo">¿Te dio hambre?</h3>
+                            <div class="col-12">
+                                <h3 class="donde-encontrarnos__subtitulo">¿Te dio hambre?</h3>
+                            </div>
                         </div>
                         <div class="row">
-                            <p class="donde-encontrarnos__texto">
-                                Viste nuestras Burgas y te encantaron...
-                                <br>
-                                <em>¿Qué estás esperando para venir a probarlas?</em>
-                                <br>
-                                Te invitamos a que revises nuestras sucursales para que encuentres la más cercana a tu domicilio.
-                                <br> ¡Te esperamos!
-
+                            <div class="col-12">
+                                <p class="donde-encontrarnos__texto">
+                                    Viste nuestras Burgas y te encantaron...
+                                    <br>
+                                    <em>¿Qué estás esperando para venir a probarlas?</em>
+                                    <br>
+                                    Te invitamos a que revises nuestras sucursales para que encuentres la más cercana a tu domicilio.
+                                    <br> ¡Te esperamos!
                                 </p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-9 col-md-6">
@@ -281,7 +286,7 @@
                     </div>
                 </div>
                 <!-- Información del autor del sitio -->
-                <div class="pie-pagina__seccion pie-pagina__seccion--centrado col-10 col-md-4">
+                <div class="pie-pagina__seccion col-10 col-md-4">
                     <div class="row pie-pagina__autor">
                         <span class="pie-pagina__texto">Desarrollado por Gonzalo Bertinat</span>
                         <div class="pie-pagina__contenedor-red-social">

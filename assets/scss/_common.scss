@@ -1,109 +1,133 @@
 /****** Selectores comunes a todos los documentos ******/
 
 /* Selector universal, asigna fuente por defecto para todos los textos.
-Se aplican fuentes en titulos y subtitulos sobreescribiendo la fuente base */
+Se aplican fuentes en títulos y subtítulos sobreescribiendo la fuente base */
 * {
     font-family: $glory;
 }
 
 /* Agrego selector para todos los documentos, para incluir un scroll a la 
-hora de acceder a secciones vía anclas */
+hora de acceder a secciones vía anclas, y no queden ocultas detrás de la barra de navegación */
 html{
     scroll-padding-top: 5.5rem;
 }
 
-/**************************** HEADER ******************************/
-
-/* Selectores para estructura del contenido */
+/* Selectores para HEADER del sitio */
 .encabezado {
     font-size: 1.3rem;
 
+    /* Selector para menú de navegación */
     &__navegacion {
         background-color: $negro;
         .container {
             justify-content: center;
         }
     }
+    
+    /* Selector para alinear contenido del menú */
+    &__contenido {
+        width: 100%;
+        align-items: center;
+    }
+
+    /* Selector para cada sección dentro de la barra de navegación */
     &__seccion {
         @include relleno(1,-1,1,-1);
 
+        /* Selector para alinear logo de la marca hacia la derecha */
         &--end {
             @include flex(row);
             justify-content: flex-end;
         }
     }
 
-    &__contenido {
-        width: 100%;
-        align-items: center;
-    }
-
+    /* Selector para listado de enlaces en menú */
     &__lista-enlaces {
         padding-inline-start: 0px;
         list-style: none;
     }
 
+    /* Selector para logo de la marca en barra de navegación */
     &__logo {
         width: 130px;
         
+        /* Selector que aplica transformación de 'crecimiento' al hacer hover con el mouse en el logo */
         &:hover {
             @include zoom(5%,5%);
         }
     }
 
+    /* Selector para submenú dentro del menú de navegación */
     &__submenu {
         background-color: $negro;
         width: 250px;
         font-size: 1.3rem;
     }
 
+    /* Selector para enlaces dentro del menú de navegación */
     &__enlace {
         @include relleno(-1,-1,-1,3);
         @include estilo-texto(negrita);
         color: $blanco !important;
 
+        /* Selector para sobreescribir comportamiento por defecto de Bootstrap 
+        al hacer hover en un enlace del nav-bar*/
         &:hover {
             background-color: $negro;
             color: $dorado !important;
         }
 
+        /* Selector que indica en que sección se encuentra el usuario al navegar */
         &--activo {
-            color: $dorado !important; /* Sobreescribe bootstrap */
+            color: $dorado !important;
             @include estilo-texto(negrita);
             @include estilo-texto(subrayado);
             text-underline-offset: 40%;
         }
     }
-
+    
+    /* Selector para menú lateral en resoluciones Tablet o más pequeñas */
     &__menu-lateral {
         background-color: $negro;
         width: 350px;
     }
     
+    /* Selector para generar efecto de 'empuje hacia abajo ' en submenús del menú lateral */
     &__lista-enlaces--margen .show {
         @include margenes(-1,-1,22,-1);
     }
 }
 
+/* Selectores para BREADCRUMB o Lista de Rutas */
+/* Aplica para todas los documentos, excepto el Mapa del Sitio */
 .lista-rutas {
     background-color: $blanco;  
     border-top: $border-size $dorado solid; 
     border-bottom: $border-size*1.5 $dorado solid;  
     
+    /* Selector para contenedor del breadcrumb */
     &__contenido {
         background-color: $negro;
         text-transform: uppercase;
+
+        /* Selector para lista con niveles de directorios */
         ol {
             @include margenes(-1,-1,0,-1);
             @include relleno(1,-1,1,2);
+
+            /* Selector para items de la lista */
             li {
                 @include estilo-texto(negrita);
                 font-size: 1.3rem;
                 color: $dorado;
+
+                /* Selector para enlace que retorna al Inicio */
                 a {
                     color: $blanco;
                     text-decoration: none;
                     transition: all 1s;
+
+                    /* Selector para cambiar de color el texto del enlace al hacer hover con el mouse */
                     &:hover {
                         color: $dorado;
                     }
@@ -113,7 +137,12 @@ html{
     }
 }
 
-/* Selector para titulos h1 de las secciones */
+/* Selector para darle relleno superior e inferior a los section en el sitio */
+.seccion {
+    @include relleno(2,-1,2,-1);
+}
+
+/* Selector para títulos h1 */
 .titulo-principal {
     font-family: $ubuntu;
     text-align: center;
@@ -123,12 +152,7 @@ html{
     -webkit-text-stroke-width: 6px;
 }
 
-/* Selector para darle relleno superior e inferior a las secciones del sitio */
-.seccion {
-    @include relleno(2,-1,2,-1);
-}
-
-/* Selector de clase para los titulos de las secciones de todas las páginas */
+/* Selector para los demás títulos del sitio (h2, h3...)  */
 .titulo-seccion {
     @include estilo-texto(italica);
     font-weight: 500;
@@ -137,25 +161,23 @@ html{
     text-align: center;
 }
 
-/* Selector de clase para estilar la imagen de fondo de cada sección del sitio */
+/* Selector para estructurar imagen de fondo de cada documento */
 .fondo-seccion {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
 
-    .container {
+    /* Selector para contenedor con titulo h1 (y slogan en Inicio) del documento */
+    &__contenido {
+        @include flex(column);
         height: 100%;
         overflow: hidden;
         justify-content: center;
     }
-
-    &__contenido {
-        @include flex(column);
-    }
 }
 
-/* Asigno estilos a imágenes de fondo de cada sección */
+/* Bucle que crea un selector de clase por cada documento para cargar imagen de fondo */
 @each $seccion in index, nosotros, menu, sucursales, contacto {
     .fondo-#{$seccion} {
         @extend .fondo-seccion;
@@ -163,43 +185,45 @@ html{
     }
 }
 
+/* Selector para contenedor de flecha hacia arriba al final del documento */
 .icono-subir__contenedor {
     @include flex(row);
     justify-content: flex-end;
 
+    /* Selector para ancla con flecha hacia arriba para volver al inicio del documento actual */
     .icono-subir__enlace {
         @include margenes(-1,2,-1,-1);
         display: block;
         transition: all 1s;
         width: 50px;
 
+        /* Selector para aplicar efecto de giro al hacer hover sobre la flecha hacia arriba */
         &:hover {
             @include rotar(360deg);
         }
     }
 }
 
-/* Selectores para estructura del contenido */
+/* Selectores para FOOTER del sitio */
 .pie-pagina {
     @include relleno(1,-1,1,-1);
     background-color: $negro;
     color: $blanco;
     font-size: 1.2rem;
 
+    /* Selector para centrar secciones dentro del footer */
     &__contenido {
         justify-content: center;
         align-items: center;
     }
 
+    /* Selector para cada sección */
     &__seccion {
         @include relleno(2,-1,2,-1);
         @include flex(column);
-
-        &--centrado {
-            text-align: center;
-        }
     }
 
+    /* Selector para textos */
     &__texto {
         @include margenes(1,-1,1,-1);
         @include relleno(-1,0,-1,0);
@@ -207,44 +231,49 @@ html{
         text-align: center;
     }
 
-    &__redes {
+    /* Selector para centrar logos de redes sociales y selector para contenido acerca del autor del sitio */
+    &__redes, &__autor {
         justify-content: center;
     }
 
-    &__autor {
-        justify-content: center;
-    }
-
+    /* Selector para contenedor con logo de red social */
     &__contenedor-red-social {
-        justify-content: center;
         width: 80px;
     }
 
+    /* Selector para logo de red social */
     &__red-social {
         transition: all 0.5s;
 
+        /* Seletor para aplicar transformación de 'crecimiento' al hacer hover sobre un logo de red social */
         &:hover {
             @include zoom(20%,20%);
         }
     }
 
+    /* Selector para contenedor con logo de la marca en footer */
     &__contenedor-logo {
         width: 60%;
         margin: 0 auto;
     }
 
+    /* Selector para logo de la marca */
     &__logo {
         @include relleno(2,-1,2,-1);
         width: 100%;
 
+        /* Selector para aplicar transformación de 'crecimiento' al hacer hover sobre el logo */
         &:hover {
             @include zoom(10%,10%);
         }
     }
 
+    /* Selector para contenedor con enlace a Mapa del Sitio */
     &__mapa-sitio {
         @include margenes(1,1,1,1);
         align-self: center;
+        
+        /* Selector para enlace a Mapa del Sitio */
         a {
             color: $blanco;
             @include estilo-texto(negrita);
