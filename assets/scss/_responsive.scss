@@ -1,132 +1,168 @@
 
-/* Selectores para responsividad de elementos */
+/* Selectores para hacer responsive al sitio en distintos dispositivos */
+/* Complementan responsividad generada con sistema de grillas de Boostrap */
+/* Se utilizan tres breakpoints de Bootstrap para facilitar aplicación de estilos
+   y un breakpoint extra para resoluciones de móviles bien pequeños */
+
+/* Breakpoint Medium (md) --> Large (lg) de Bootstrap */
 @media only screen and (max-width: 991px){
     
+    /* Selector para contenedor con logo de la marca en footer */
     .pie-pagina__contenedor-logo {
         width: 85%;
     }
 
+    /* Selector para article contenedor de la hamburguesa destacada en 'Inicio' */
     .destacada__article {
         width: 90%;
     }
 
-    .donde-encontrarnos__seccion{
+    /* Selector para cada sección del contenido debajo del título de sección ¿Dónde encontrarnos?' en 'Inicio' */
+    .donde-encontrarnos__seccion {
         @include margenes(-1,-1,2,-1);
     }
 
-    .historia__columna, .diferentes__columna {
-        @include margenes(-1,-1,3,-1);
-    }
-
+    /* Selector para alinear contenido de la sección 'Nuestra historia' y '¿Qué nos hace diferentes?' respectivamente en 'Nosotros' */
     .historia__contenido, .diferentes__contenido {
         @include margenes(3,-1,3,-1);
     }
 
+    /* Selector para cada subsección de la sección 'Nuestra historia' y '¿Qué nos hace diferentes?' respectivamente en 'Nosotros' */
+    .historia__seccion, .diferentes__seccion {
+        @include margenes(-1,-1,3,-1);
+    }
+
+    /* Selector para opinión de un cliente en 'Nosotros' */
     .opinion {
         @include margenes(-1,-1,3,-1);
     }
 
+    /* Selector con estilos comunes para el article de cada hamburguesa en 'Menú Completo' */
     .articulo-menu {
         @include margenes(-1,-1,3,-1);
         height: auto;
     }
 
+    /* Selector para nota con leyenda '* Todas las burgas incluyen papas fritas' en 'Menú Completo' */
     .hamburguesas__nota {
         @include margenes(0,-1,3,-1);
     }
 
+    /* Selector para contenedor de listado de bebidas en 'Menú Completo' */
     .bebidas__listado {
         width: 100%;
     }
 
+    /* Selector para item de lista con nombre de bebida y precio en 'Menú Completo' */
     .bebida {
         font-size: 1.3rem;
     }
 
-    .formulario {
+    /* Selector para formulario de contacto en 'Contacto' */
+    .dejanos-mensaje {
         form {
             width: 80%;
         }
     }
 }
 
+/* Breakpoint Small (sm) --> Medium (md) de Bootstrap */
 @media only screen and (max-width: 767px){
+    
+    /* Selector para títulos h1 */
     .titulo-principal {
         font-size: 5rem;
         -webkit-text-stroke-width: 5px;
     }
     
+    /* Selector para invertir orden de elementos en footer y poner en primer lugar al logo de la marca */
     .primer-elemento {
         order: -1;
     }
     
+    /* Selector para contenedor con logo de la marca en footer */
     .pie-pagina__contenedor-logo {
         width: 60%;
     }
 
+    /* Selector para slogan de la marca en 'Inicio' */
     .fondo-index__slogan {
         font-size: 3rem;
         -webkit-text-stroke-width: 4px;
     }
 
+    /* Selector para nombre de la hamburguesa destacada en 'Inicio' */
     .destacada__nombre {
         @include margenes(-1,-1,2,-1);
     }
 
+    /* Selector para contenedor de listado de bebidas en 'Menú Completo' */
     .bebidas__listado {
         width: 90%;
     }
 }
 
+/* Breakpoint X-Small --> Small (sm) de Bootstrap */
 @media only screen and (max-width: 575px){
+    
+    /* Selector para menú lateral en resoluciones Tablet o más pequeñas */
     .encabezado__menu-lateral {
         background-color: $negro;
         width: 280px;
     }
 
+    /* Selector para contenedor con logo de la marca en footer */
     .pie-pagina__contenedor-logo {
         width: 65%;
     }
 
+    /* Selector para títulos h1 */
     .titulo-principal {
         font-size: 4rem;
         -webkit-text-stroke-width: 4px;
     }
 
+    /* Selector para slogan de la marca en 'Inicio' */
     .fondo-index__slogan {
         font-size: 3rem;
         -webkit-text-stroke-width: 4px;
     }
 
+    /* Selector para iframe de Google Maps en 'Sucursales' */
     .sucursal__mapa {
         width: 100%;
         height: 300px;
     }
 
-    .formulario {
+    /* Selector para formulario de contacto en 'Contacto' */
+    .dejanos-mensaje {
         form {
             width: 90%;
         }
     }
 }
 
+/* Breakpoint extra para resoluciones muy pequeñas de hasta 375px de ancho */
 @media only screen and (max-width: 375px){
     
+    /* Selector para contenedor con logo de la marca en footer */
     .pie-pagina__contenedor-logo {
         width: 80%;
     }
 
+    /* Selector para títulos h1 */
     .titulo-principal {
         font-size: 3rem;
         -webkit-text-stroke-width: 3px;
     }
     
+    /* Selector para slogan de la marca en 'Inicio' */
     .fondo-index__slogan {
         font-size: 2rem;
         -webkit-text-stroke-width: 2px;
     }
-
-    /* Adapto grid para móbiles chicos */
+    
+    /* Selector para opinión de un cliente en 'Nosotros' - Adapto grid a resoluciones muy pequeñas */
     .opinion {
         display: grid;
         grid-template-areas: 
@@ -138,11 +174,13 @@
         grid-template-rows: 1fr 1fr 1fr 2fr;
     }
 
+    /* Selector para item de lista con nombre de bebida y precio en 'Menú Completo' */
     .bebida {
         @include flex(column);
         align-items: center;
         font-size: 1.4rem;
         
+        /* Selector para nombre de bebida */
         &__nombre {
             text-align: center;
         }

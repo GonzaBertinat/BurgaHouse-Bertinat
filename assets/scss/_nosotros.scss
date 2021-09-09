@@ -1,65 +1,74 @@
-/****** Selectores para sección Nosotros ******/
+/****** Selectores para sección 'Nosotros' ******/
 
-/*** Selectores para imagen de fondo con título de la sección ***/
+/* Selector para título h1 en imagen de fondo */
 .fondo-nosotros__titulo {
     @extend .titulo-principal;
     color: $blanco;
     -webkit-text-stroke-color: $negro;
 }
 
-/*** Selectores para sección 'Nuestra historia', y algunos para '¿Qué nos hace diferentes?' ***/
+/* Selectores para sección 'Nuestra historia' */
 .historia {
     @extend .seccion;
     background-color: $blanco;
 
+    /* Selector para alinear contenido de la sección */
     &__contenido {
         @include margenes(6,-1,6,-1);
         justify-content: center;
         align-items: center;
     }
 
-    &__columna {
+    /* Selector para cada subsección de la sección */
+    &__seccion {
         @include relleno(-1,3,-1,3);
     }
     
+    /* Selector para título */
     &__titulo {
         @extend .titulo-seccion;
         @include margenes(-1,-1,3,-1);
     }
 
+    /* Selector para texto informativo */
     &__texto {
         @include margenes(-1,-1,1,-1);
         font-size: 1.2rem;
         text-align: start;
     }
 
+    /* Selector para imagen ilustrativa */
     &__imagen {
         border: solid $border-size*2 $negro;
     }
 }
 
-/*** Selectores para sección '¿Qué nos hace diferentes?' ***/ 
+/* Selectores para sección '¿Qué nos hace diferentes?' */
 .diferentes {
     @extend .seccion;
     background-color: $negro;
     color: $dorado;
     background: $gradiente-negro;
 
+    /* Selector para alinear contenido de la sección */
     &__contenido {
         @include margenes(6,-1,6,-1);
         justify-content: center;
         align-items: center;
     }
 
-    &__columna {
+    /* Selector para cada subsección de la sección */
+    &__seccion {
         @include relleno(-1,3,-1,3);
     }
     
+    /* Selector para título */
     &__titulo {
         @extend .titulo-seccion;
         @include margenes(-1,-1,3,-1);
     }
 
+    /* Selector para texto informativo */
     &__texto {
         @include margenes(-1,-1,1,-1);
         text-align: end;
@@ -67,92 +76,108 @@
         font-size: 1.2rem;
     }
 
+    /* Selector para imagen ilustrativa */
     &__imagen {
         border: solid $border-size*2 $negro;
     }
 }
 
-/*** Selectores para sección 'Opiniones de nuestros clientes' ***/
-
-/* Selector para section */ 
+/* Selectores para sección 'Opiniones de nuestros clientes' */
 .recomendaciones {
     @extend .seccion;
     background: $gradiente-dorado;
 
+    /* Selector para cada fila con contenido dentro de la sección */
     &__fila {
         @include margenes(3,-1,3,-1);
         justify-content: center;
         align-items: center;
     }
 
+    /* Selector para título */
     &__titulo {
         @extend .titulo-seccion;
         @include margenes(-1,-1,0,-1);
     }
-}
 
-.opinion {
-    @include relleno(1,2,1,2);
-    border: solid $border-size $marron-claro;
-    background-color: $negro;
-    display: grid;
-    grid-template-areas: 
-        "foto nombre"
-        "foto valoracion"
-        "texto texto";
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr;
-    justify-items: center;
-    align-items: center;
-    align-content: end;
-    text-align: center;
-
-    &__imagen {
-        height: 125px;
-        width: 125px;
-        grid-area: foto;
-        img {
-            border: solid $border-size $dorado;
-            border-radius: 100%;
-            height: 100%;
+    /* Selector para opinión de un cliente */
+    .opinion {
+        @include relleno(1,2,1,2);
+        border: solid $border-size $marron-claro;
+        background-color: $negro;
+        display: grid;
+        grid-template-areas: 
+            "foto nombre"
+            "foto valoracion"
+            "texto texto";
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        justify-items: center;
+        align-items: center;
+        align-content: end;
+        text-align: center;
+        
+        /* Selector para contenedor de imagen de cliente */
+        &__imagen {
+            height: 125px;
+            width: 125px;
+            grid-area: foto;
+            
+            /* Selector para imagen con cara de cliente */
+            img {
+                border: solid $border-size $dorado;
+                border-radius: 100%;
+                height: 100%;
+            }
         }
-    }
-
-    &__nombre {
-        @include margenes(3,-1,-1,-1);
-        @include estilo-texto(italica);
-        grid-area: nombre;
-        h3{
-            color: $dorado;
-            font-family: $glory;
-            font-size: 1.5rem;
-        }
-    }
-
-    &__valoracion {
-        grid-area: valoracion;
-        span {
-            display: block;
-            @include margenes(1,-1,-1,-1);
-            text-align: center;
-            color: $dorado;
-            font-family: $glory;
-            font-size: 1.4rem;
-        }
-        img {
-            width: 15%;     
-        }
-    }
-
-    &__texto {
-        @include margenes(1,-1,-1,-1);
-        grid-area: texto;
-        padding-left: 5%;
-        padding-right: 5%;
-        p {
-            font-size: 1.2rem;
-            color: $blanco;
+    
+        /* Selector para contenedor con nombre del cliente */
+        &__nombre {
+            @include margenes(3,-1,-1,-1);
             @include estilo-texto(italica);
+            grid-area: nombre;
+            
+            /* Selector para nombre del cliente */
+            h3 {
+                color: $dorado;
+                font-family: $glory;
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Selector para contenedor de valoración */
+        &__valoracion {
+            grid-area: valoracion;
+            
+            /* Selector para texto corto con valoración */
+            span {
+                display: block;
+                @include margenes(1,-1,-1,-1);
+                text-align: center;
+                color: $dorado;
+                font-family: $glory;
+                font-size: 1.4rem;
+            }
+            
+            /* Selector para imagen con estrella o media estrella */
+            img {
+                width: 15%;     
+            }
+        }
+    
+        /* Selector para contenedor de testimonio del cliente */
+        &__texto {
+            @include margenes(1,-1,-1,-1);
+            grid-area: texto;
+            padding-left: 5%;
+            padding-right: 5%;
+            
+            /* Selector para testimonio de recomendación del cliente */
+            p {
+                font-size: 1.2rem;
+                color: $blanco;
+                @include estilo-texto(italica);
+            }
         }
     }
 }

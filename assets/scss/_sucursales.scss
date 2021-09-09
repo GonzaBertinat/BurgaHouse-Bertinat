@@ -1,185 +1,193 @@
-/****** Selectores para sección Sucursales ******/
+/****** Selectores para sección 'Sucursales' ******/
 
-/*** Selectores para imagen de fondo con título de la sección ***/
+/* Selector para título h1 en imagen de fondo */
 .fondo-sucursales__titulo {
     @extend .titulo-principal;
     color: $blanco;
     -webkit-text-stroke-color: $negro;
 }
 
-/*** Selectores para sección con las sucursales en acordeón ***/
-
-/** Selectores para estructurar contenido del section **/
+/* Selectores para sección 'Buscá tu BurgaHouse más cercana' */
 .sucursales {
     @extend .seccion;
     background-color: $blanco;
     
+    /* Selector para título de la sección */
     &__titulo {
         @extend .titulo-seccion;
         @include margenes(3,-1,3,-1);
         font-weight: 600;
     }
-}
 
-/** Selectores para el acordeón con las sucursales **/
-/* Sobreescribe estilos de bootstrap */
-.accordion {
-    @include margenes(-1,-1,3,-1);
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    h4, h5 {
-        @include margenes(-1,-1,0,-1);
-    }
+    /* Selectores para acordeón con sucursales */
+    /* Sobreescribe estilos de Bootstrap */
+    .accordion {
+        @include margenes(-1,-1,3,-1);
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
 
-    &-button {
-        &__titulo {
-            font-weight: 600;
-            font-family: $glory;
-            font-size: 1.7rem;
-            color: $blanco !important;
-            border: $negro solid $border-size;
-            background-color: $negro!important;
+        /* Selectores para botón con nombre de sucursal que al presionarlo despliega o colapsa contenido */
+        &-button {
+            
+            /* Selector para título con nombre de sucursal en el botón */
+            &__titulo {
+                font-weight: 600;
+                font-family: $glory;
+                font-size: 1.7rem;
+                color: $blanco !important;
+                border: $negro solid $border-size;
+                background-color: $negro!important;
 
-            &:hover {
-                color: $dorado !important;
+                /* Selector para cambiar color el nombre de la sucursal al hacer hover con el mouse en el botón */
+                &:hover {
+                    color: $dorado !important;
+                }
+            }
+
+            /* Selector para aplicar bordes en botón de sucursal cuando es presionado y queda en foco */
+            &:focus {
+                border-color: $negro;
+                border-width: $border-size*2;
+                box-shadow: 0 0 0 0 $negro;
             }
         }
+        
+        /* Selector para aplicar borde a contenido dentro de un item del acordeón */
+        &-collapse {
+            border: solid $border-size $negro;
+        }
 
-        &:focus {
-            border-color: $negro;
-            border-width: $border-size*2;
-            box-shadow: 0 0 0 0 $negro;
+        /* Selectores para información de cada sucursal */
+        .sucursal {
+            @include relleno(2,3,2,3);
+
+            /* Selector para contenedor de un grupo de información de la sucursal */
+            &__contenido {
+                @include flex(column);
+                justify-content: center;
+            }
+            
+            /* Selector para cada grupo de información */
+            &__categoria {
+                @include margenes(1,-1,1,-1);
+
+                /* Selector para centrar contenido de un grupo de información */
+                &--centrada {
+                    @include flex(row);
+                    justify-content: center;
+                }
+            }
+            
+            /* Selector para nombre de la sucursal */
+            &__nombre {
+                @include margenes(-1,-1,0,1);
+                @include estilo-texto(negrita);
+                font-size: 1.7rem;
+            }
+
+            /* Selector para cada ícono en la información */
+            &__icono {
+                @include margenes(-1,2,-1,-1);
+                width: 25px;
+            }
+            
+            /* Selector para contenedor con ícono y nombre del dato */
+            &__tipo-categoria {
+                @include flex(row);
+                align-items: center;
+            }
+            
+            /* Selector para el nombre del dato */
+            &__info {
+                @include margenes(-1,-1,0,1);
+                color: $rojo-oscuro;
+                font-size: 1.5rem;
+                @include estilo-texto(italica);
+            }
+            
+            /* Selector para el dato propiamente dicho */
+            &__dato {
+                @include margenes(1,-1,1,-1);
+                font-size: 1.3rem;
+            }
+            
+            /* Selector para iframe de Google Maps */
+            &__mapa {
+                width: 100%;
+            }
+
+            /* Selector para lista con formas de entrega de pedidos */
+            .formas-entrega {
+                @include margenes(1,-1,1,-1);
+                list-style-type: circle;
+                color: $negro;
+
+                /* Selector para la forma de entrega */
+                &__forma {
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
-    
-    &-collapse {
-        border: solid $border-size $negro;
-    }
 }
 
-/** Selectores para estructurar contenido dentro de cada item del acordeon **/
-.sucursal {
-    @include relleno(2,3,2,3);
-
-    &__contenido {
-        @include flex(column);
-        justify-content: center;
-    }
-    
-    &__categoria {
-        @include margenes(1,-1,1,-1);
-
-        &--centrada {
-            @include flex(row);
-            justify-content: center;
-        }
-    }
-    
-    &__tipo-categoria {
-        @include flex(row);
-        align-items: center;
-    }
-    
-    /** Selectores para datos de la sucursal **/
-    &__nombre {
-        @include margenes(-1,-1,-1,1);
-        @include estilo-texto(negrita);
-        font-size: 1.7rem;
-    }
-    
-    &__info {
-        color: $rojo-oscuro;
-        font-size: 1.5rem;
-        @include estilo-texto(italica);
-    }
-    
-    &__dato {
-        @include margenes(1,-1,1,-1);
-        font-size: 1.3rem;
-    }
-    
-    /* Selector para asignar tamaño a los iconos en el detalle de las sucursales */
-    &__icono {
-        @include margenes(-1,2,-1,-1);
-        width: 25px;
-    }
-    
-    /* Selector para los iframe de Google Maps */
-    &__mapa {
-        width: 100%;
-    }
-}
-
-/** Selectores para listas con las formas de entrega **/
-.formas-entrega {
-    @include margenes(1,-1,1,-1);
-    list-style-type: circle;
-    color: $negro;
-
-    &__forma {
-        font-size: 1.3rem;
-    }
-}
-
-/*** Selectores para sección 'Métodos de Pago' ***/
-
-/** Selectores para estructurar contenido dentro del section **/
+/* Selectores para sección 'Métodos de Pago' */
 .metodos-pago {
     @extend .seccion;
     border-top: solid $border-size $negro;
     text-align: center;    
     background: $gradiente-dorado;
 
+    /* Selector para cada fila con contenido dentro de la sección */
     &__fila {
         @include margenes(3,-1,3,-1);
         justify-content: center;
     }
     
-    &__contenido {
-        @include relleno(-1,4,-1,4);
-    }
-    
+    /* Selector para título de la sección */
     &__titulo {
         @extend .titulo-seccion;
         @include relleno(-1,-1,0,-1);
         font-weight: 600;
     }
     
+    /* Selector para texto informativo */
     &__descripcion {
         @include relleno(2,-1,0,-1);
         text-align: center;
         font-size: 1.3rem;
     }
-}
 
-/* Selector para caja contenedora de métodos de pago */
-.listado-metodos {
-    @include relleno(2,-1,2,-1);
-    background: $gradiente-negro;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    /* Selector para contenedor con métodos de pago */
+    .listado-metodos {
+        @include relleno(2,-1,2,-1);
+        background: $gradiente-negro;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
 
-/** Selectores para estructurar contenido de cada article **/
-.metodo-pago {
-    @include flex(column);
-    justify-content: center;
-    align-items: center;
+        /* Selectores para cada método de pago **/
+        .metodo-pago {
+            @include flex(column);
+            justify-content: center;
+            align-items: center;
 
-    &__tipo {
-        @include relleno(1,-1,1,-1);
-        @include estilo-texto(negrita);
-        text-transform: uppercase;
-        color: $dorado;
-        font-size: 1.7rem;
-        font-family: $glory;
-    }
-    
-    /* Selector para imágenes de métodos de pago, por ej: Logo de Visa*/
-    &__logo {
-        @include margenes(2,2,2,2);
-        width: 60px;
+            /* Selector para subtítulo con tipo de método de pago (Ej: Efectivo) */
+            &__tipo {
+                @include relleno(1,-1,1,-1);
+                @include estilo-texto(negrita);
+                text-transform: uppercase;
+                color: $dorado;
+                font-size: 1.7rem;
+                font-family: $glory;
+            }
+            
+            /* Selector para logo de método de pago (Ej: Visa) */
+            &__logo {
+                @include margenes(2,2,2,2);
+                width: 60px;
+            }
+        }
     }
 }

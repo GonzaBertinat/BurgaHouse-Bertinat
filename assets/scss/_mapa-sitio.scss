@@ -1,9 +1,10 @@
-/** Selectores para mapa del sitio **/
+/****** Selectores para sección 'Mapa del Sitio' ******/
 
-/* Selectores para estructurar contenido */
+/* Selector para section principal */
 .mapa-sitio {
     @include relleno(12,-1,-1,-1);
-
+    
+    /* Selector para título de la sección */
     &__titulo {
         @extend .titulo-seccion;
         @include relleno(3,-1,-1,-1);
@@ -12,44 +13,51 @@
         @include estilo-texto(italica);
     }
     
+    /* Selector para texto informativo */
     &__descripcion {
         @include margenes(3,-1,3,-1);
         font-size: 1.3rem;
         text-align: center;
     }
     
+    /* Selector para contenedor de enlaces a las secciones del sitio */
     &__contenido {
         justify-content: center;
         @include margenes(3,-1,3,-1);
-    }
-}
 
-/* Selectores para enlaces */
-.enlaces {
-    @include relleno(-1,3,-1,3);
+        /* Selector para grupo de enlaces de un mismo documento */
+        .enlaces {
+            @include relleno(-1,3,-1,3);
 
-    &__titulo {
-        @include margenes(2,-1,2,-1);
+            /* Selector para título del documento */
+            &__titulo {
+                @include margenes(2,-1,2,-1);
 
-        a {
-            color: $negro;
-            text-decoration: none;
-            font-family: $ubuntu;
-            font-size: 2rem;    
-
-            &:hover {
-                color: $dorado;
+                /* Selector para enlace hacia ese documento */
+                a {
+                    color: $negro;
+                    text-decoration: none;
+                    font-family: $ubuntu;
+                    font-size: 2rem;    
+                    
+                    /* Selector para cambiar color del título al hacer hover con el mouse en él */
+                    &:hover {
+                        color: $dorado;
+                    }
+                }
             }
-        }
-    }
-    
-    /* Selector para lista de enlaces */
-    &__lista {
-        @include margenes(2,-1,2,-1);
-        list-style: disc;
-        font-size: 1.3rem;
-        ul {
-            list-style: disc;    
+            
+            /* Selector para lista de enlaces que apuntan a secciones dentro de un documento */
+            &__lista {
+                @include margenes(2,-1,2,-1);
+                list-style: disc;
+                font-size: 1.3rem;
+                
+                /* Selector para sublista dentro de una lista de enlaces */
+                ul {
+                    list-style: disc;    
+                }
+            }
         }
     }
 }
