@@ -820,7 +820,8 @@ html {
         margin-bottom: 0.5rem;
         font-size: 1.3rem; }
       .sucursales .accordion .sucursal__mapa {
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
       .sucursales .accordion .sucursal .formas-entrega {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -1078,7 +1079,7 @@ html {
   .bebidas__listado {
     width: 100%; }
   /* Selector para item de lista con nombre de bebida y precio en 'Menú Completo' */
-  .bebida {
+  .bebidas .bebida {
     font-size: 1.3rem; }
   /* Selector para formulario de contacto en 'Contacto' */
   .dejanos-mensaje form {
@@ -1103,6 +1104,9 @@ html {
   /* Selector para nombre de la hamburguesa destacada en 'Inicio' */
   .destacada__nombre {
     margin-bottom: 1rem; }
+  /* Selector para iframe de Google Maps en 'Sucursales' */
+  .sucursales .accordion .sucursal__mapa {
+    height: 300px; }
   /* Selector para contenedor de listado de bebidas en 'Menú Completo' */
   .bebidas__listado {
     width: 90%; } }
@@ -1124,10 +1128,6 @@ html {
   .fondo-index__slogan {
     font-size: 3rem;
     -webkit-text-stroke-width: 4px; }
-  /* Selector para iframe de Google Maps en 'Sucursales' */
-  .sucursal__mapa {
-    width: 100%;
-    height: 300px; }
   /* Selector para formulario de contacto en 'Contacto' */
   .dejanos-mensaje form {
     width: 90%; } }
@@ -1152,11 +1152,11 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 2fr; }
   /* Selector para item de lista con nombre de bebida y precio en 'Menú Completo' */
-  .bebida {
+  .bebidas .bebida {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.4rem;
     /* Selector para nombre de bebida */ }
-    .bebida__nombre {
+    .bebidas .bebida__nombre {
       text-align: center; } }
